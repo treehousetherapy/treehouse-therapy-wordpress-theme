@@ -232,6 +232,65 @@
                 transform: scale(0.7);
             }
         }
+
+        /* Scroll Animations */
+        [data-animate] {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        [data-animate].animated {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        [data-animate="fade-up"] {
+            transform: translateY(40px);
+        }
+
+        [data-animate="fade-in"] {
+            transform: translateY(0);
+        }
+
+        [data-animate="scale-up"] {
+            transform: scale(0.9);
+        }
+
+        [data-animate="scale-up"].animated {
+            transform: scale(1);
+        }
+
+        [data-animate="slide-left"] {
+            transform: translateX(-40px);
+        }
+
+        [data-animate="slide-left"].animated {
+            transform: translateX(0);
+        }
+
+        [data-animate="slide-right"] {
+            transform: translateX(40px);
+        }
+
+        [data-animate="slide-right"].animated {
+            transform: translateX(0);
+        }
+
+        /* Staggered delays for children */
+        [data-stagger] > *:nth-child(1) { transition-delay: 0ms; }
+        [data-stagger] > *:nth-child(2) { transition-delay: 100ms; }
+        [data-stagger] > *:nth-child(3) { transition-delay: 200ms; }
+        [data-stagger] > *:nth-child(4) { transition-delay: 300ms; }
+        [data-stagger] > *:nth-child(5) { transition-delay: 400ms; }
+
+        @media (prefers-reduced-motion: reduce) {
+            [data-animate] {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+        }
     </style>
 </head>
 <body class="bg-cream-bg text-text-dark">
@@ -405,10 +464,10 @@
         <!-- Insurance Section -->
         <section class="py-16 px-4 bg-white">
             <div class="max-w-7xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-4">Most insurances accepted</h2>
-                <p class="text-xl text-text-medium mb-12">We've got you covered :)</p>
+                <h2 data-animate="fade-up" class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-4">Most insurances accepted</h2>
+                <p data-animate="fade-up" class="text-xl text-text-medium mb-12">We've got you covered :)</p>
 
-                <div class="grid grid-cols-2 md:grid-cols-5 gap-8">
+                <div data-animate="fade-up" data-stagger class="grid grid-cols-2 md:grid-cols-5 gap-8">
                     <div class="p-6 bg-cream-bg rounded-xl hover:bg-white hover:shadow-md transition-all">
                         <p class="font-semibold text-text-dark">Blue Cross Blue Shield</p>
                     </div>
@@ -443,13 +502,13 @@
         <section class="py-16 px-4 bg-gradient-to-br from-teal-light/10 to-seafoam-green/10">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-6">What is ABA therapy?</h2>
-                    <p class="text-xl text-text-medium max-w-4xl mx-auto leading-relaxed">
+                    <h2 data-animate="fade-up" class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-6">What is ABA therapy?</h2>
+                    <p data-animate="fade-up" class="text-xl text-text-medium max-w-4xl mx-auto leading-relaxed">
                         ABA (Applied Behavior Analysis) is an evidence-based approach that helps children develop essential skills while reducing challenging behaviors through personalized, play-based learning.
                     </p>
                 </div>
 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div data-animate="fade-up" data-stagger class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                     <div class="card text-center">
                         <div class="w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-br from-primary-orange to-golden-yellow flex items-center justify-center">
                             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
@@ -513,12 +572,12 @@
         <section id="services" class="py-16 px-4 bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-4">Our Services</h2>
-                    <p class="text-xl text-text-medium">Therapy tailored to your family's needs</p>
+                    <h2 data-animate="fade-up" class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-4">Our Services</h2>
+                    <p data-animate="fade-up" class="text-xl text-text-medium">Therapy tailored to your family's needs</p>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="card">
+                <div data-animate="fade-up" data-stagger class="grid md:grid-cols-3 gap-8">
+                    <div class="card" data-animate="fade-up">
                         <div class="icon-box mb-6">
                             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
                                 <path d="M3 10L12 3L21 10V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V10Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -535,7 +594,7 @@
                         </a>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-animate="fade-up">
                         <div class="icon-box mb-6">
                             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
                                 <path d="M4 19.5C4 18.12 5.12 17 6.5 17H20" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -554,7 +613,7 @@
                         </a>
                     </div>
 
-                    <div class="card">
+                    <div class="card" data-animate="fade-up">
                         <div class="icon-box mb-6">
                             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
                                 <circle cx="12" cy="12" r="10" stroke="white" stroke-width="2"/>
@@ -586,11 +645,11 @@
         <section class="py-16 px-4 bg-primary-navy/5">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-6">Why Families Trust Treehouse Therapy</h2>
+                    <h2 data-animate="fade-up" class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-6">Why Families Trust Treehouse Therapy</h2>
                 </div>
 
-                <div class="grid md:grid-cols-3 gap-12 text-center">
-                    <div>
+                <div data-animate="fade-up" data-stagger class="grid md:grid-cols-3 gap-12 text-center">
+                    <div data-animate="fade-up">
                         <div class="w-20 h-20 bg-gradient-to-br from-primary-orange to-golden-yellow rounded-full mx-auto mb-6 flex items-center justify-center">
                             <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="white"/>
@@ -599,7 +658,7 @@
                         <h3 class="text-2xl font-nunito font-bold text-primary-navy mb-4">Compassion</h3>
                         <p class="text-text-medium leading-relaxed">Empathy and genuine care for each child and family's unique journey</p>
                     </div>
-                    <div>
+                    <div data-animate="fade-up">
                         <div class="w-20 h-20 bg-gradient-to-br from-teal-light to-seafoam-green rounded-full mx-auto mb-6 flex items-center justify-center">
                             <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 2L14.5 9H22L16 14L18.5 21L12 17L5.5 21L8 14L2 9H9.5L12 2Z" fill="white"/>
@@ -608,7 +667,7 @@
                         <h3 class="text-2xl font-nunito font-bold text-primary-navy mb-4">Excellence</h3>
                         <p class="text-text-medium leading-relaxed">Highest standards in therapy practices with ongoing training and development</p>
                     </div>
-                    <div>
+                    <div data-animate="fade-up">
                         <div class="w-20 h-20 bg-gradient-to-br from-seafoam-green to-primary-orange rounded-full mx-auto mb-6 flex items-center justify-center">
                             <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none">
                                 <path d="M12 22C12 22 4 18 4 12V6L12 2L20 6V12C20 18 12 22 12 22Z" stroke="white" stroke-width="2" fill="none"/>
@@ -635,32 +694,32 @@
         <section class="py-16 px-4 bg-white">
             <div class="max-w-7xl mx-auto">
                 <div class="text-center mb-12">
-                    <h2 class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-6">Getting Started is Easy</h2>
+                    <h2 data-animate="fade-up" class="text-4xl md:text-5xl font-nunito font-bold text-primary-navy mb-6">Getting Started is Easy</h2>
                 </div>
 
-                <div class="grid md:grid-cols-4 gap-8 text-center">
-                    <div>
+                <div data-animate="fade-up" data-stagger class="grid md:grid-cols-4 gap-8 text-center">
+                    <div data-animate="fade-up">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-orange to-golden-yellow rounded-full mx-auto mb-6 flex items-center justify-center">
                             <span class="text-2xl font-nunito font-bold text-white">1</span>
                         </div>
                         <h3 class="text-xl font-nunito font-bold text-primary-navy mb-4">Reach Out</h3>
                         <p class="text-text-medium">Fill out our form or give us a call. We'll answer your questions.</p>
                     </div>
-                    <div>
+                    <div data-animate="fade-up">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-orange to-golden-yellow rounded-full mx-auto mb-6 flex items-center justify-center">
                             <span class="text-2xl font-nunito font-bold text-white">2</span>
                         </div>
                         <h3 class="text-xl font-nunito font-bold text-primary-navy mb-4">Insurance Verification</h3>
                         <p class="text-text-medium">We'll verify your coverage and handle the paperwork.</p>
                     </div>
-                    <div>
+                    <div data-animate="fade-up">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-orange to-golden-yellow rounded-full mx-auto mb-6 flex items-center justify-center">
                             <span class="text-2xl font-nunito font-bold text-white">3</span>
                         </div>
                         <h3 class="text-xl font-nunito font-bold text-primary-navy mb-4">Assessment</h3>
                         <p class="text-text-medium">Our BCBA meets with your family to understand your child's needs.</p>
                     </div>
-                    <div>
+                    <div data-animate="fade-up">
                         <div class="w-16 h-16 bg-gradient-to-br from-primary-orange to-golden-yellow rounded-full mx-auto mb-6 flex items-center justify-center">
                             <span class="text-2xl font-nunito font-bold text-white">4</span>
                         </div>
@@ -683,8 +742,8 @@
         <!-- CTA Section -->
         <section id="contact" class="py-16 px-4 bg-gradient-to-r from-primary-navy to-deep-teal text-white">
             <div class="max-w-7xl mx-auto text-center">
-                <h2 class="text-4xl md:text-5xl font-nunito font-bold mb-6">Ready to Get Started?</h2>
-                <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us today to learn more about our services and how we can support your family's journey.</p>
+                <h2 data-animate="fade-up" class="text-4xl md:text-5xl font-nunito font-bold mb-6">Ready to Get Started?</h2>
+                <p data-animate="fade-up" class="text-xl mb-8 max-w-2xl mx-auto">Contact us today to learn more about our services and how we can support your family's journey.</p>
 
                 <div class="flex flex-wrap justify-center gap-6">
                     <a href="tel:6123094135" class="btn bg-white text-primary-navy hover:bg-cream-bg text-lg px-8 py-4 inline-flex items-center gap-2">
@@ -782,6 +841,33 @@
                     toggleMenu(); // Close mobile menu after click
                 }
             });
+        });
+
+        // Scroll-triggered animations with Intersection Observer
+        document.addEventListener('DOMContentLoaded', function() {
+            const animatedElements = document.querySelectorAll('[data-animate]');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -10% 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        // Also animate staggered children
+                        if (entry.target.hasAttribute('data-stagger')) {
+                            entry.target.querySelectorAll('[data-animate]').forEach(child => {
+                                child.classList.add('animated');
+                            });
+                        }
+                    }
+                });
+            }, observerOptions);
+
+            animatedElements.forEach(el => observer.observe(el));
         });
     </script>
 

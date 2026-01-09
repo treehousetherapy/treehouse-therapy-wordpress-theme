@@ -7,25 +7,37 @@
 
     // Scroll Animation Observer
     function initScrollAnimations() {
-        const animatedElements = document.querySelectorAll('.animate-on-scroll');
+        // Support both old (.animate-on-scroll) and new ([data-animate]) selectors
+        const animatedElements = document.querySelectorAll('.animate-on-scroll, [data-animate]');
         
         if ('IntersectionObserver' in window) {
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
+                        // Add both classes for compatibility
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target);
+                        entry.target.classList.add('animated');
+                        
+                        // Also animate staggered children
+                        if (entry.target.hasAttribute('data-stagger')) {
+                            entry.target.querySelectorAll('[data-animate]').forEach(child => {
+                                child.classList.add('animated');
+                            });
+                        }
                     }
                 });
             }, {
                 threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
+                rootMargin: '0px 0px -10% 0px'
             });
 
             animatedElements.forEach(el => observer.observe(el));
         } else {
             // Fallback for browsers without IntersectionObserver
-            animatedElements.forEach(el => el.classList.add('visible'));
+            animatedElements.forEach(el => {
+                el.classList.add('visible');
+                el.classList.add('animated');
+            });
         }
     }
 

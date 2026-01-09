@@ -2,8 +2,8 @@
 
 ## Current Status
 - **Phase:** 6 - Premium Visual Upgrades
-- **Sub-Phase:** 6.5 - Implement Scroll-Triggered Animations
-- **Completion:** 65%
+- **Sub-Phase:** 6.6 - Add Testimonials Carousel Section
+- **Completion:** 70%
 
 ---
 
@@ -30,10 +30,10 @@
 - [x] CSS animations (float, float-slow, float-reverse, drift)
 - [x] Responsive scaling for mobile
 
-### 6.5 Implement Scroll-Triggered Animations
-- [ ] Intersection Observer setup
-- [ ] data-animate attributes
-- [ ] Staggered children animations
+### 6.5 Implement Scroll-Triggered Animations ✅
+- [x] Intersection Observer setup
+- [x] data-animate attributes (fade-up, scale-up, slide-left/right)
+- [x] Staggered children animations with data-stagger
 
 ### 6.6 Add Testimonials Carousel Section
 - [ ] Create testimonial cards
