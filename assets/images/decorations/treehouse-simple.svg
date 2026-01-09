@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Tree trunk -->
+  <rect x="42" y="55" width="16" height="40" fill="#6E4C1E" rx="2"/>
+  <!-- Tree foliage -->
+  <circle cx="50" cy="45" r="22" fill="#48C9B0" opacity="0.9"/>
+  <circle cx="38" cy="40" r="16" fill="#48C9B0"/>
+  <circle cx="62" cy="38" r="18" fill="#5DADE2" opacity="0.8"/>
+  <!-- House base -->
+  <rect x="35" y="32" width="30" height="18" fill="#E8912D" rx="2"/>
+  <!-- Roof -->
+  <path d="M32,32 L50,20 L68,32 Z" fill="#1E3A5F"/>
+  <!-- Windows -->
+  <rect x="40" y="36" width="6" height="6" fill="#F5B041" rx="1"/>
+  <rect x="54" y="36" width="6" height="6" fill="#F5B041" rx="1"/>
+  <!-- Door -->
+  <rect x="46" y="42" width="8" height="8" fill="#6E4C1E" rx="1"/>
+</svg>

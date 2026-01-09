@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <radialGradient id="sunGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#F5B041"/>
+      <stop offset="100%" stop-color="#E8912D"/>
+    </radialGradient>
+  </defs>
+  <!-- Sun center -->
+  <circle cx="50" cy="50" r="20" fill="url(#sunGrad)"/>
+  <!-- Main rays -->
+  <g stroke="#F5B041" stroke-width="3" stroke-linecap="round" opacity="0.8">
+    <line x1="50" y1="5" x2="50" y2="20"/>
+    <line x1="50" y1="80" x2="50" y2="95"/>
+    <line x1="5" y1="50" x2="20" y2="50"/>
+    <line x1="80" y1="50" x2="95" y2="50"/>
+    <line x1="18" y1="18" x2="29" y2="29"/>
+    <line x1="71" y1="71" x2="82" y2="82"/>
+    <line x1="82" y1="18" x2="71" y2="29"/>
+    <line x1="29" y1="71" x2="18" y2="82"/>
+  </g>
+  <!-- Secondary rays -->
+  <g stroke="#F5B041" stroke-width="2" stroke-linecap="round" opacity="0.5">
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(22.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(67.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(112.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(157.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(202.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(247.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(292.5 50 50)"/>
+    <line x1="50" y1="10" x2="50" y2="18" transform="rotate(337.5 50 50)"/>
+  </g>
+</svg>

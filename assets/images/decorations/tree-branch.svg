@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 80">
+  <!-- Main branch -->
+  <path d="M0,50 Q40,45 80,40 Q120,35 150,30" stroke="#6E4C1E" stroke-width="6" fill="none" stroke-linecap="round"/>
+  <!-- Small branches -->
+  <path d="M30,47 Q40,35 55,30" stroke="#6E4C1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M70,42 Q85,50 100,45" stroke="#6E4C1E" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M110,36 Q125,25 140,20" stroke="#6E4C1E" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Leaves -->
+  <ellipse cx="55" cy="28" rx="10" ry="6" fill="#48C9B0" transform="rotate(-20 55 28)"/>
+  <ellipse cx="45" cy="35" rx="8" ry="5" fill="#5DADE2" transform="rotate(10 45 35)" opacity="0.8"/>
+  <ellipse cx="100" cy="42" rx="9" ry="5" fill="#48C9B0" transform="rotate(15 100 42)"/>
+  <ellipse cx="140" cy="18" rx="8" ry="5" fill="#5DADE2" transform="rotate(-25 140 18)" opacity="0.8"/>
+</svg>
