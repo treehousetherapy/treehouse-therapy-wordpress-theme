@@ -48,6 +48,13 @@ get_header();
     </div>
 </section>
 
+<!-- Wave Divider: Hero → Insurance -->
+<div class="wave-divider bg-gradient-to-br from-cream-bg to-teal-light/10">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,64 C288,89 576,108 720,108 C864,108 1152,89 1440,64 L1440,120 L0,120 Z" fill="#FFFFFF"/>
+    </svg>
+</div>
+
 <!-- Insurance Section -->
 <section id="insurance" class="section bg-white">
     <div class="container-custom text-center">
@@ -63,6 +70,13 @@ get_header();
         </div>
     </div>
 </section>
+
+<!-- Wave Divider: Insurance → What is ABA -->
+<div class="wave-divider bg-white">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,40 C120,60 240,80 360,75 C480,70 600,45 720,50 C840,55 960,90 1080,95 C1200,100 1320,75 1440,60 L1440,120 L0,120 Z" fill="rgba(93, 173, 226, 0.1)"/>
+    </svg>
+</div>
 
 <!-- What is ABA Section -->
 <section id="what-is-aba" class="section bg-teal-light/10">
@@ -99,6 +113,13 @@ get_header();
     </div>
 </section>
 
+<!-- Wave Divider: What is ABA → Services -->
+<div class="wave-divider bg-teal-light/10">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,80 Q360,40 720,80 T1440,80 L1440,120 L0,120 Z" fill="#FFFFFF"/>
+    </svg>
+</div>
+
 <!-- Services Section -->
 <section id="services" class="section bg-white">
     <div class="container-custom">
@@ -130,6 +151,13 @@ get_header();
     </div>
 </section>
 
+<!-- Wave Divider: Services → Why Choose Us -->
+<div class="wave-divider bg-white">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,64 L48,75 C96,85 192,107 288,112 C384,117 480,107 576,91 C672,75 768,53 864,59 C960,64 1056,96 1152,107 C1248,117 1344,107 1392,101 L1440,96 L1440,120 L0,120 Z" fill="rgba(30, 58, 95, 0.05)"/>
+    </svg>
+</div>
+
 <!-- Why Choose Us -->
 <section id="why-choose-us" class="section bg-primary-navy/5">
     <div class="container-custom">
@@ -156,6 +184,13 @@ get_header();
         </div>
     </div>
 </section>
+
+<!-- Wave Divider: Why Choose Us → Process -->
+<div class="wave-divider bg-primary-navy/5">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,64 C288,89 576,108 720,108 C864,108 1152,89 1440,64 L1440,120 L0,120 Z" fill="#FFFFFF"/>
+    </svg>
+</div>
 
 <!-- Process Section -->
 <section id="process" class="section bg-white">
@@ -196,6 +231,15 @@ get_header();
         </div>
     </div>
 </section>
+
+<!-- Wave Divider: Process → CTA -->
+<div class="wave-divider bg-white">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,60 C240,90 480,100 720,80 C960,60 1200,40 1440,60 L1440,120 L0,120 Z" fill="#1E3A5F" opacity="0.3"/>
+        <path d="M0,80 C360,100 720,90 1080,100 C1260,105 1380,95 1440,90 L1440,120 L0,120 Z" fill="#1E3A5F" opacity="0.5"/>
+        <path d="M0,100 C480,85 960,110 1440,95 L1440,120 L0,120 Z" fill="#1E3A5F"/>
+    </svg>
+</div>
 
 <!-- CTA Section -->
 <section id="cta" class="section bg-gradient-to-r from-primary-navy to-deep-teal text-white">
