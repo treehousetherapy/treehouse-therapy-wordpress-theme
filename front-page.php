@@ -342,7 +342,133 @@ get_header();
     </div>
 </section>
 
-<!-- Wave Divider: Process → CTA -->
+<!-- Wave Divider: Process → Testimonials -->
+<div class="wave-divider bg-white">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,64 C288,89 576,108 720,108 C864,108 1152,89 1440,64 L1440,120 L0,120 Z" fill="rgba(93, 173, 226, 0.05)"/>
+    </svg>
+</div>
+
+<!-- Testimonials Section -->
+<section id="testimonials" class="section bg-gradient-to-br from-teal-light/5 to-seafoam-green/5">
+    <div class="container-custom">
+        <div class="text-center mb-12">
+            <h2 data-animate="fade-up" class="text-5xl font-nunito font-bold text-primary-navy mb-4">What Families Are Saying</h2>
+            <p data-animate="fade-up" class="text-xl text-text-medium">Real stories from real families</p>
+        </div>
+
+        <div class="relative max-w-4xl mx-auto">
+            <!-- Testimonial Carousel Container -->
+            <div class="testimonial-carousel" data-animate="fade-up">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-slide active">
+                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-premium-lg relative">
+                        <div class="absolute top-6 left-6 text-6xl md:text-8xl text-primary-orange/20 font-serif leading-none">"</div>
+                        
+                        <div class="relative z-10 pt-8">
+                            <p class="text-xl md:text-2xl text-text-dark leading-relaxed mb-8 italic">
+                                Treehouse Therapy has been a blessing for our family. The therapists are patient, caring, and truly understand our son's needs. We've seen incredible progress in his communication skills.
+                            </p>
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary-orange to-golden-yellow flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="white"/>
+                                        <path d="M12 14C7.58 14 4 16.69 4 20V22H20V20C20 16.69 16.42 14 12 14Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-nunito font-bold text-primary-navy text-lg">Sarah M.</p>
+                                    <p class="text-text-medium">Parent, Minneapolis</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-slide">
+                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-premium-lg relative">
+                        <div class="absolute top-6 left-6 text-6xl md:text-8xl text-teal-light/20 font-serif leading-none">"</div>
+                        
+                        <div class="relative z-10 pt-8">
+                            <p class="text-xl md:text-2xl text-text-dark leading-relaxed mb-8 italic">
+                                The team at Treehouse made the entire process seamless. From insurance verification to the personalized therapy plan, they were professional and supportive every step of the way.
+                            </p>
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal-light to-seafoam-green flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="white"/>
+                                        <path d="M12 14C7.58 14 4 16.69 4 20V22H20V20C20 16.69 16.42 14 12 14Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-nunito font-bold text-primary-navy text-lg">Michael & Jennifer T.</p>
+                                    <p class="text-text-medium">Parents, St. Paul</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-slide">
+                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-premium-lg relative">
+                        <div class="absolute top-6 left-6 text-6xl md:text-8xl text-seafoam-green/20 font-serif leading-none">"</div>
+                        
+                        <div class="relative z-10 pt-8">
+                            <p class="text-xl md:text-2xl text-text-dark leading-relaxed mb-8 italic">
+                                We couldn't be happier with the progress our daughter has made. The in-home therapy approach has been perfect for her, and the therapists have become like family to us.
+                            </p>
+                            
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-seafoam-green to-primary-orange flex items-center justify-center">
+                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
+                                        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="white"/>
+                                        <path d="M12 14C7.58 14 4 16.69 4 20V22H20V20C20 16.69 16.42 14 12 14Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-nunito font-bold text-primary-navy text-lg">Amanda R.</p>
+                                    <p class="text-text-medium">Parent, Bloomington</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Navigation Dots -->
+            <div class="flex justify-center gap-3 mt-8">
+                <button onclick="changeTestimonial(0)" class="testimonial-dot active"></button>
+                <button onclick="changeTestimonial(1)" class="testimonial-dot"></button>
+                <button onclick="changeTestimonial(2)" class="testimonial-dot"></button>
+            </div>
+
+            <!-- Arrow Navigation -->
+            <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 rounded-full bg-white shadow-premium hover:shadow-premium-lg transition-all duration-300 flex items-center justify-center text-primary-navy hover:text-primary-orange">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
+                </svg>
+            </button>
+            <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 rounded-full bg-white shadow-premium hover:shadow-premium-lg transition-all duration-300 flex items-center justify-center text-primary-navy hover:text-primary-orange">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider: Testimonials → CTA -->
+<div class="wave-divider bg-gradient-to-br from-teal-light/5 to-seafoam-green/5">
+    <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
+        <path d="M0,60 C240,90 480,100 720,80 C960,60 1200,40 1440,60 L1440,120 L0,120 Z" fill="#FFFFFF"/>
+    </svg>
+</div>
+
+<!-- Wave Divider: Before CTA -->
 <div class="wave-divider bg-white">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
         <path d="M0,60 C240,90 480,100 720,80 C960,60 1200,40 1440,60 L1440,120 L0,120 Z" fill="#1E3A5F" opacity="0.3"/>

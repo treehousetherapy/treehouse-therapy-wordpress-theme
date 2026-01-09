@@ -122,6 +122,60 @@
         });
     }
 
+    // Testimonial Carousel
+    let currentTestimonial = 0;
+    let testimonialInterval;
+
+    function initTestimonialCarousel() {
+        const slides = document.querySelectorAll('.testimonial-slide');
+        const dots = document.querySelectorAll('.testimonial-dot');
+        
+        if (slides.length === 0) return;
+
+        window.showTestimonial = function(index) {
+            slides.forEach(slide => slide.classList.remove('active'));
+            dots.forEach(dot => dot.classList.remove('active'));
+            
+            slides[index].classList.add('active');
+            dots[index].classList.add('active');
+            currentTestimonial = index;
+        };
+
+        window.changeTestimonial = function(index) {
+            showTestimonial(index);
+            resetTestimonialInterval();
+        };
+
+        window.nextTestimonial = function() {
+            const next = (currentTestimonial + 1) % slides.length;
+            showTestimonial(next);
+        };
+
+        window.prevTestimonial = function() {
+            const prev = (currentTestimonial - 1 + slides.length) % slides.length;
+            showTestimonial(prev);
+        };
+
+        function resetTestimonialInterval() {
+            clearInterval(testimonialInterval);
+            testimonialInterval = setInterval(nextTestimonial, 6000);
+        }
+
+        // Auto-advance every 6 seconds
+        testimonialInterval = setInterval(nextTestimonial, 6000);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'ArrowLeft') {
+                prevTestimonial();
+                resetTestimonialInterval();
+            } else if (e.key === 'ArrowRight') {
+                nextTestimonial();
+                resetTestimonialInterval();
+            }
+        });
+    }
+
     // Initialize all animations
     document.addEventListener('DOMContentLoaded', function() {
         initScrollAnimations();
@@ -129,6 +183,7 @@
         initParallax();
         initCounters();
         initFloatingElements();
+        initTestimonialCarousel();
     });
 
     // Re-initialize on page resize (debounced)
