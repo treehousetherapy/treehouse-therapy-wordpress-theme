@@ -9,7 +9,44 @@ get_header();
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section relative overflow-hidden bg-gradient-to-br from-cream-bg to-teal-light/10 pt-32 pb-20 px-4">
-    <div class="container-custom">
+    <!-- Floating Decorative Elements -->
+    <div class="floating-element float-slow top-24 left-[5%] w-24 h-16 text-teal-light/40">
+        <svg viewBox="0 0 100 60" fill="currentColor">
+            <ellipse cx="30" cy="40" rx="20" ry="15"/>
+            <ellipse cx="50" cy="35" rx="25" ry="20"/>
+            <ellipse cx="75" cy="40" rx="18" ry="14"/>
+        </svg>
+    </div>
+    <div class="floating-element float top-40 right-[8%] w-20 h-14 text-seafoam-green/30">
+        <svg viewBox="0 0 100 60" fill="currentColor">
+            <ellipse cx="25" cy="35" rx="18" ry="12"/>
+            <ellipse cx="50" cy="30" rx="22" ry="18"/>
+            <ellipse cx="70" cy="38" rx="15" ry="10"/>
+        </svg>
+    </div>
+    <div class="floating-element drift top-60 left-[12%] w-12 h-20">
+        <svg viewBox="0 0 50 80" fill="#48C9B0" opacity="0.5">
+            <path d="M25,5 Q45,25 40,50 Q35,70 25,75 Q15,70 10,50 Q5,25 25,5 Z"/>
+        </svg>
+    </div>
+    <div class="floating-element float-reverse bottom-32 right-[15%] w-10 h-16">
+        <svg viewBox="0 0 50 80" fill="#5DADE2" opacity="0.4">
+            <path d="M25,5 Q45,25 40,50 Q35,70 25,75 Q15,70 10,50 Q5,25 25,5 Z"/>
+        </svg>
+    </div>
+    <div class="floating-element float-slow bottom-20 left-[20%] w-16 h-10 text-golden-yellow/30">
+        <svg viewBox="0 0 100 60" fill="currentColor">
+            <ellipse cx="50" cy="30" rx="35" ry="22"/>
+            <ellipse cx="25" cy="40" rx="20" ry="12"/>
+        </svg>
+    </div>
+    <div class="floating-element drift top-32 right-[25%] w-8 h-14">
+        <svg viewBox="0 0 50 80" fill="#48C9B0" opacity="0.35">
+            <path d="M25,5 Q45,25 40,50 Q35,70 25,75 Q15,70 10,50 Q5,25 25,5 Z"/>
+        </svg>
+    </div>
+
+    <div class="container-custom relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
             <div class="hero-content">
                 <span class="inline-flex items-center gap-2 bg-gradient-to-r from-teal-light/20 to-primary-orange/20 text-primary-navy px-4 py-2 rounded-full text-sm font-nunito font-semibold mb-6">
