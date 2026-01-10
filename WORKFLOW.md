@@ -1,19 +1,25 @@
 # Treehouse Therapy WordPress Theme - Workflow
 
 ## Current Status
-- **Phase:** 9 - Aviation ABA Buoyant Motion Integration
-- **Sub-Phase:** Complete (9.1-9.5 core features implemented)
-- **Completion:** 100% (Phase 9 core)
+- **Phase:** 9 - Aviation ABA Simplification (Reality Check)
+- **Sub-Phase:** Complete (Removed Over-Animation)
+- **Completion:** 100% (Phase 9 complete)
 
 ---
 
-## Phase 9: Aviation ABA Buoyant Motion Integration
-- [x] **9.1:** Refine scroll-triggered animations with buoyant easing (30px lift, 0.8s, cubic-bezier)
-- [x] **9.2:** Button & card micro-interactions (-2px/-6px lifts, soft shadows)
-- [x] **9.3:** Sticky header transition (glass morphism, 50px threshold)
-- [x] **9.4:** Progressive image loading (blur-to-focus, shimmer skeleton)
-- [x] **9.5:** Final visual polish (typography spacing, overflow control)
-- [x] **9.9:** Hero depth rescue (stagger animations, premium shadows, subtle decorations)
+## Phase 9: Aviation ABA Simplification (Reality Check)
+- [x] **9.1:** Remove floating elements & parallax (too fancy)
+- [x] **9.2:** Simplify scroll animations (16px, 0.4s, no stagger)
+- [x] **9.3:** Tone down hover effects (no lifts, just color/shadow)
+- [x] **9.4:** Simplify header (static, no sticky transitions)
+- [x] **9.5:** Remove blob shapes & decorative animations
+- [x] **9.6:** Convert testimonials to static grid (no carousel)
+- [x] **9.7:** Final cleanup & consistency pass
+
+**Key Changes:**
+- Removed: Floating clouds/leaves, parallax, blob shapes, carousel auto-advance
+- Simplified: Scroll animations (30px→16px), hover effects (no translateY)
+- Result: Calm, professional site matching Aviation ABA's "stability-first" approach
 
 ## Phase 8: Animations & Functionality Polish
 - [x] **Form Interactions:** Add visual success state to forms (simulated)

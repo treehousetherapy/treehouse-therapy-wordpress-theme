@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nComplete SVG decoration assets \\(Phase 6.1\\)\n\nAdd 21 SVG decoration files for premium visual upgrades:\n- Wave dividers \\(7 variations\\)\n- Cloud shapes \\(3 variations\\)\n- Leaf shapes \\(3 variations\\)\n- Background shapes \\(blobs, dots, circle gradient\\)\n- Treehouse theme icons \\(treehouse, branch, sun\\)\n\n🤖 Generated with [Claude Code]\\(https://claude.com/claude-code\\)\n\nCo-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(npm install)",
+      "Bash(npm run build:*)",
+      "Bash(npm run build:js:*)",
+      "Bash(dir:*)",
+      "Bash(ls -la \"C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\\\\dist\\\\css\"\" && ls -la \"C:Userstreehtreehouse-wordpress-themedistjs\"\")",
+      "Bash(powershell -Command \"New-Item -ItemType SymbolicLink -Path ''C:\\\\Users\\\\treeh\\\\Local Sites\\\\treehouse-theme-preview\\\\app\\\\public\\\\wp-content\\\\themes\\\\treehouse-therapy'' -Target ''C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme''\")",
+      "Bash(cmd /c \"mklink /J \"\"C:\\\\Users\\\\treeh\\\\Local Sites\\\\treehouse-theme-preview\\\\app\\\\public\\\\wp-content\\\\themes\\\\treehouse-therapy\"\" \"\"C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\"\"\")",
+      "Bash(cmd //c \"mklink /J treehouse-therapy C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\")"
+    ]
+  }
+}

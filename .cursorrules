@@ -1,0 +1,133 @@
+# Treehouse WordPress Theme - Cursor AI Instructions
+
+## Project Context
+Premium WordPress theme for Treehouse Therapy Center (ABA therapy practice).
+Goal: Match quality of aviationaba.com, pioneersaba.com, magicalmomentsaba.com.
+
+## Current Status
+- **Completion:** 50% (Phase 6.1 complete)
+- **Current Phase:** Phase 6 - Premium Visual Upgrades
+- **Next Task:** Phase 6.2 - Add wave dividers between sections
+- **Location:** C:\Users\treeh\treehouse-wordpress-theme
+
+## CRITICAL: Read These Files First
+Before any work:
+1. Read `WORKFLOW.md` for current phase details
+2. Read `CLAUDE_INSTRUCTIONS.md` for workflow rules
+3. Check `git status` for uncommitted work
+
+## Token Management Rules
+User prefers phased execution with STOP commands:
+- Execute ONE sub-phase at a time
+- Commit after each sub-phase: `git commit -m "Description (Phase X.Y)"`
+- Brief confirmations only (1-2 sentences)
+- STOP and wait for "continue" command
+- Update WORKFLOW.md checkboxes after completion
+
+## Phase 6 Remaining Tasks
+
+### Phase 6.2: Add Wave Dividers (15K tokens) - NEXT
+- Add wave SVG dividers between all sections in preview.html and front-page.php
+- Sections to separate: Hero→Insurance, Insurance→ABA, ABA→Services, Services→Values, Values→Process, Process→CTA
+- Use SVGs from assets/images/decorations/
+- Ensure smooth color transitions
+
+### Phase 6.3: Replace Emojis with SVG Icons (20K tokens)
+- Replace all emojis (🎯🤝💪🧠🏠📚🌍😊⭐🌱) with custom SVG icons
+- Add gradient circle containers
+- Use brand colors
+
+### Phase 6.4: Floating Elements (15K tokens)
+- Add floating clouds/leaves to hero section
+- CSS keyframe animations
+- Parallax scroll effects
+
+### Phase 6.5: Scroll Animations (10K tokens)
+- Intersection Observer setup
+- Fade-up on scroll
+- Staggered card animations
+
+### Phase 6.6: Testimonials Section (15K tokens)
+- New section after Process
+- Carousel with 3 testimonials
+- Large quotation marks
+
+### Phase 6.7: Visual Polish (10K tokens)
+- Background blob shapes
+- Layered sections
+- Enhanced shadows
+
+## Brand Standards
+**Colors:**
+- Primary Navy: #1E3A5F (text, headers, buttons)
+- Primary Orange: #E8912D (CTAs, accents)
+- Golden Yellow: #F5B041 (warm accents)
+- Teal Light: #5DADE2 (backgrounds)
+- Seafoam Green: #48C9B0 (backgrounds)
+- Deep Teal: #1A5276 (footer)
+- Cream: #FAF9F6 (main background)
+
+**Typography:**
+- Headings: Nunito (400, 500, 600, 700, 800)
+- Body: Open Sans (400, 500, 600, 700)
+
+## File Structure
+```
+assets/
+  images/decorations/   ← 21 SVG files (Phase 6.1 ✅)
+  css/tailwind.css
+  js/main.js, animations.js
+dist/
+  css/style.min.css     ← Built (22KB) ✅
+  js/*.min.js
+*.php                   ← WordPress templates
+```
+
+## Git Workflow
+After each sub-phase:
+```bash
+git add .
+git commit -m "Brief description (Phase X.Y)"
+git push origin main
+```
+
+## Response Pattern
+✅ GOOD: "Added wave dividers between 6 sections. Committed as Phase 6.2."
+❌ BAD: "I've added beautiful wave dividers that create smooth organic transitions between each section using the SVG files we created earlier..."
+
+## Build Commands
+```bash
+npm install          # Install dependencies
+npm run dev         # Watch mode
+npm run build       # Production build
+npm run build:js    # Build JavaScript
+```
+
+## Quality Targets
+- Visual quality must match aviationaba.com
+- Lighthouse Performance: 90+
+- Lighthouse Accessibility: 95+
+- Perfect mobile responsive
+- Smooth 60fps animations
+
+## Reference Sites (Quality Benchmark)
+- https://aviationaba.com
+- https://pioneersaba.com
+- https://magicalmomentsaba.com
+
+## Contact Info
+**Treehouse Therapy Center**
+- Phone: (612) 309-4135 / (651) 765-7444
+- Email: info@treehousetherapymn.com
+- Location: Minneapolis/St. Paul, Minnesota
+
+## Next Session Command
+When ready to continue:
+```
+Read WORKFLOW.md. Continue with Phase 6.2 (wave dividers).
+Remember to STOP after completion.
+```
+
+---
+Last Updated: January 8, 2026, 9:45 PM
+Next Task: Phase 6.2 - Add wave dividers between sections

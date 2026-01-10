@@ -9,7 +9,8 @@ get_header();
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section relative overflow-hidden bg-gradient-to-br from-cream-bg to-teal-light/10 pt-32 pb-20 px-4">
-    <!-- Background Blob Shapes -->
+    <!-- Background Blob Shapes - REMOVED (Aviation ABA uses clean, minimal backgrounds) -->
+    <!-- 
     <div class="absolute -top-20 -right-20 w-64 h-64 opacity-10 pointer-events-none z-0">
         <svg viewBox="0 0 200 200">
             <defs>
@@ -32,8 +33,10 @@ get_header();
             <path d="M39.9,-48.1C52.6,-38.7,64.3,-27.4,69.5,-13.2C74.7,1,73.4,18.1,65.8,31.8C58.2,45.5,44.3,55.8,29,62.4C13.7,69,-3,71.9,-19.5,68.7C-36,65.5,-52.3,56.2,-62.1,42.4C-71.9,28.6,-75.2,10.3,-72.1,-6.5C-69,-23.3,-59.5,-38.6,-46.4,-47.9C-33.3,-57.2,-16.7,-60.5,-1.3,-59C14.1,-57.5,27.2,-57.5,39.9,-48.1Z" transform="translate(100 100)" fill="url(#blobGrad2)"/>
         </svg>
     </div>
+    -->
 
-    <!-- Floating Decorative Elements -->
+    <!-- Floating Decorative Elements - REMOVED (Aviation ABA doesn't use animated floating elements) -->
+    <!-- 
     <div class="floating-element float-slow top-24 left-[5%] w-24 h-16 text-teal-light/10">
         <svg viewBox="0 0 100 60" fill="currentColor">
             <ellipse cx="30" cy="40" rx="20" ry="15"/>
@@ -69,6 +72,7 @@ get_header();
             <path d="M25,5 Q45,25 40,50 Q35,70 25,75 Q15,70 10,50 Q5,25 25,5 Z"/>
         </svg>
     </div>
+    -->
 
     <div class="container-custom relative z-10">
         <div class="grid lg:grid-cols-2 gap-12 items-center">
@@ -397,106 +401,37 @@ get_header();
             <p data-animate="fade-up" class="text-xl text-text-medium">Real stories from real families</p>
         </div>
 
-        <div class="relative max-w-4xl mx-auto">
-            <!-- Testimonial Carousel Container -->
-            <div class="testimonial-carousel" data-animate="fade-up">
-                <!-- Testimonial 1 -->
-                <div class="testimonial-slide active">
-                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-premium-lg relative">
-                        <div class="absolute top-6 left-6 text-6xl md:text-8xl text-primary-orange/20 font-serif leading-none">"</div>
-                        
-                        <div class="relative z-10 pt-8">
-                            <p class="text-xl md:text-2xl text-text-dark leading-relaxed mb-8 italic">
-                                Treehouse Therapy has been a blessing for our family. The therapists are patient, caring, and truly understand our son's needs. We've seen incredible progress in his communication skills.
-                            </p>
-                            
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-primary-orange to-golden-yellow flex items-center justify-center">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="white"/>
-                                        <path d="M12 14C7.58 14 4 16.69 4 20V22H20V20C20 16.69 16.42 14 12 14Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="font-nunito font-bold text-primary-navy text-lg">Sarah M.</p>
-                                    <p class="text-text-medium">Parent, Minneapolis</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 2 -->
-                <div class="testimonial-slide">
-                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-premium-lg relative">
-                        <div class="absolute top-6 left-6 text-6xl md:text-8xl text-teal-light/20 font-serif leading-none">"</div>
-                        
-                        <div class="relative z-10 pt-8">
-                            <p class="text-xl md:text-2xl text-text-dark leading-relaxed mb-8 italic">
-                                The team at Treehouse made the entire process seamless. From insurance verification to the personalized therapy plan, they were professional and supportive every step of the way.
-                            </p>
-                            
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-teal-light to-seafoam-green flex items-center justify-center">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="white"/>
-                                        <path d="M12 14C7.58 14 4 16.69 4 20V22H20V20C20 16.69 16.42 14 12 14Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="font-nunito font-bold text-primary-navy text-lg">Michael & Jennifer T.</p>
-                                    <p class="text-text-medium">Parents, St. Paul</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Testimonial 3 -->
-                <div class="testimonial-slide">
-                    <div class="bg-white rounded-3xl p-8 md:p-12 shadow-premium-lg relative">
-                        <div class="absolute top-6 left-6 text-6xl md:text-8xl text-seafoam-green/20 font-serif leading-none">"</div>
-                        
-                        <div class="relative z-10 pt-8">
-                            <p class="text-xl md:text-2xl text-text-dark leading-relaxed mb-8 italic">
-                                We couldn't be happier with the progress our daughter has made. The in-home therapy approach has been perfect for her, and the therapists have become like family to us.
-                            </p>
-                            
-                            <div class="flex items-center gap-4">
-                                <div class="w-16 h-16 rounded-full bg-gradient-to-br from-seafoam-green to-primary-orange flex items-center justify-center">
-                                    <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none">
-                                        <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12Z" fill="white"/>
-                                        <path d="M12 14C7.58 14 4 16.69 4 20V22H20V20C20 16.69 16.42 14 12 14Z" fill="white"/>
-                                    </svg>
-                                </div>
-                                <div>
-                                    <p class="font-nunito font-bold text-primary-navy text-lg">Amanda R.</p>
-                                    <p class="text-text-medium">Parent, Bloomington</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+        <!-- Testimonials Grid - SIMPLIFIED to static grid (Aviation ABA style) -->
+        <div class="grid md:grid-cols-3 gap-8" data-animate="fade-up">
+            <!-- Testimonial 1 -->
+            <div class="bg-white rounded-2xl p-6 shadow-md">
+                <div class="text-4xl text-primary-orange/30 mb-4">"</div>
+                <p class="text-text-medium mb-6 leading-relaxed">
+                    Treehouse Therapy has been a blessing for our family. The therapists are patient, caring, and truly understand our son's needs. We've seen incredible progress in his communication skills.
+                </p>
+                <p class="font-nunito font-bold text-primary-navy">- Sarah M.</p>
+                <p class="text-sm text-text-light">Parent, Minneapolis</p>
             </div>
 
-            <!-- Navigation Dots -->
-            <div class="flex justify-center gap-3 mt-8">
-                <button onclick="changeTestimonial(0)" class="testimonial-dot active"></button>
-                <button onclick="changeTestimonial(1)" class="testimonial-dot"></button>
-                <button onclick="changeTestimonial(2)" class="testimonial-dot"></button>
+            <!-- Testimonial 2 -->
+            <div class="bg-white rounded-2xl p-6 shadow-md">
+                <div class="text-4xl text-teal-light/30 mb-4">"</div>
+                <p class="text-text-medium mb-6 leading-relaxed">
+                    The team at Treehouse made the entire process seamless. From insurance verification to the personalized therapy plan, they were professional and supportive every step of the way.
+                </p>
+                <p class="font-nunito font-bold text-primary-navy">- Michael & Jennifer T.</p>
+                <p class="text-sm text-text-light">Parents, St. Paul</p>
             </div>
 
-            <!-- Arrow Navigation -->
-            <button onclick="prevTestimonial()" class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 rounded-full bg-white shadow-premium hover:shadow-premium-lg transition-all duration-300 flex items-center justify-center text-primary-navy hover:text-primary-orange">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
-                </svg>
-            </button>
-            <button onclick="nextTestimonial()" class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 rounded-full bg-white shadow-premium hover:shadow-premium-lg transition-all duration-300 flex items-center justify-center text-primary-navy hover:text-primary-orange">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                </svg>
-            </button>
+            <!-- Testimonial 3 -->
+            <div class="bg-white rounded-2xl p-6 shadow-md">
+                <div class="text-4xl text-seafoam-green/30 mb-4">"</div>
+                <p class="text-text-medium mb-6 leading-relaxed">
+                    We couldn't be happier with the progress our daughter has made. The in-home therapy approach has been perfect for her, and the therapists have become like family to us.
+                </p>
+                <p class="font-nunito font-bold text-primary-navy">- Amanda R.</p>
+                <p class="text-sm text-text-light">Parent, Bloomington</p>
+            </div>
         </div>
     </div>
 </section>

@@ -50,30 +50,26 @@
 }
 
 @layer components {
-  /* Buttons */
+  /* Buttons - SIMPLIFIED (no lift, just color change - matches Aviation ABA) */
   .btn {
-    @apply inline-flex items-center justify-center px-6 py-3 font-nunito font-semibold rounded-full focus:outline-none focus:ring-2 focus:ring-primary-orange focus:ring-offset-2;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    @apply inline-flex items-center justify-center px-6 py-3 font-nunito font-semibold rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-orange focus:ring-offset-2;
+    transition: filter 0.2s ease, background-color 0.2s ease;
   }
   
   .btn:hover {
-    transform: translateY(-2px);
-  }
-
-  .btn:active {
-    transform: translateY(0);
+    filter: brightness(1.1);
   }
   
   .btn-primary {
-    @apply text-white relative overflow-hidden;
+    @apply text-white;
     background: linear-gradient(135deg, #E8912D 0%, #d07a1a 100%);
-    box-shadow: 0 4px 6px -1px rgba(232, 145, 45, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
   }
 
   .btn-primary:hover {
-    box-shadow: 0 4px 12px rgba(232, 145, 45, 0.4);
+    background: linear-gradient(135deg, #d07a1a 0%, #E8912D 100%);
   }
 
+  /* Button shine effect - REMOVED (too fancy for Aviation ABA style)
   .btn-primary::before {
     content: '';
     position: absolute;
@@ -88,19 +84,16 @@
   .btn-primary:hover::before {
     left: 100%;
   }
-
-  .btn-primary:hover {
-    background: linear-gradient(135deg, #d07a1a 0%, #E8912D 100%);
-    box-shadow: 0 10px 15px -3px rgba(232, 145, 45, 0.5), 0 4px 6px -2px rgba(0, 0, 0, 0.08);
-  }
+  */
   
   .btn-secondary {
-    @apply bg-white text-primary-navy text-white shadow-sm;
+    @apply bg-white text-primary-navy shadow-sm;
     border: 1px solid currentColor;
+    transition: background-color 0.2s ease, color 0.2s ease;
   }
 
   .btn-secondary:hover {
-    @apply bg-primary-navy text-white shadow-md;
+    @apply bg-primary-navy text-white;
   }
   
   .btn-outline {
@@ -111,17 +104,17 @@
   .btn-md { @apply px-6 py-3 text-base; }
   .btn-lg { @apply px-8 py-4 text-lg; }
   
-  /* Cards */
+  /* Cards - SIMPLIFIED (no lift, just shadow change - matches Aviation ABA) */
   .card {
     @apply bg-white rounded-2xl shadow-md relative;
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: box-shadow 0.2s ease;
   }
 
   .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px -12px rgba(30, 58, 95, 0.15);
+    @apply shadow-lg;
   }
 
+  /* Card gradient border - REMOVED (too fancy for Aviation ABA style)
   .card::before {
     content: '';
     position: absolute;
@@ -139,21 +132,15 @@
   .card:hover::before {
     opacity: 1;
   }
-
-  .card:hover .icon-box {
-    transform: scale(1.05);
-    box-shadow: 0 8px 24px rgba(93, 173, 226, 0.3);
-  }
+  */
   
   .card-elevated {
-    @apply bg-white rounded-2xl relative;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    @apply bg-white rounded-2xl shadow-lg;
+    transition: box-shadow 0.2s ease;
   }
 
   .card-elevated:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px -12px rgba(30, 58, 95, 0.15);
+    box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.15);
   }
 
   .card-elevated::before {
@@ -174,25 +161,18 @@
     opacity: 1;
   }
 
-  /* News Card Hover Effects */
+  /* News Card Hover Effects - SIMPLIFIED (no lift, no zoom - matches Aviation ABA) */
   .news-card {
-    @apply bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 group;
+    @apply bg-white rounded-2xl shadow-md overflow-hidden;
+    transition: box-shadow 0.2s ease;
   }
 
   .news-card:hover {
-    @apply shadow-premium-lg -translate-y-1;
+    @apply shadow-lg;
   }
 
   .news-card-image {
     @apply h-48 relative overflow-hidden;
-  }
-
-  .news-card-image > div {
-    @apply transition-transform duration-500;
-  }
-
-  .news-card:hover .news-card-image > div {
-    @apply scale-105;
   }
 
   /* Form States */
@@ -213,8 +193,8 @@
     @apply translate-x-0;
   }
 
-  /* Sticky Header Transition */
-  [data-sticky-header] {
+  /* Header - SIMPLIFIED (static, no sticky transitions - matches Aviation ABA) */
+  /* [data-sticky-header] {
     @apply fixed top-0 left-0 right-0 z-50;
     transition: background-color 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
     background: transparent;
@@ -225,7 +205,7 @@
     backdrop-filter: blur(12px);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
     border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-  }
+  } */
 
   /* Progressive Image Loading */
   .img-progressive {
@@ -273,11 +253,10 @@
     background-image: var(--gradient-calm);
   }
   
-  /* Icon Boxes */
+  /* Icon Boxes - SIMPLIFIED (no scale animation - too fancy) */
   .icon-box {
     @apply w-16 h-16 rounded-full flex items-center justify-center;
     background: var(--gradient-accent);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   /* Form Elements */
@@ -325,28 +304,28 @@
     @apply opacity-100 translate-y-0;
   }
 
-  /* Floating Animations */
-  .floating-element {
+  /* Floating Animations - REMOVED for simplicity (Aviation ABA doesn't use these) */
+  /* .floating-element {
     @apply absolute pointer-events-none z-0;
     opacity: 0.15;
-  }
+  } */
 
-  /* Hero Section Stagger Animation */
+  /* Hero Section Stagger Animation - SIMPLIFIED (reduced from 30px to 16px, faster timing) */
   .hero-content > * {
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    transform: translateY(16px);
+    animation: fadeInUp 0.4s ease-out forwards;
   }
 
   .hero-content > *:nth-child(1) { animation-delay: 0s; }
-  .hero-content > *:nth-child(2) { animation-delay: 0.15s; }
-  .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
-  .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.2s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.3s; }
 
   .hero-image {
     opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+    transform: translateY(16px);
+    animation: fadeInUp 0.4s ease-out 0.3s forwards;
   }
 
   @keyframes fadeInUp {
@@ -380,6 +359,7 @@
   }
 }
 
+/* Floating animations - COMMENTED OUT (Aviation ABA doesn't use these)
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); }
   50% { transform: translateY(-20px) rotate(3deg); }
@@ -401,12 +381,13 @@
   50% { transform: translateX(0) translateY(-10px); }
   75% { transform: translateX(-10px) translateY(-5px); }
 }
+*/
 
-/* Scroll Animations */
+/* Scroll Animations - SIMPLIFIED to match Aviation ABA (reduced movement, faster) */
 [data-animate] {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(16px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 [data-animate].animated {
@@ -416,8 +397,8 @@
 
 [data-animate="fade-up"] {
   opacity: 0;
-  transform: translateY(30px);
-  transition: all 0.8s var(--ease-buoyant);
+  transform: translateY(16px);
+  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
 [data-animate="fade-up"].animated {
@@ -467,7 +448,7 @@
 [data-stagger] > *:nth-child(4) { transition-delay: 300ms; }
 [data-stagger] > *:nth-child(5) { transition-delay: 400ms; }
 
-/* Testimonial Carousel */
+/* Testimonial Carousel - REMOVED (using static grid instead - Aviation ABA style)
 .testimonial-carousel {
   position: relative;
 }
@@ -509,6 +490,7 @@
     transform: translateY(0);
   }
 }
+*/
 
 @layer utilities {
   /* Smooth Scroll */

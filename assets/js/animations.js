@@ -14,29 +14,14 @@
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
-                        // Add both classes for compatibility
+                        // Simplified - just add animated class (no stagger, matches Aviation ABA calm style)
                         entry.target.classList.add('visible');
                         entry.target.classList.add('animated');
-                        
-                        // Also animate staggered children
-                        if (entry.target.hasAttribute('data-stagger')) {
-                            entry.target.querySelectorAll('[data-animate]').forEach(child => {
-                                child.classList.add('animated');
-                            });
-                        }
-
-                        // Stagger groups with data-animate-group
-                        if (entry.target.hasAttribute('data-animate-group')) {
-                            const children = entry.target.children;
-                            Array.from(children).forEach((child, index) => {
-                                child.style.transitionDelay = (index * 0.1) + 's';
-                            });
-                        }
                     }
                 });
             }, {
-                threshold: 0.15,
-                rootMargin: '0px 0px -50px 0px'
+                threshold: 0.1,
+                rootMargin: '0px'
             });
 
             animatedElements.forEach(el => observer.observe(el));
@@ -62,9 +47,11 @@
         });
     }
 
-    // Parallax Effect for Decorative Elements (Optimized)
+    // Parallax Effect - REMOVED (Aviation ABA doesn't use parallax)
     function initParallax() {
-        const parallaxElements = document.querySelectorAll('[data-parallax]');
+        // Commented out - too fancy for Aviation ABA's calm aesthetic
+        return;
+        /* const parallaxElements = document.querySelectorAll('[data-parallax]');
         if (parallaxElements.length === 0) return;
 
         let ticking = false;
@@ -83,6 +70,7 @@
                 ticking = true;
             }
         });
+        */
     }
 
     // Counter Animation
@@ -136,11 +124,11 @@
         });
     }
 
-    // Testimonial Carousel
-    let currentTestimonial = 0;
-    let testimonialInterval;
-
+    // Testimonial Carousel - REMOVED (using static grid instead - matches Aviation ABA simplicity)
     function initTestimonialCarousel() {
+        return; // Disabled - testimonials now shown in static grid
+        /* let currentTestimonial = 0;
+        let testimonialInterval;
         const slides = document.querySelectorAll('.testimonial-slide');
         const dots = document.querySelectorAll('.testimonial-dot');
         
@@ -188,6 +176,7 @@
                 resetTestimonialInterval();
             }
         });
+        */
     }
 
     // Form Handling (Visual Only)
@@ -236,9 +225,10 @@
         });
     }
 
-    // Sticky Header Transition
+    // Sticky Header - REMOVED (Aviation ABA uses simple static header)
     function initStickyHeader() {
-        const header = document.querySelector('[data-sticky-header]');
+        return; // Disabled - not needed for Aviation ABA style
+        /* const header = document.querySelector('[data-sticky-header]');
         if (!header) return;
         
         const scrollThreshold = 50;
@@ -253,6 +243,7 @@
         
         window.addEventListener('scroll', updateHeader, { passive: true });
         updateHeader(); // Initial check
+        */
     }
 
     // Progressive Image Loading
