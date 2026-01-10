@@ -23,11 +23,11 @@
                                 <!-- Tree trunk -->
                                 <rect x="42" y="60" width="16" height="30" fill="#6E4C1E" rx="2"/>
                                 <!-- Tree canopy -->
-                                <circle cx="50" cy="45" r="30" fill="#48C9B0"/>
-                                <circle cx="35" cy="55" r="18" fill="#5DADE2"/>
-                                <circle cx="65" cy="55" r="18" fill="#5DADE2"/>
+                                <circle cx="50" cy="45" r="30" fill="#5BA89D"/>
+                                <circle cx="35" cy="55" r="18" fill="#44809B"/>
+                                <circle cx="65" cy="55" r="18" fill="#44809B"/>
                                 <!-- Heart accent -->
-                                <path d="M50 35 C45 30, 38 32, 38 40 C38 48, 50 55, 50 55 C50 55, 62 48, 62 40 C62 32, 55 30, 50 35Z" fill="#E8912D"/>
+                                <path d="M50 35 C45 30, 38 32, 38 40 C38 48, 50 55, 50 55 C50 55, 62 48, 62 40 C62 32, 55 30, 50 35Z" fill="#DA9B4D"/>
                             </svg>
                         </div>
                         <div>
@@ -41,12 +41,15 @@
                     </a>
                 </div>
 
-                <!-- Desktop Navigation -->
-                <nav class="hidden lg:flex items-center space-x-8">
+                <!-- Desktop Navigation (Upstream ABA structure) -->
+                <nav class="hidden lg:flex items-center space-x-6">
                     <a href="<?php echo home_url('/'); ?>" class="nav-link">Home</a>
                     <a href="<?php echo home_url('/about'); ?>" class="nav-link">About</a>
+                    <a href="<?php echo home_url('/process'); ?>" class="nav-link">Process</a>
                     <a href="<?php echo home_url('/services'); ?>" class="nav-link">Services</a>
+                    <a href="<?php echo home_url('/careers'); ?>" class="nav-link">Careers</a>
                     <a href="<?php echo home_url('/contact'); ?>" class="nav-link">Contact</a>
+                    <a href="<?php echo home_url('/locations'); ?>" class="nav-link">Locations</a>
                 </nav>
 
                 <!-- CTA Button (Orange Pill) -->
@@ -67,14 +70,17 @@
         </div>
     </div>
 
-    <!-- Mobile Menu -->
+    <!-- Mobile Menu (Upstream ABA structure) -->
     <div id="mobile-menu" class="mobile-menu">
         <div class="px-4 py-6 space-y-4">
             <a href="<?php echo home_url('/'); ?>" class="block py-2 text-lg font-nunito nav-link">Home</a>
             <a href="<?php echo home_url('/about'); ?>" class="block py-2 text-lg font-nunito nav-link">About</a>
+            <a href="<?php echo home_url('/process'); ?>" class="block py-2 text-lg font-nunito nav-link">Process</a>
             <a href="<?php echo home_url('/services'); ?>" class="block py-2 text-lg font-nunito nav-link">Services</a>
+            <a href="<?php echo home_url('/careers'); ?>" class="block py-2 text-lg font-nunito nav-link">Careers</a>
             <a href="<?php echo home_url('/contact'); ?>" class="block py-2 text-lg font-nunito nav-link">Contact</a>
-            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary w-full mt-4">Contact Us</a>
+            <a href="<?php echo home_url('/locations'); ?>" class="block py-2 text-lg font-nunito nav-link">Locations</a>
+            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary w-full mt-4">Get Started</a>
         </div>
     </div>
 </header>
