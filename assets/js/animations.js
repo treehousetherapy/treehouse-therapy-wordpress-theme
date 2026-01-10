@@ -225,25 +225,24 @@
         });
     }
 
-    // Sticky Header - REMOVED (Aviation ABA uses simple static header)
+    // Sticky Header - Aviation ABA Style (transparent at top, solid when scrolled)
     function initStickyHeader() {
-        return; // Disabled - not needed for Aviation ABA style
-        /* const header = document.querySelector('[data-sticky-header]');
+        const header = document.querySelector('.site-header');
         if (!header) return;
         
         const scrollThreshold = 50;
         
         function updateHeader() {
             if (window.scrollY > scrollThreshold) {
-                header.classList.add('header-scrolled');
+                header.classList.add('scrolled');
             } else {
-                header.classList.remove('header-scrolled');
+                header.classList.remove('scrolled');
             }
         }
         
+        // Use passive scroll listener for performance
         window.addEventListener('scroll', updateHeader, { passive: true });
         updateHeader(); // Initial check
-        */
     }
 
     // Progressive Image Loading
