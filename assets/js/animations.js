@@ -24,11 +24,19 @@
                                 child.classList.add('animated');
                             });
                         }
+
+                        // Stagger groups with data-animate-group
+                        if (entry.target.hasAttribute('data-animate-group')) {
+                            const children = entry.target.children;
+                            Array.from(children).forEach((child, index) => {
+                                child.style.transitionDelay = (index * 0.1) + 's';
+                            });
+                        }
                     }
                 });
             }, {
                 threshold: 0.15,
-                rootMargin: '0px 0px -10% 0px'
+                rootMargin: '0px 0px -50px 0px'
             });
 
             animatedElements.forEach(el => observer.observe(el));

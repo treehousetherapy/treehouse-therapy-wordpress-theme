@@ -39,6 +39,10 @@
     </script>
 
     <style>
+        :root {
+            --ease-buoyant: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
         body {
             font-family: 'Open Sans', sans-serif;
             background-color: #FAF9F6;
@@ -283,8 +287,8 @@
 
         [data-animate="fade-up"] {
             opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            transform: translateY(30px);
+            transition: all 0.8s var(--ease-buoyant);
         }
 
         [data-animate="fade-up"].animated {
@@ -1305,7 +1309,7 @@
             
             const observerOptions = {
                 root: null,
-                rootMargin: '0px 0px -10% 0px',
+                rootMargin: '0px 0px -50px 0px',
                 threshold: 0.15
             };
 
@@ -1317,6 +1321,14 @@
                         if (entry.target.hasAttribute('data-stagger')) {
                             entry.target.querySelectorAll('[data-animate]').forEach(child => {
                                 child.classList.add('animated');
+                            });
+                        }
+
+                        // Stagger groups with data-animate-group
+                        if (entry.target.hasAttribute('data-animate-group')) {
+                            const children = entry.target.children;
+                            Array.from(children).forEach((child, index) => {
+                                child.style.transitionDelay = (index * 0.1) + 's';
                             });
                         }
                     }

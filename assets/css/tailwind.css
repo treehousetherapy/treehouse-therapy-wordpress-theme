@@ -12,6 +12,7 @@
   --deep-teal: #1A5276;
   --tree-brown: #6E4C1E;
   --cream-bg: #FAF9F6;
+  --ease-buoyant: cubic-bezier(0.16, 1, 0.3, 1);
   --gradient-primary: linear-gradient(135deg, #1E3A5F 0%, #1A5276 100%);
   --gradient-accent: linear-gradient(135deg, #E8912D 0%, #F5B041 100%);
   --gradient-calm: linear-gradient(135deg, #5DADE2 0%, #48C9B0 100%);
@@ -292,8 +293,8 @@
 
 [data-animate="fade-up"] {
   opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  transform: translateY(30px);
+  transition: all 0.8s var(--ease-buoyant);
 }
 
 [data-animate="fade-up"].animated {
