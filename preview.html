@@ -383,6 +383,32 @@
             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
             border: 1px solid rgba(255, 255, 255, 0.5);
         }
+
+        /* Mobile Menu */
+        .mobile-menu {
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* News Card Effects */
+        .news-card {
+            transition: all 0.3s ease;
+        }
+        .news-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .news-card-image div {
+            transition: transform 0.5s ease;
+        }
+        .news-card:hover .news-card-image div {
+            transform: scale(1.05);
+        }
+
+        /* Form Success States */
+        .form-input.success {
+            border-color: #22c55e;
+            background-color: rgba(240, 253, 244, 0.5);
+        }
     </style>
 </head>
 <body class="bg-cream-bg text-text-dark">
@@ -1334,6 +1360,50 @@
                 nextTestimonial();
                 resetTestimonialInterval();
             }
+        });
+
+        // Form Handling (Visual Only)
+        document.querySelectorAll('form').forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                const originalWidth = btn.offsetWidth;
+                
+                // Loading state
+                btn.style.width = originalWidth + 'px'; // Maintain width
+                btn.innerHTML = '<svg class="animate-spin h-5 w-5 text-white mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+                btn.disabled = true;
+                
+                // Simulate success
+                setTimeout(() => {
+                    btn.innerHTML = 'Message Sent! ✓';
+                    btn.classList.add('bg-green-500', 'border-green-500');
+                    btn.classList.remove('btn-primary');
+                    
+                    // Reset form inputs visual state
+                    form.querySelectorAll('.form-input').forEach(input => {
+                        input.value = '';
+                        input.classList.remove('border-gray-200');
+                        input.classList.add('border-green-200', 'bg-green-50/50');
+                        input.classList.add('success');
+                    });
+
+                    // Reset button after delay
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        btn.classList.remove('bg-green-500', 'border-green-500');
+                        btn.classList.add('btn-primary');
+                        
+                        form.querySelectorAll('.form-input').forEach(input => {
+                            input.classList.remove('border-green-200', 'bg-green-50/50');
+                            input.classList.remove('success');
+                            input.classList.add('border-gray-200');
+                        });
+                    }, 3000);
+                }, 1500);
+            });
         });
     </script>
 

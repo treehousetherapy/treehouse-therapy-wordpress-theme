@@ -132,6 +132,45 @@
   .card-elevated:hover::before {
     opacity: 1;
   }
+
+  /* News Card Hover Effects */
+  .news-card {
+    @apply bg-white rounded-2xl shadow-md overflow-hidden transition-all duration-300 group;
+  }
+
+  .news-card:hover {
+    @apply shadow-premium-lg -translate-y-1;
+  }
+
+  .news-card-image {
+    @apply h-48 relative overflow-hidden;
+  }
+
+  .news-card-image > div {
+    @apply transition-transform duration-500;
+  }
+
+  .news-card:hover .news-card-image > div {
+    @apply scale-105;
+  }
+
+  /* Form States */
+  .form-input.success {
+    @apply border-green-500 ring-green-500/20;
+  }
+
+  .form-input.error {
+    @apply border-red-500 ring-red-500/20;
+  }
+
+  /* Mobile Menu Transitions */
+  .mobile-menu {
+    @apply fixed inset-0 z-40 bg-white transform transition-transform duration-300 ease-in-out translate-x-full lg:hidden pt-24 px-6;
+  }
+
+  .mobile-menu.active {
+    @apply translate-x-0;
+  }
   
   /* Section Containers */
   .section {

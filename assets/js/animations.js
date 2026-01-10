@@ -54,20 +54,26 @@
         });
     }
 
-    // Parallax Effect for Decorative Elements
+    // Parallax Effect for Decorative Elements (Optimized)
     function initParallax() {
         const parallaxElements = document.querySelectorAll('[data-parallax]');
-        
         if (parallaxElements.length === 0) return;
 
+        let ticking = false;
+
         window.addEventListener('scroll', function() {
-            const scrolled = window.pageYOffset;
-            
-            parallaxElements.forEach(el => {
-                const speed = el.dataset.parallax || 0.5;
-                const yPos = -(scrolled * speed);
-                el.style.transform = 'translateY(' + yPos + 'px)';
-            });
+            if (!ticking) {
+                window.requestAnimationFrame(function() {
+                    const scrolled = window.pageYOffset;
+                    parallaxElements.forEach(el => {
+                        const speed = el.dataset.parallax || 0.2;
+                        const yPos = -(scrolled * speed);
+                        el.style.transform = `translateY(${yPos}px)`;
+                    });
+                    ticking = false;
+                });
+                ticking = true;
+            }
         });
     }
 
@@ -176,6 +182,52 @@
         });
     }
 
+    // Form Handling (Visual Only)
+    function initForms() {
+        const forms = document.querySelectorAll('form');
+        
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const btn = form.querySelector('button[type="submit"]');
+                const originalText = btn.innerHTML;
+                const originalWidth = btn.offsetWidth;
+                
+                // Loading state
+                btn.style.width = originalWidth + 'px'; // Maintain width
+                btn.innerHTML = '<svg class="animate-spin h-5 w-5 text-white mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg>';
+                btn.disabled = true;
+                
+                // Simulate success
+                setTimeout(() => {
+                    btn.innerHTML = 'Message Sent! ✓';
+                    btn.classList.add('bg-green-500', 'border-green-500');
+                    btn.classList.remove('btn-primary');
+                    
+                    // Reset form inputs visual state
+                    form.querySelectorAll('.form-input').forEach(input => {
+                        input.value = '';
+                        input.classList.remove('border-gray-200');
+                        input.classList.add('border-green-200', 'bg-green-50/50');
+                    });
+
+                    // Reset button after delay
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.disabled = false;
+                        btn.classList.remove('bg-green-500', 'border-green-500');
+                        btn.classList.add('btn-primary');
+                        
+                        form.querySelectorAll('.form-input').forEach(input => {
+                            input.classList.remove('border-green-200', 'bg-green-50/50');
+                            input.classList.add('border-gray-200');
+                        });
+                    }, 3000);
+                }, 1500);
+            });
+        });
+    }
+
     // Initialize all animations
     document.addEventListener('DOMContentLoaded', function() {
         initScrollAnimations();
@@ -184,6 +236,7 @@
         initCounters();
         initFloatingElements();
         initTestimonialCarousel();
+        initForms();
     });
 
     // Re-initialize on page resize (debounced)
