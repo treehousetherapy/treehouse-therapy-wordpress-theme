@@ -494,9 +494,6 @@ get_header();
     </div>
 </section>
 
-    </div>
-</section>
-
 <!-- Wave Divider: Testimonials → In the News -->
 <div class="wave-divider bg-white">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">

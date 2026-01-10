@@ -384,15 +384,30 @@
 */
 
 /* Scroll Animations - SIMPLIFIED to match Aviation ABA (reduced movement, faster) */
+/* Scroll reveal animations - with fallback for no-JS */
 [data-animate] {
   opacity: 0;
   transform: translateY(16px);
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
 
-[data-animate].animated {
+[data-animate].animated,
+.no-js [data-animate] {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Fallback: Make visible after page load if JS fails */
+@keyframes reveal-fallback {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* If animation hasn't triggered after 2s, show content anyway */
+[data-animate]:not(.animated) {
+  animation: reveal-fallback 0.4s ease-out 2s forwards;
 }
 
 [data-animate="fade-up"] {
