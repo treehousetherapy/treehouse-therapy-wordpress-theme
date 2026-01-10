@@ -161,11 +161,20 @@
   
   /* Form Elements */
   .form-input {
-    @apply w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:border-primary-orange focus:ring-2 focus:ring-primary-orange focus:outline-none transition-all duration-200;
+    @apply w-full px-4 py-3 border-2 border-gray-200 rounded-xl focus:border-primary-orange focus:ring-2 focus:ring-primary-orange/20 focus:outline-none transition-all duration-200 bg-white/50 backdrop-blur-sm;
   }
   
   .form-label {
-    @apply block mb-2 font-nunito font-semibold text-text-dark;
+    @apply block mb-1 font-nunito font-bold text-primary-navy text-sm uppercase tracking-wide;
+  }
+
+  .form-checkbox {
+    @apply w-5 h-5 text-primary-orange border-2 border-gray-300 rounded focus:ring-primary-orange;
+  }
+
+  /* Hero Form */
+  .hero-form-container {
+    @apply bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-premium-lg border border-white/50;
   }
   
   /* Animations */

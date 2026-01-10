@@ -1,11 +1,17 @@
 # Treehouse Therapy WordPress Theme - Workflow
 
 ## Current Status
-- **Phase:** 6 - Premium Visual Upgrades ✅ COMPLETE
-- **Sub-Phase:** All sub-phases complete
-- **Completion:** 100% (Phase 6)
+- **Phase:** 7 - Aviation ABA Design Alignment
+- **Sub-Phase:** 7.1 - Hero Form & Layout Updates
+- **Completion:** 100% (Phase 7)
 
 ---
+
+## Phase 7: Aviation ABA Alignment (Design Borrowing)
+- [x] **Hero Section:** Replace static image with embedded Lead Capture Form
+- [x] **News Section:** Add "In the News" grid section for resources/blog
+- [x] **Contact Section:** Implement "Call or Text Away" section with secondary contact form
+- [x] **Functionality:** Match the high-conversion layout of Aviation ABA
 
 ## Phase 6: Premium Visual Upgrades
 

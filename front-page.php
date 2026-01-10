@@ -82,18 +82,15 @@ get_header();
                 </span>
 
                 <h1 class="text-5xl md:text-6xl lg:text-7xl font-nunito font-bold text-primary-navy mb-6 leading-tight">
-                    Building a
-                    <span class="gradient-text block">Foundation for Growth</span>
+                    Caring, Individualized
+                    <span class="gradient-text block">ABA Therapy</span>
                 </h1>
 
                 <p class="text-xl text-text-medium mb-8">
-                    Evidence-based ABA therapy delivered in the comfort of your home. Empowering families throughout the Twin Cities.
+                    We help children with autism thrive through individualized ABA therapy, delivered with heart and care throughout the Twin Cities.
                 </p>
 
                 <div class="flex flex-wrap gap-4">
-                    <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary btn-lg">
-                        Start Your Journey →
-                    </a>
                     <a href="<?php echo home_url('/services'); ?>" class="btn btn-secondary btn-lg">
                         Our Services
                     </a>
@@ -101,20 +98,39 @@ get_header();
             </div>
 
             <div class="hero-image">
-                <div class="bg-gradient-to-br from-primary-orange to-seafoam-green rounded-3xl p-12 shadow-premium-lg">
-                    <div class="bg-white/90 rounded-2xl p-8 text-center">
-                        <div class="w-16 h-16 mx-auto mb-4">
-                            <svg viewBox="0 0 64 64" fill="none">
-                                <rect x="28" y="40" width="8" height="18" rx="2" fill="#6E4C1E"/>
-                                <circle cx="32" cy="28" r="18" fill="#48C9B0"/>
-                                <circle cx="24" cy="24" r="12" fill="#5DADE2"/>
-                                <circle cx="40" cy="22" r="14" fill="#48C9B0" opacity="0.9"/>
-                                <circle cx="32" cy="18" r="10" fill="#5DADE2" opacity="0.8"/>
-                            </svg>
+                <div class="hero-form-container">
+                    <h3 class="text-2xl font-nunito font-bold text-primary-navy mb-6">Start Your Journey</h3>
+                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="space-y-4">
+                        <input type="hidden" name="action" value="submit_contact_form">
+                        <div>
+                            <label class="form-label">Full Name*</label>
+                            <input type="text" name="full_name" class="form-input" placeholder="Jane Doe" required>
                         </div>
-                        <h3 class="text-2xl font-nunito font-bold text-primary-navy mb-2">95%</h3>
-                        <p class="text-text-medium">prefer home-based therapy</p>
-                    </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="form-label">Phone*</label>
+                                <input type="tel" name="phone" class="form-input" placeholder="(555) 123-4567" required>
+                            </div>
+                            <div>
+                                <label class="form-label">Email*</label>
+                                <input type="email" name="email" class="form-input" placeholder="jane@example.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label">Insurance Provider</label>
+                            <input type="text" name="insurance" class="form-input" placeholder="e.g. Blue Cross Blue Shield">
+                        </div>
+                        <div>
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-input h-24 resize-none" placeholder="How can we help?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full text-lg">
+                            Send Message
+                        </button>
+                        <p class="text-xs text-text-light text-center mt-4">
+                            Your information is secure. We'll be in touch within 24 hours.
+                        </p>
+                    </form>
                 </div>
             </div>
         </div>
@@ -485,14 +501,86 @@ get_header();
     </div>
 </section>
 
-<!-- Wave Divider: Testimonials → CTA -->
-<div class="wave-divider bg-gradient-to-br from-teal-light/5 to-seafoam-green/5">
+    </div>
+</section>
+
+<!-- Wave Divider: Testimonials → In the News -->
+<div class="wave-divider bg-white">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
         <path d="M0,60 C240,90 480,100 720,80 C960,60 1200,40 1440,60 L1440,120 L0,120 Z" fill="#FFFFFF"/>
     </svg>
 </div>
 
-<!-- Wave Divider: Before CTA -->
+<!-- In the News Section -->
+<section id="news" class="section bg-white">
+    <div class="container-custom">
+        <div class="text-center mb-12">
+            <h2 data-animate="fade-up" class="text-5xl font-nunito font-bold text-primary-navy mb-4">In the News</h2>
+            <p data-animate="fade-up" class="text-xl text-text-medium">Latest updates and resources for families</p>
+        </div>
+
+        <div data-animate="fade-up" data-stagger class="grid md:grid-cols-3 gap-8">
+            <!-- News Item 1 -->
+            <article class="bg-white rounded-2xl shadow-md hover:shadow-premium transition-all duration-300 overflow-hidden">
+                <div class="h-48 bg-teal-light/20 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-teal-light/40">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M19 20H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v1m2 13a2 2 0 0 1-2-2V7m2 13a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-sm font-semibold text-primary-orange mb-2 block">Resources</span>
+                    <h3 class="text-xl font-nunito font-bold text-primary-navy mb-3">Naturalistic Teaching Strategies in ABA</h3>
+                    <p class="text-text-medium text-sm mb-4">Discover how learning happens naturally through play and daily routines.</p>
+                    <a href="#" class="text-primary-navy font-semibold hover:text-primary-orange flex items-center transition-colors">
+                        Read More <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- News Item 2 -->
+            <article class="bg-white rounded-2xl shadow-md hover:shadow-premium transition-all duration-300 overflow-hidden">
+                <div class="h-48 bg-primary-orange/10 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-primary-orange/30">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-sm font-semibold text-primary-orange mb-2 block">Guides</span>
+                    <h3 class="text-xl font-nunito font-bold text-primary-navy mb-3">Parent's Guide to Home-Based Therapy</h3>
+                    <p class="text-text-medium text-sm mb-4">What to expect when starting in-home ABA therapy for your child.</p>
+                    <a href="#" class="text-primary-navy font-semibold hover:text-primary-orange flex items-center transition-colors">
+                        Read More <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </article>
+
+            <!-- News Item 3 -->
+            <article class="bg-white rounded-2xl shadow-md hover:shadow-premium transition-all duration-300 overflow-hidden">
+                <div class="h-48 bg-seafoam-green/20 relative">
+                    <div class="absolute inset-0 flex items-center justify-center text-seafoam-green/40">
+                        <svg class="w-16 h-16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="p-6">
+                    <span class="text-sm font-semibold text-primary-orange mb-2 block">Team</span>
+                    <h3 class="text-xl font-nunito font-bold text-primary-navy mb-3">Meet Our Behavior Technicians</h3>
+                    <p class="text-text-medium text-sm mb-4">Get to know the dedicated professionals working with your family.</p>
+                    <a href="#" class="text-primary-navy font-semibold hover:text-primary-orange flex items-center transition-colors">
+                        Read More <span class="ml-2">→</span>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Divider: In the News → CTA -->
 <div class="wave-divider bg-white">
     <svg viewBox="0 0 1440 120" preserveAspectRatio="none" class="w-full h-[60px] md:h-[80px] lg:h-[100px]">
         <path d="M0,60 C240,90 480,100 720,80 C960,60 1200,40 1440,60 L1440,120 L0,120 Z" fill="#1E3A5F" opacity="0.3"/>
@@ -501,22 +589,99 @@ get_header();
     </svg>
 </div>
 
-<!-- CTA Section -->
-<section id="cta" class="section bg-gradient-to-r from-primary-navy to-deep-teal text-white">
-    <div class="container-custom text-center">
-        <h2 class="text-5xl font-nunito font-bold mb-6">Ready to Get Started?</h2>
-        <p class="text-xl mb-8 max-w-2xl mx-auto">Contact us today to learn how we can support your family's journey.</p>
+<!-- Contact Section (Call or Text Away) -->
+<section id="contact" class="section bg-gradient-to-r from-primary-navy to-deep-teal text-white relative overflow-hidden">
+    <!-- Decorative Dots Pattern -->
+    <div class="absolute inset-0 opacity-5 pointer-events-none">
+        <svg width="100%" height="100%">
+            <pattern id="dots" x="0" y="0" width="30" height="30" patternUnits="userSpaceOnUse">
+                <circle cx="2" cy="2" r="2" fill="white"/>
+            </pattern>
+            <rect x="0" y="0" width="100%" height="100%" fill="url(#dots)"/>
+        </svg>
+    </div>
+    
+    <div class="container-custom relative z-10">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+            <div data-animate="fade-up">
+                <h2 class="text-5xl font-nunito font-bold mb-6">We're Just a Call or Text Away</h2>
+                <p class="text-xl mb-8 leading-relaxed text-teal-light">
+                    Have questions? We're here to help your child's journey take off with clarity, care, and heart.
+                </p>
 
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="tel:6123094135" class="btn bg-white text-primary-navy hover:bg-cream-bg btn-lg inline-flex items-center gap-2">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M22 16.92V19.92C22 20.48 21.56 20.93 21 20.99C20.68 21.02 20.35 21.04 20 21.04C10.61 21.04 3 13.43 3 4.04C3 3.69 3.02 3.36 3.05 3.04C3.11 2.48 3.56 2.04 4.12 2.04H7.12C7.62 2.04 8.06 2.41 8.12 2.91C8.18 3.48 8.29 4.03 8.46 4.56C8.6 5 8.49 5.47 8.17 5.8L6.71 7.26C8.4 10.27 10.8 12.67 13.81 14.36L15.27 12.9C15.6 12.58 16.07 12.47 16.51 12.61C17.04 12.78 17.59 12.89 18.16 12.95C18.66 13.01 19.03 13.45 19.03 13.95V16.95L22 16.92Z" fill="currentColor"/>
-                </svg>
-                (612) 309-4135
-            </a>
-            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-outline border-2 border-white text-white hover:bg-white hover:text-primary-navy btn-lg">
-                Contact Us
-            </a>
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold font-nunito">Call Us</h3>
+                            <a href="tel:6123094135" class="text-lg hover:text-primary-orange transition-colors">(612) 309-4135</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold font-nunito">Email Us</h3>
+                            <a href="mailto:info@treehousetherapymn.com" class="text-lg hover:text-primary-orange transition-colors">info@treehousetherapymn.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+                            <svg class="w-6 h-6 text-primary-orange" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold font-nunito">Visit Us</h3>
+                            <p class="text-lg">Minneapolis/St. Paul, MN</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div data-animate="fade-up" data-delay="200">
+                <div class="bg-white rounded-3xl p-8 shadow-2xl text-text-dark">
+                    <h3 class="text-2xl font-nunito font-bold text-primary-navy mb-6">Send Us a Message</h3>
+                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="space-y-4">
+                        <input type="hidden" name="action" value="submit_contact_form">
+                        <div>
+                            <label class="form-label">Full Name*</label>
+                            <input type="text" name="full_name" class="form-input bg-gray-50" placeholder="Jane Doe" required>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div>
+                                <label class="form-label">Phone*</label>
+                                <input type="tel" name="phone" class="form-input bg-gray-50" placeholder="(555) 123-4567" required>
+                            </div>
+                            <div>
+                                <label class="form-label">Email*</label>
+                                <input type="email" name="email" class="form-input bg-gray-50" placeholder="jane@example.com" required>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label">Insurance Provider</label>
+                            <input type="text" name="insurance" class="form-input bg-gray-50" placeholder="e.g. Blue Cross Blue Shield">
+                        </div>
+                        <div>
+                            <label class="form-label">Message</label>
+                            <textarea name="message" class="form-input bg-gray-50 h-24 resize-none" placeholder="How can we help?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-full text-lg shadow-lg">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </section>
