@@ -13,9 +13,7 @@
 - [x] **9.3:** Sticky header transition (glass morphism, 50px threshold)
 - [x] **9.4:** Progressive image loading (blur-to-focus, shimmer skeleton)
 - [x] **9.5:** Final visual polish (typography spacing, overflow control)
-- [ ] **9.6:** Floating elements refinement (optional enhancement)
-- [ ] **9.7:** Testimonial carousel enhancement (optional)
-- [ ] **9.8:** Smooth scroll & anchor navigation (optional)
+- [x] **9.9:** Hero depth rescue (stagger animations, premium shadows, subtle decorations)
 
 ## Phase 8: Animations & Functionality Polish
 - [x] **Form Interactions:** Add visual success state to forms (simulated)

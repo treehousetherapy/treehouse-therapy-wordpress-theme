@@ -95,7 +95,12 @@
   }
   
   .btn-secondary {
-    @apply bg-white text-primary-navy border-2 border-primary-navy hover:bg-primary-navy hover:text-white shadow-sm hover:shadow-md;
+    @apply bg-white text-primary-navy text-white shadow-sm;
+    border: 1px solid currentColor;
+  }
+
+  .btn-secondary:hover {
+    @apply bg-primary-navy text-white shadow-md;
   }
   
   .btn-outline {
@@ -295,7 +300,19 @@
 
   /* Hero Form */
   .hero-form-container {
-    @apply bg-white/90 backdrop-blur-md rounded-3xl p-8 shadow-premium-lg border border-white/50;
+    @apply bg-white/90 rounded-3xl p-8 border;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 20px 50px -12px rgba(30, 58, 95, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+  }
+
+  /* Hero Typography Polish */
+  .hero-content h1 {
+    line-height: 1.1;
+  }
+
+  .hero-content p {
+    max-width: 500px;
   }
   
   /* Animations */
@@ -311,7 +328,32 @@
   /* Floating Animations */
   .floating-element {
     @apply absolute pointer-events-none z-0;
-    opacity: 0.6;
+    opacity: 0.15;
+  }
+
+  /* Hero Section Stagger Animation */
+  .hero-content > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .hero-content > *:nth-child(1) { animation-delay: 0s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.15s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+
+  .hero-image {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s forwards;
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 
   .float {
