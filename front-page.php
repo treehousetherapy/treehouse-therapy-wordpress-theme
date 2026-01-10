@@ -12,12 +12,12 @@ get_header();
     <!-- Static Cloud Graphics (Aviation ABA - low opacity, decorative only) -->
     <div class="absolute top-20 right-[8%] w-64 h-40 pointer-events-none z-0 opacity-15">
         <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30,60 Q20,40 40,35 Q45,20 65,25 Q80,15 95,25 Q110,20 120,30 Q135,25 145,35 Q165,30 170,45 Q180,50 170,60 Q175,70 165,75 L35,75 Q25,70 30,60 Z" fill="#5DADE2"/>
+            <path d="M30,60 Q20,40 40,35 Q45,20 65,25 Q80,15 95,25 Q110,20 120,30 Q135,25 145,35 Q165,30 170,45 Q180,50 170,60 Q175,70 165,75 L35,75 Q25,70 30,60 Z" fill="#44809B"/>
         </svg>
     </div>
     <div class="absolute bottom-16 left-[3%] w-48 h-32 pointer-events-none z-0 opacity-12">
         <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M25,65 Q15,45 35,40 Q40,25 60,30 Q75,20 90,30 Q105,25 115,35 Q130,30 140,40 Q160,35 165,50 Q175,55 165,65 Q170,75 160,80 L30,80 Q20,75 25,65 Z" fill="#48C9B0"/>
+            <path d="M25,65 Q15,45 35,40 Q40,25 60,30 Q75,20 90,30 Q105,25 115,35 Q130,30 140,40 Q160,35 165,50 Q175,55 165,65 Q170,75 160,80 L30,80 Q20,75 25,65 Z" fill="#5BA89D"/>
         </svg>
     </div>
     <div class="absolute top-[50%] right-[25%] w-40 h-28 pointer-events-none z-0 opacity-10">
@@ -154,28 +154,28 @@ get_header();
         </div>
         <div class="grid md:grid-cols-4 gap-8">
             <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                <div class="icon-box-blue mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+                <div class="icon-box-blue mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M9 12L11 14L15 10M21 12C21 16.97 16.97 21 12 21C7.03 21 3 16.97 3 12C3 7.03 7.03 3 12 3C16.97 3 21 7.03 21 12Z" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-3" style="color: #333;">Evidence-Based</h3>
                 <p style="color: #666;">Backed by decades of scientific research and proven outcomes</p>
             </div>
             <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                <div class="icon-box-purple mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #E8912D, #1E3A5F); display: flex; align-items: center; justify-content: center;">
+                <div class="icon-box-purple mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #DA9B4D, #242E3C); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M16 7C16 9.21 14.21 11 12 11C9.79 11 8 9.21 8 7C8 4.79 9.79 3 12 3C14.21 3 16 4.79 16 7Z" stroke="white" stroke-width="2"/><path d="M12 14C8.13 14 5 17.13 5 21H19C19 17.13 15.87 14 12 14Z" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-3" style="color: #333;">Individualized Plans</h3>
                 <p style="color: #666;">Customized therapy tailored to each child unique needs and goals</p>
             </div>
             <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                <div class="icon-box-blue mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+                <div class="icon-box-blue mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M17 20H22V18C22 16.34 20.66 15 19 15M17 20H7M17 20V18C17 17.34 16.87 16.72 16.64 16.14M7 20H2V18C2 16.34 3.34 15 5 15M7 20V18C7 17.34 7.13 16.72 7.36 16.14M15 7C15 8.66 13.66 10 12 10C10.34 10 9 8.66 9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7Z" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-3" style="color: #333;">Family Involvement</h3>
                 <p style="color: #666;">Parents and caregivers are active partners in the therapy process</p>
             </div>
             <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; text-align: center; box-shadow: 0 10px 40px rgba(0,0,0,0.1);">
-                <div class="icon-box-purple mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #E8912D, #1E3A5F); display: flex; align-items: center; justify-content: center;">
+                <div class="icon-box-purple mx-auto mb-4" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #DA9B4D, #242E3C); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M16 8V16M12 11V16M8 14V16M6 20H18C19.1 20 20 19.1 20 18V6C20 4.9 19.1 4 18 4H6C4.9 4 4 4.9 4 6V18C4 19.1 4.9 20 6 20Z" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-xl font-bold mb-3" style="color: #333;">Measurable Progress</h3>
@@ -197,33 +197,33 @@ get_header();
 <section id="services" class="section relative overflow-hidden" style="background: #FFFFFF; padding: 80px 0;">
     <div class="container-custom">
         <div class="text-center mb-12">
-            <h2 class="text-5xl font-bold mb-4" style="color: #1E3A5F;">Our Services</h2>
+            <h2 class="text-5xl font-bold mb-4" style="color: #242E3C;">Our Services</h2>
             <p class="text-xl" style="color: #666;">Comprehensive ABA therapy tailored to your family needs</p>
         </div>
         <div class="grid md:grid-cols-3 gap-8">
-            <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #1E3A5F;">
-                <div class="icon-box-blue mb-6" style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+            <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #242E3C;">
+                <div class="icon-box-blue mb-6" style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M3 10L12 3L21 10V20C21 20.55 20.55 21 20 21H4C3.45 21 3 20.55 3 20V10Z" stroke="white" stroke-width="2"/><path d="M9 21V12H15V21" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="color: #333;">In-Home ABA Therapy</h3>
                 <p class="mb-6" style="color: #666;">Personalized one-on-one therapy sessions conducted in the comfort and familiarity of your home environment.</p>
-                <a href="<?php echo home_url("/services"); ?>" class="font-semibold" style="color: #1E3A5F;">Learn more &rarr;</a>
+                <a href="<?php echo home_url("/services"); ?>" class="font-semibold" style="color: #242E3C;">Learn more &rarr;</a>
             </div>
-            <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #E8912D;">
-                <div class="icon-box-purple mb-6" style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #E8912D, #1E3A5F); display: flex; align-items: center; justify-content: center;">
+            <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #DA9B4D;">
+                <div class="icon-box-purple mb-6" style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #DA9B4D, #242E3C); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M19 21V5C19 3.9 18.1 3 17 3H7C5.9 3 5 3.9 5 5V21M3 21H21M9 7H10M9 11H10M14 7H15M14 11H15M9 21V16H15V21" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="color: #333;">Center-Based Therapy</h3>
                 <p class="mb-6" style="color: #666;">Structured learning environment designed to help children develop social skills and thrive in group settings.</p>
-                <a href="<?php echo home_url("/services"); ?>" class="font-semibold" style="color: #E8912D;">Learn more &rarr;</a>
+                <a href="<?php echo home_url("/services"); ?>" class="font-semibold" style="color: #DA9B4D;">Learn more &rarr;</a>
             </div>
-            <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #1E3A5F;">
-                <div class="icon-box-blue mb-6" style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+            <div class="card-elevated" style="background: white; border-radius: 16px; padding: 32px; box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-top: 4px solid #242E3C;">
+                <div class="icon-box-blue mb-6" style="width: 64px; height: 64px; border-radius: 16px; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-8 h-8" viewBox="0 0 24 24" fill="none"><path d="M17 20H22V18C22 16.34 20.66 15 19 15M17 20H7M17 20V18M7 20H2V18C2 16.34 3.34 15 5 15M7 20V18M15 7C15 8.66 13.66 10 12 10C10.34 10 9 8.66 9 7C9 5.34 10.34 4 12 4C13.66 4 15 5.34 15 7Z" stroke="white" stroke-width="2"/></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="color: #333;">Parent Training</h3>
                 <p class="mb-6" style="color: #666;">Empowering parents with the knowledge and techniques to support their child progress at home.</p>
-                <a href="<?php echo home_url("/services"); ?>" class="font-semibold" style="color: #1E3A5F;">Learn more &rarr;</a>
+                <a href="<?php echo home_url("/services"); ?>" class="font-semibold" style="color: #242E3C;">Learn more &rarr;</a>
             </div>
         </div>
     </div>
@@ -246,21 +246,21 @@ get_header();
         </div>
         <div class="grid md:grid-cols-3 gap-12 text-center">
             <div>
-                <div class="mx-auto mb-6" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M12 21.35L10.55 20.03C5.4 15.36 2 12.27 2 8.5C2 5.41 4.42 3 7.5 3C9.24 3 10.91 3.81 12 5.08C13.09 3.81 14.76 3 16.5 3C19.58 3 22 5.41 22 8.5C22 12.27 18.6 15.36 13.45 20.03L12 21.35Z" fill="white"/></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="color: #333;">Compassionate Care</h3>
                 <p style="color: #666;">Our team genuinely cares about each child and family we serve, creating a warm and supportive environment.</p>
             </div>
             <div>
-                <div class="mx-auto mb-6" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #E8912D, #1E3A5F); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #DA9B4D, #242E3C); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M12 2L14.5 9H22L16 14L18.5 21L12 17L5.5 21L8 14L2 9H9.5L12 2Z" fill="white"/></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="color: #333;">Expert Team</h3>
                 <p style="color: #666;">Board-certified behavior analysts (BCBAs) and trained therapists with years of experience and ongoing education.</p>
             </div>
             <div>
-                <div class="mx-auto mb-6" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 80px; height: 80px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <svg class="w-10 h-10" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" fill="white"/></svg>
                 </div>
                 <h3 class="text-2xl font-bold mb-4" style="color: #333;">Proven Results</h3>
@@ -282,33 +282,33 @@ get_header();
 <section id="process" class="section" style="background: #FFFFFF; padding: 80px 0;">
     <div class="container-custom">
         <div class="text-center mb-12">
-            <h2 class="text-5xl font-bold mb-6" style="color: #1E3A5F;">Getting Started is Easy</h2>
+            <h2 class="text-5xl font-bold mb-6" style="color: #242E3C;">Getting Started is Easy</h2>
             <p class="text-xl" style="color: #666;">Four simple steps to begin your child journey</p>
         </div>
         <div class="grid md:grid-cols-4 gap-8 text-center">
             <div>
-                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <span class="text-2xl font-bold" style="color: white;">1</span>
                 </div>
                 <h3 class="text-xl font-bold mb-4" style="color: #333;">Free Consultation</h3>
                 <p style="color: #666;">Contact us to discuss your child needs and learn about our services.</p>
             </div>
             <div>
-                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #E8912D, #1E3A5F); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #DA9B4D, #242E3C); display: flex; align-items: center; justify-content: center;">
                     <span class="text-2xl font-bold" style="color: white;">2</span>
                 </div>
                 <h3 class="text-xl font-bold mb-4" style="color: #333;">Insurance Verification</h3>
                 <p style="color: #666;">We handle all the paperwork and verify your insurance benefits.</p>
             </div>
             <div>
-                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D); display: flex; align-items: center; justify-content: center;">
                     <span class="text-2xl font-bold" style="color: white;">3</span>
                 </div>
                 <h3 class="text-xl font-bold mb-4" style="color: #333;">Comprehensive Assessment</h3>
                 <p style="color: #666;">Our BCBA conducts a thorough assessment to create a personalized plan.</p>
             </div>
             <div>
-                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #E8912D, #1E3A5F); display: flex; align-items: center; justify-content: center;">
+                <div class="mx-auto mb-6" style="width: 64px; height: 64px; border-radius: 50%; background: linear-gradient(135deg, #DA9B4D, #242E3C); display: flex; align-items: center; justify-content: center;">
                     <span class="text-2xl font-bold" style="color: white;">4</span>
                 </div>
                 <h3 class="text-xl font-bold mb-4" style="color: #333;">Begin Therapy</h3>
@@ -338,7 +338,7 @@ get_header();
                 <div class="text-5xl mb-4" style="color: rgba(6, 147, 227, 0.3);">"</div>
                 <p class="mb-6 leading-relaxed" style="color: #666;">The team at Aviation ABA has been incredible. Our son has made more progress in six months than we ever thought possible. The therapists are patient, skilled, and truly care about our family.</p>
                 <div class="flex items-center gap-3">
-                    <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D);"></div>
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D);"></div>
                     <div>
                         <p class="font-bold" style="color: #333;">Sarah M.</p>
                         <p class="text-sm" style="color: #999;">Parent</p>
@@ -349,7 +349,7 @@ get_header();
                 <div class="text-5xl mb-4" style="color: rgba(155, 81, 224, 0.3);">"</div>
                 <p class="mb-6 leading-relaxed" style="color: #666;">From the very first consultation, we felt supported and understood. The individualized approach has helped our daughter develop communication skills we never thought possible.</p>
                 <div class="flex items-center gap-3">
-                    <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #E8912D, #1E3A5F);"></div>
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #DA9B4D, #242E3C);"></div>
                     <div>
                         <p class="font-bold" style="color: #333;">Michael T.</p>
                         <p class="text-sm" style="color: #999;">Parent</p>
@@ -360,7 +360,7 @@ get_header();
                 <div class="text-5xl mb-4" style="color: rgba(6, 147, 227, 0.3);">"</div>
                 <p class="mb-6 leading-relaxed" style="color: #666;">The progress reports and parent training sessions have been invaluable. We now have the tools to support our son at home, and we have seen remarkable improvements in his daily life skills.</p>
                 <div class="flex items-center gap-3">
-                    <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #1E3A5F, #E8912D);"></div>
+                    <div style="width: 48px; height: 48px; border-radius: 50%; background: linear-gradient(135deg, #242E3C, #DA9B4D);"></div>
                     <div>
                         <p class="font-bold" style="color: #333;">Jennifer L.</p>
                         <p class="text-sm" style="color: #999;">Parent</p>
@@ -391,7 +391,7 @@ get_header();
                 <div class="space-y-6">
                     <div class="flex items-start gap-4">
                         <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <svg class="w-6 h-6" style="color: #1E3A5F;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                            <svg class="w-6 h-6" style="color: #242E3C;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold">Call Us</h3>
@@ -400,7 +400,7 @@ get_header();
                     </div>
                     <div class="flex items-start gap-4">
                         <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <svg class="w-6 h-6" style="color: #E8912D;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                            <svg class="w-6 h-6" style="color: #DA9B4D;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold">Email Us</h3>
@@ -409,7 +409,7 @@ get_header();
                     </div>
                     <div class="flex items-start gap-4">
                         <div style="width: 48px; height: 48px; border-radius: 50%; background: rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: center; flex-shrink: 0;">
-                            <svg class="w-6 h-6" style="color: #1E3A5F;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                            <svg class="w-6 h-6" style="color: #242E3C;" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
                         </div>
                         <div>
                             <h3 class="text-xl font-bold">Visit Us</h3>
@@ -445,7 +445,7 @@ get_header();
                             <label class="form-label" style="display: block; margin-bottom: 6px; font-weight: 600; color: #333;">Message</label>
                             <textarea name="message" class="form-input" style="width: 100%; padding: 12px 16px; border: 1px solid #ddd; border-radius: 8px; background: #f8f9fa; height: 100px; resize: none;" placeholder="How can we help?"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #1E3A5F, #E8912D); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">Request Free Consultation</button>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; padding: 16px; background: linear-gradient(135deg, #242E3C, #DA9B4D); color: white; border: none; border-radius: 8px; font-size: 18px; font-weight: 600; cursor: pointer;">Request Free Consultation</button>
                     </form>
                 </div>
             </div>

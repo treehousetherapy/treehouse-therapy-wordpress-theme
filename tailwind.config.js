@@ -8,25 +8,28 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Aviation ABA EXACT color palette (from video analysis)
-        'primary-navy': '#1E3A5F',        // Headings, footer bg
-        'primary-orange': '#E8912D',      // Buttons, CTAs
-        'golden-yellow': '#F5B041',       // Gradient end
-        'teal-light': '#5DADE2',          // Sky accents, icons
-        'seafoam-green': '#48C9B0',       // Secondary accent
-        'deep-teal': '#1A5276',           // Footer gradient
-        'cream-bg': '#FAF9F6',            // Off-white background (NOT pure white)
+        // TREEHOUSE THERAPY CENTER - Final Color Palette
+        // Based on Upstream ABA structure with Treehouse branding
+        'primary-navy': '#242E3C',        // Text, headers, nav, footer
+        'primary-orange': '#DA9B4D',      // CTAs, accents, emphasis
+        'accent-teal': '#44809B',         // Icons, subtle accents
+        'golden-yellow': '#E8B84D',       // Warm accent (lighter orange)
+        // Backgrounds
+        'cream-bg': '#FAFAFA',            // Off-white background
+        'gray-light': '#F5F5F5',          // Light gray sections
         'white': '#FFFFFF',               // Pure white for cards
         // Text colors
-        'text-dark': '#1E3A5F',           // Primary text (matches navy)
+        'text-dark': '#242E3C',           // Primary text (matches navy)
         'text-medium': '#5A6672',         // Secondary text
         'text-light': '#8A9AAA',          // Muted text
         // Utility
         'error-red': '#E53E3E',
         'success-green': '#38A169',
         // Legacy aliases (for backward compatibility)
-        'dark-navy': '#1E3A5F',
-        'tree-brown': '#6E4C1E',
+        'dark-navy': '#242E3C',
+        'teal-light': '#44809B',
+        'seafoam-green': '#5BA89D',
+        'deep-teal': '#3A6F85',
       },
       fontFamily: {
         'nunito': ['Nunito', 'sans-serif'],

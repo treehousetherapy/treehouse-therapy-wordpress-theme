@@ -3,33 +3,36 @@
 @tailwind utilities;
 
 /* ============================================
-   AVIATION ABA EXACT DESIGN TOKENS
-   From video analysis specification
+   TREEHOUSE THERAPY CENTER - DESIGN TOKENS
+   Upstream ABA structure + Treehouse branding
    ============================================ */
 :root {
   /* Primary Colors */
-  --primary-navy: #1E3A5F;
-  --primary-orange: #E8912D;
-  --golden-yellow: #F5B041;
-  
-  /* Sky Accents */
-  --teal-light: #5DADE2;
-  --seafoam-green: #48C9B0;
-  --deep-teal: #1A5276;
+  --primary-navy: #242E3C;      /* Text, headers, nav */
+  --primary-orange: #DA9B4D;    /* CTAs, accents */
+  --accent-teal: #44809B;       /* Icons, subtle accents */
+  --golden-yellow: #E8B84D;     /* Warm accent */
   
   /* Backgrounds */
-  --cream-bg: #FAF9F6;        /* NOT pure white - off-white */
+  --cream-bg: #FAFAFA;
+  --gray-light: #F5F5F5;
   --pure-white: #FFFFFF;
   
-  /* Gradients */
-  --gradient-orange: linear-gradient(135deg, #E8912D 0%, #F5B041 100%);
-  --gradient-navy: linear-gradient(135deg, #1E3A5F 0%, #1A5276 100%);
+  /* Text */
+  --text-dark: #242E3C;
+  --text-medium: #5A6672;
+  --text-light: #8A9AAA;
   
-  /* Buoyant Shadows (blue-tinted) */
-  --shadow-card: 0 10px 40px -10px rgba(30, 58, 95, 0.1);
-  --shadow-card-hover: 0 20px 60px -15px rgba(30, 58, 95, 0.2);
-  --shadow-form: 0 20px 50px -12px rgba(30, 58, 95, 0.15);
-  --shadow-button: 0 4px 12px rgba(232, 145, 45, 0.3);
+  /* Gradients */
+  --gradient-orange: linear-gradient(135deg, #DA9B4D 0%, #E8B84D 100%);
+  --gradient-navy: linear-gradient(135deg, #242E3C 0%, #3A4A5C 100%);
+  --gradient-teal: linear-gradient(135deg, #44809B 0%, #5BA89D 100%);
+  
+  /* Shadows (subtle, professional) */
+  --shadow-card: 0 10px 40px -10px rgba(36, 46, 60, 0.08);
+  --shadow-card-hover: 0 20px 60px -15px rgba(36, 46, 60, 0.15);
+  --shadow-form: 0 20px 50px -12px rgba(36, 46, 60, 0.12);
+  --shadow-button: 0 4px 12px rgba(218, 155, 77, 0.25);
   
   /* Animation */
   --ease-buoyant: cubic-bezier(0.16, 1, 0.3, 1);
