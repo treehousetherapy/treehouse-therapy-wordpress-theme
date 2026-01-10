@@ -236,6 +236,54 @@
         });
     }
 
+    // Sticky Header Transition
+    function initStickyHeader() {
+        const header = document.querySelector('[data-sticky-header]');
+        if (!header) return;
+        
+        const scrollThreshold = 50;
+        
+        function updateHeader() {
+            if (window.scrollY > scrollThreshold) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        }
+        
+        window.addEventListener('scroll', updateHeader, { passive: true });
+        updateHeader(); // Initial check
+    }
+
+    // Progressive Image Loading
+    function initProgressiveImages() {
+        const images = document.querySelectorAll('img[data-src]');
+        
+        if (images.length === 0) return;
+        
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('img-progressive');
+                    
+                    img.onload = () => {
+                        img.classList.add('loaded');
+                        img.classList.remove('img-skeleton');
+                    };
+                    
+                    imageObserver.unobserve(img);
+                }
+            });
+        }, { rootMargin: '50px' });
+        
+        images.forEach(img => {
+            img.classList.add('img-skeleton');
+            imageObserver.observe(img);
+        });
+    }
+
     // Initialize all animations
     document.addEventListener('DOMContentLoaded', function() {
         initScrollAnimations();
@@ -245,6 +293,8 @@
         initFloatingElements();
         initTestimonialCarousel();
         initForms();
+        initStickyHeader();
+        initProgressiveImages();
     });
 
     // Re-initialize on page resize (debounced)
