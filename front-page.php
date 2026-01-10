@@ -9,6 +9,30 @@ get_header();
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section relative overflow-hidden bg-gradient-to-br from-cream-bg to-teal-light/10 pt-32 pb-20 px-4">
+    <!-- Background Blob Shapes -->
+    <div class="absolute top-0 right-0 w-96 h-96 opacity-30 pointer-events-none">
+        <svg viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="blobGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#48C9B0" stop-opacity="0.6"/>
+                    <stop offset="100%" stop-color="#5DADE2" stop-opacity="0.3"/>
+                </linearGradient>
+            </defs>
+            <path d="M44.5,-51.4C59.1,-41.8,73.3,-28.6,77.8,-12.4C82.4,3.8,77.3,23,66.3,37.3C55.3,51.6,38.4,61,20.5,67.1C2.6,73.2,-16.3,75.9,-32.7,70.1C-49.1,64.3,-63,50,-71.2,32.7C-79.4,15.4,-81.9,-4.9,-76.1,-22.7C-70.3,-40.5,-56.2,-55.8,-40.3,-65.1C-24.4,-74.4,-6.7,-77.7,8.5,-73.5C23.7,-69.3,29.9,-61,44.5,-51.4Z" transform="translate(100 100)" fill="url(#blobGrad1)"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-0 left-0 w-80 h-80 opacity-20 pointer-events-none">
+        <svg viewBox="0 0 200 200">
+            <defs>
+                <linearGradient id="blobGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#E8912D" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#F5B041" stop-opacity="0.2"/>
+                </linearGradient>
+            </defs>
+            <path d="M39.9,-48.1C52.6,-38.7,64.3,-27.4,69.5,-13.2C74.7,1,73.4,18.1,65.8,31.8C58.2,45.5,44.3,55.8,29,62.4C13.7,69,-3,71.9,-19.5,68.7C-36,65.5,-52.3,56.2,-62.1,42.4C-71.9,28.6,-75.2,10.3,-72.1,-6.5C-69,-23.3,-59.5,-38.6,-46.4,-47.9C-33.3,-57.2,-16.7,-60.5,-1.3,-59C14.1,-57.5,27.2,-57.5,39.9,-48.1Z" transform="translate(100 100)" fill="url(#blobGrad2)"/>
+        </svg>
+    </div>
+
     <!-- Floating Decorative Elements -->
     <div class="floating-element float-slow top-24 left-[5%] w-24 h-16 text-teal-light/40">
         <svg viewBox="0 0 100 60" fill="currentColor">
