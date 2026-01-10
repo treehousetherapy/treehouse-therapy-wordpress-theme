@@ -9,6 +9,23 @@ get_header();
 
 <!-- Hero Section -->
 <section id="hero" class="hero-section relative overflow-hidden bg-gradient-to-br from-cream-bg to-teal-light/10 pt-32 pb-20 px-4">
+    <!-- Static Cloud Graphics (Aviation ABA Style) -->
+    <div class="absolute top-20 right-[10%] w-32 h-20 opacity-20 pointer-events-none z-0">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,60 Q20,40 40,35 Q45,20 65,25 Q80,15 95,25 Q110,20 120,30 Q135,25 145,35 Q165,30 170,45 Q180,50 170,60 Q175,70 165,75 L35,75 Q25,70 30,60 Z" fill="#5DADE2" opacity="0.3"/>
+        </svg>
+    </div>
+    <div class="absolute top-[30%] left-[5%] w-40 h-24 opacity-15 pointer-events-none z-0">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,65 Q15,45 35,40 Q40,25 60,30 Q75,20 90,30 Q105,25 115,35 Q130,30 140,40 Q160,35 165,50 Q175,55 165,65 Q170,75 160,80 L30,80 Q20,75 25,65 Z" fill="#48C9B0" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-32 right-[15%] w-36 h-22 opacity-15 pointer-events-none z-0">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35,70 Q25,50 45,45 Q50,30 70,35 Q85,25 100,35 Q115,30 125,40 Q140,35 150,45 Q170,40 175,55 Q185,60 175,70 L40,70 Q30,65 35,70 Z" fill="#E8912D" opacity="0.25"/>
+        </svg>
+    </div>
+    
     <!-- Background Blob Shapes - REMOVED (Aviation ABA uses clean, minimal backgrounds) -->
     <!-- 
     <div class="absolute -top-20 -right-20 w-64 h-64 opacity-10 pointer-events-none z-0">
@@ -172,7 +189,19 @@ get_header();
 </div>
 
 <!-- What is ABA Section -->
-<section id="what-is-aba" class="section bg-teal-light/10">
+<section id="what-is-aba" class="section bg-teal-light/10 relative overflow-hidden">
+    <!-- Static Cloud Graphics -->
+    <div class="absolute top-10 right-[8%] w-36 h-20 opacity-15 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,60 Q20,40 40,35 Q45,20 65,25 Q80,15 95,25 Q110,20 120,30 Q135,25 145,35 Q165,30 170,45 Q180,50 170,60 L35,60 Q25,55 30,60 Z" fill="#48C9B0" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-20 left-[5%] w-32 h-18 opacity-12 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35,65 Q25,45 45,40 Q50,25 70,30 Q85,20 100,30 Q115,25 125,35 L30,65 Q30,60 35,65 Z" fill="#5DADE2" opacity="0.3"/>
+        </svg>
+    </div>
+    
     <div class="container-custom">
         <div class="text-center mb-16">
             <h2 class="text-5xl font-nunito font-bold text-primary-navy mb-6">What is ABA therapy?</h2>
@@ -242,7 +271,19 @@ get_header();
 </div>
 
 <!-- Services Section -->
-<section id="services" class="section bg-white">
+<section id="services" class="section bg-white relative overflow-hidden">
+    <!-- Static Cloud Graphics -->
+    <div class="absolute top-[15%] left-[3%] w-28 h-16 opacity-10 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,60 Q15,40 35,35 Q40,20 60,25 Q75,15 90,25 Q105,20 115,30 Q130,25 140,35 Q160,30 165,45 L30,60 Q20,55 25,60 Z" fill="#E8912D" opacity="0.3"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-[10%] right-[5%] w-32 h-20 opacity-12 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,65 Q20,45 40,40 Q45,25 65,30 Q80,20 95,30 Q110,25 120,35 Q135,30 145,40 L35,65 Q25,60 30,65 Z" fill="#5DADE2" opacity="0.35"/>
+        </svg>
+    </div>
+    
     <div class="container-custom">
         <div class="text-center mb-12">
             <h2 class="text-5xl font-nunito font-bold text-primary-navy mb-4">Our Services</h2>
@@ -394,7 +435,19 @@ get_header();
 </div>
 
 <!-- Testimonials Section -->
-<section id="testimonials" class="section bg-gradient-to-br from-teal-light/5 to-seafoam-green/5">
+<section id="testimonials" class="section bg-gradient-to-br from-teal-light/5 to-seafoam-green/5 relative overflow-hidden">
+    <!-- Static Cloud Graphics -->
+    <div class="absolute top-[20%] right-[10%] w-36 h-20 opacity-15 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M35,60 Q25,40 45,35 Q50,20 70,25 Q85,15 100,25 Q115,20 125,30 Q140,25 150,35 Q170,30 175,45 L40,60 Q30,55 35,60 Z" fill="#48C9B0" opacity="0.4"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-10 left-[8%] w-28 h-16 opacity-12 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,65 Q20,45 40,40 Q45,25 65,30 Q80,20 95,30 Q110,25 120,35 L35,65 Q25,60 30,65 Z" fill="#F5B041" opacity="0.3"/>
+        </svg>
+    </div>
+    
     <div class="container-custom">
         <div class="text-center mb-12">
             <h2 data-animate="fade-up" class="text-5xl font-nunito font-bold text-primary-navy mb-4">What Families Are Saying</h2>
@@ -447,7 +500,19 @@ get_header();
 </div>
 
 <!-- In the News Section -->
-<section id="news" class="section bg-white">
+<section id="news" class="section bg-white relative overflow-hidden">
+    <!-- Static Cloud Graphics -->
+    <div class="absolute top-[10%] left-[4%] w-32 h-18 opacity-10 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,60 Q15,40 35,35 Q40,20 60,25 Q75,15 90,25 Q105,20 115,30 L30,60 Q20,55 25,60 Z" fill="#5DADE2" opacity="0.35"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-[15%] right-[6%] w-36 h-20 opacity-12 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,65 Q20,45 40,40 Q45,25 65,30 Q80,20 95,30 Q110,25 120,35 Q135,30 145,40 L35,65 Q25,60 30,65 Z" fill="#48C9B0" opacity="0.3"/>
+        </svg>
+    </div>
+    
     <div class="container-custom">
         <div class="text-center mb-12">
             <h2 data-animate="fade-up" class="text-5xl font-nunito font-bold text-primary-navy mb-4">In the News</h2>
@@ -526,6 +591,18 @@ get_header();
 
 <!-- Contact Section (Call or Text Away) -->
 <section id="contact" class="section bg-gradient-to-r from-primary-navy to-deep-teal text-white relative overflow-hidden">
+    <!-- Static Cloud Graphics -->
+    <div class="absolute top-[15%] right-[5%] w-40 h-24 opacity-10 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M30,60 Q20,40 40,35 Q45,20 65,25 Q80,15 95,25 Q110,20 120,30 Q135,25 145,35 Q165,30 170,45 Q180,50 170,60 L35,60 Q25,55 30,60 Z" fill="white" opacity="0.2"/>
+        </svg>
+    </div>
+    <div class="absolute bottom-20 left-[8%] w-32 h-20 opacity-8 pointer-events-none">
+        <svg viewBox="0 0 200 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M25,65 Q15,45 35,40 Q40,25 60,30 Q75,20 90,30 Q105,25 115,35 L30,65 Q20,60 25,65 Z" fill="white" opacity="0.15"/>
+        </svg>
+    </div>
+    
     <!-- Decorative Dots Pattern -->
     <div class="absolute inset-0 opacity-5 pointer-events-none">
         <svg width="100%" height="100%">
