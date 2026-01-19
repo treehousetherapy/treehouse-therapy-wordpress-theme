@@ -1,46 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Poppins:wght@400;500;600;700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 /* ============================================
-   TREEHOUSE THERAPY CENTER - DESIGN TOKENS
-   Upstream ABA structure + Treehouse branding
+   TREEHOUSE THERAPY CENTER - "FRIENDLY SKIES"
+   Theme: Airy, calm, professional, playful
+   Child-centered wonder + safe, supportive care
    ============================================ */
 :root {
-  /* Primary Colors */
-  --primary-navy: #242E3C;      /* Text, headers, nav */
-  --primary-orange: #DA9B4D;    /* CTAs, accents */
-  --accent-teal: #44809B;       /* Icons, subtle accents */
-  --golden-yellow: #E8B84D;     /* Warm accent */
+  /* Brand Colors */
+  --brand-navy: #1A365D;        /* Primary - headers, footer, authority */
+  --brand-sky: #87CEEB;         /* Secondary - clear sky blue */
+  --brand-mist: #E0F7FA;        /* Secondary - pale sky backgrounds */
+  --brand-coral: #FF6B6B;       /* Accent - primary CTAs, warmth */
+  --brand-sun: #F4A261;         /* Accent - secondary CTAs, sunlight */
+  --brand-teal: #2A9D8F;        /* Treehouse teal - links, brand continuity */
   
-  /* Backgrounds */
-  --cream-bg: #FAFAFA;
-  --gray-light: #F5F5F5;
-  --pure-white: #FFFFFF;
+  /* Background Colors */
+  --bg-base: #FFFFFF;           /* Pure white - cards, clean sections */
+  --bg-alt: #F7F9FC;            /* Cloud grey - alternating sections */
   
-  /* Text */
-  --text-dark: #242E3C;
-  --text-medium: #5A6672;
-  --text-light: #8A9AAA;
+  /* Text Colors */
+  --text-base: #102A43;         /* Dark text - body copy */
+  --text-muted: #486581;        /* Muted text - secondary content */
+  --text-on-dark: #FFFFFF;      /* White text on dark backgrounds */
   
-  /* Gradients */
-  --gradient-orange: linear-gradient(135deg, #DA9B4D 0%, #E8B84D 100%);
-  --gradient-navy: linear-gradient(135deg, #242E3C 0%, #3A4A5C 100%);
-  --gradient-teal: linear-gradient(135deg, #44809B 0%, #5BA89D 100%);
+  /* Border */
+  --border-subtle: rgba(26, 54, 93, 0.12);
   
-  /* Shadows (subtle, professional) */
-  --shadow-card: 0 10px 40px -10px rgba(36, 46, 60, 0.08);
-  --shadow-card-hover: 0 20px 60px -15px rgba(36, 46, 60, 0.15);
-  --shadow-form: 0 20px 50px -12px rgba(36, 46, 60, 0.12);
-  --shadow-button: 0 4px 12px rgba(218, 155, 77, 0.25);
+  /* Shadows */
+  --shadow-elevation: 0 10px 30px -10px rgba(26, 54, 93, 0.15);
+  --shadow-card: 0 10px 30px -10px rgba(26, 54, 93, 0.15);
+  --shadow-card-hover: 0 20px 40px -10px rgba(26, 54, 93, 0.2);
+  --shadow-form: 0 20px 50px -12px rgba(26, 54, 93, 0.12);
+  --shadow-button: 0 4px 16px rgba(255, 107, 107, 0.3);
   
   /* Animation */
-  --ease-buoyant: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-lift: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Header + Hero */
+  --header-h: 140px;
+  --hero-bg-start: #2B2344;
+  --hero-bg-mid: #211D3A;
+  --hero-bg-end: #151B2F;
+  
+  /* Legacy aliases for backward compatibility */
+  --primary-navy: #1A365D;
+  --primary-teal: #2A9D8F;
+  --primary-orange: #F4A261;
+  --accent-coral: #FF6B6B;
+  --accent-teal: #2A9D8F;
+  --cream-bg: #F7F9FC;
+  --text-dark: #1A365D;
+  --text-medium: #486581;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    height: 100%;
   }
   
   @media (prefers-reduced-motion: reduce) {
@@ -48,14 +68,18 @@
   }
   
   body {
-    @apply font-open-sans bg-cream-bg;
-    color: var(--primary-navy);
+    font-family: "Open Sans", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    line-height: 1.6;
+    background: var(--bg-base);
+    color: var(--text-base);
+    height: 100%;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-nunito font-bold;
-    color: var(--primary-navy);
+    font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--brand-navy);
     letter-spacing: -0.02em;
+    font-weight: 700;
   }
 
   h1 { @apply text-4xl md:text-5xl lg:text-6xl; line-height: 1.1; }
@@ -66,61 +90,103 @@
   h6 { @apply text-base md:text-lg; line-height: 1.4; }
 
   p {
-    @apply text-base md:text-lg text-text-medium;
+    @apply text-base md:text-lg;
+    color: var(--text-muted);
     line-height: 1.7;
   }
 
   a {
-    color: var(--primary-orange);
+    color: inherit;
     transition: color 0.2s ease;
   }
 
-  a:hover {
-    color: var(--golden-yellow);
+  /* Background alternating helper */
+  .bg-alt {
+    background: var(--bg-alt);
   }
 }
 
 @layer components {
   /* ============================================
-     AVIATION ABA PILL BUTTONS
-     Rounded pill, flat, no shadow (only on hover)
+     FRIENDLY SKIES - PILL BUTTONS
+     Rounded pill, soft elevation, lift on hover
      ============================================ */
   .btn {
-    @apply inline-flex items-center justify-center font-nunito font-semibold;
+    @apply inline-flex items-center justify-center font-semibold text-sm;
+    font-family: "Poppins", system-ui, sans-serif;
     border-radius: 9999px;
     padding: 0.75rem 1.5rem;
-    transition: all 0.2s ease;
+    transition: all 200ms var(--ease-lift);
+    will-change: transform;
     cursor: pointer;
   }
 
+  /* Primary button - Coral (warm, inviting CTA) */
   .btn-primary {
-    @apply text-white;
-    background: var(--gradient-orange);
+    background: var(--brand-coral);
+    color: var(--text-on-dark);
+    box-shadow: var(--shadow-elevation);
   }
 
   .btn-primary:hover {
+    transform: translateY(-3px);
     box-shadow: var(--shadow-button);
-    filter: brightness(1.05);
   }
-
+  
+  /* Secondary button - Navy (authority, trust) */
   .btn-secondary {
-    @apply bg-white border-2;
-    color: var(--primary-navy);
-    border-color: var(--primary-navy);
+    background: var(--brand-navy);
+    color: var(--text-on-dark);
+    box-shadow: var(--shadow-elevation);
   }
-
+  
   .btn-secondary:hover {
-    background: var(--primary-navy);
-    @apply text-white;
+    transform: translateY(-3px);
   }
 
+  /* Ghost button - Outline style */
+  .btn-ghost {
+    background: transparent;
+    color: var(--brand-navy);
+    border: 1px solid var(--border-subtle);
+  }
+
+  .btn-ghost:hover {
+    transform: translateY(-3px);
+    background: var(--bg-alt);
+  }
+  
+  /* Sun/Orange variant */
+  .btn-sun {
+    background: var(--brand-sun);
+    color: var(--text-on-dark);
+    box-shadow: var(--shadow-elevation);
+  }
+  
+  .btn-sun:hover {
+    transform: translateY(-3px);
+  }
+
+  /* Teal variant - Treehouse brand */
+  .btn-teal {
+    background: var(--brand-teal);
+    color: var(--text-on-dark);
+    box-shadow: var(--shadow-elevation);
+  }
+
+  .btn-teal:hover {
+    transform: translateY(-3px);
+  }
+  
+  /* Legacy aliases */
   .btn-navy {
-    @apply text-white;
-    background: var(--primary-navy);
+    background: var(--brand-navy);
+    color: var(--text-on-dark);
   }
-
-  .btn-navy:hover {
-    background: var(--deep-teal);
+  
+  .btn-coral {
+    background: var(--brand-coral);
+    color: var(--text-on-dark);
   }
 
   .btn-sm { @apply px-4 py-2 text-sm; }
@@ -128,43 +194,46 @@
   .btn-lg { @apply px-8 py-4 text-lg; }
 
   /* ============================================
-     AVIATION ABA CARDS
-     Buoyant shadows, lift on hover
+     FRIENDLY SKIES CARDS
+     Soft elevation, lift on hover
      ============================================ */
   .card {
     @apply bg-white relative;
     border-radius: 24px;
-    box-shadow: var(--shadow-card);
-    transition: transform 0.3s var(--ease-buoyant), box-shadow 0.3s var(--ease-buoyant);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-elevation);
+    transition: transform 200ms var(--ease-lift), box-shadow 200ms var(--ease-lift);
   }
 
   .card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
   }
 
   .card-elevated {
     @apply bg-white;
     border-radius: 24px;
-    box-shadow: var(--shadow-card);
-    transition: transform 0.3s var(--ease-buoyant), box-shadow 0.3s var(--ease-buoyant);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-elevation);
+    transition: transform 200ms var(--ease-lift), box-shadow 200ms var(--ease-lift);
   }
 
   .card-elevated:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
   }
 
-  /* News Card - Aviation ABA style */
+  /* News Card - Friendly Skies style */
   .news-card {
     @apply bg-white overflow-hidden;
     border-radius: 24px;
-    box-shadow: var(--shadow-card);
-    transition: transform 0.3s var(--ease-buoyant), box-shadow 0.3s var(--ease-buoyant);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-elevation);
+    transition: transform 200ms var(--ease-lift), box-shadow 200ms var(--ease-lift);
   }
 
   .news-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
   }
 
@@ -176,12 +245,13 @@
   .service-card {
     @apply bg-white p-6 text-center;
     border-radius: 24px;
-    box-shadow: var(--shadow-card);
-    transition: transform 0.3s var(--ease-buoyant), box-shadow 0.3s var(--ease-buoyant);
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-elevation);
+    transition: transform 200ms var(--ease-lift), box-shadow 200ms var(--ease-lift);
   }
 
   .service-card:hover {
-    transform: translateY(-10px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
   }
 
@@ -191,15 +261,47 @@
 
   /* Icon circles in brand colors */
   .icon-circle-teal {
-    background: linear-gradient(135deg, var(--teal-light) 0%, var(--seafoam-green) 100%);
+    background: var(--brand-teal);
   }
 
-  .icon-circle-orange {
-    background: var(--gradient-orange);
+  .icon-circle-coral {
+    background: var(--brand-coral);
+  }
+
+  .icon-circle-sun {
+    background: var(--brand-sun);
   }
 
   .icon-circle-navy {
-    background: var(--gradient-navy);
+    background: var(--brand-navy);
+  }
+  
+  .icon-circle-sky {
+    background: var(--brand-mist);
+  }
+  
+  /* Legacy aliases */
+  .icon-circle-orange {
+    background: var(--brand-sun);
+  }
+  
+  /* ============================================
+     CLOUD DIVIDER
+     Soft wave between sections
+     ============================================ */
+  .cloud-divider {
+    display: block;
+    width: 100%;
+    line-height: 0;
+  }
+  
+  .cloud-divider svg {
+    display: block;
+    width: 100%;
+  }
+  
+  .cloud-divider.flip {
+    transform: rotate(180deg);
   }
 
   /* Form States */
@@ -232,33 +334,95 @@
   /* Gradient Text - Orange to Yellow (Aviation ABA) */
   .gradient-text {
     @apply bg-clip-text text-transparent;
-    background-image: var(--gradient-orange);
+    background-image: var(--gradient-teal);
+  }
+  
+  .gradient-text-coral {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-coral);
   }
 
   /* ============================================
-     AVIATION ABA HEADER
-     Transparent at top, solid white when scrolled
+     HEADER LAYOUT
      ============================================ */
   .site-header {
     @apply fixed top-0 left-0 right-0 z-50;
-    background: transparent;
+    height: var(--header-h);
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-subtle);
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
   }
 
   .site-header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.98);
     box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
   }
 
+  .site-header--hero {
+    background: transparent;
+    border-bottom: none;
+    backdrop-filter: none;
+  }
+
+  .site-header--hero.scrolled {
+    background: rgba(21, 27, 47, 0.9);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  .header-inner {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+  }
+
+  .header-logo-img {
+    height: 120px;
+    width: auto;
+    max-height: calc(var(--header-h) - 24px);
+    object-fit: contain;
+    display: block;
+  }
+
+  .nav-main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    flex: 1;
+  }
+
+  .header-cta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-shrink: 0;
+  }
+
   .nav-link {
-    @apply font-nunito font-semibold text-sm;
-    color: var(--primary-navy);
+    @apply font-semibold text-sm;
+    font-family: "Open Sans", system-ui, sans-serif;
+    color: var(--brand-navy);
     transition: color 0.2s ease;
   }
 
   .nav-link:hover {
-    color: var(--primary-orange);
+    color: var(--brand-teal);
+  }
+
+  .site-header--hero .nav-link {
+    color: rgba(255, 255, 255, 0.9);
+  }
+
+  .site-header--hero .nav-link:hover {
+    color: var(--brand-sun);
   }
 
   /* ============================================
@@ -453,6 +617,297 @@
   transform: scale(1);
 }
 
+  /* ============================================
+     BEDROCK-STYLE HERO
+     ============================================ */
+  .hero-bedrock {
+    position: relative;
+    color: var(--text-on-dark);
+    background: linear-gradient(135deg, var(--hero-bg-start) 0%, var(--hero-bg-mid) 45%, var(--hero-bg-end) 100%);
+    padding-top: calc(var(--header-h) + 32px);
+    padding-bottom: 90px;
+    min-height: 78vh;
+    overflow: hidden;
+  }
+
+  .hero-bedrock::before {
+    content: "";
+    position: absolute;
+    width: 480px;
+    height: 480px;
+    right: -120px;
+    top: -180px;
+    background: radial-gradient(circle, rgba(93, 173, 226, 0.18), transparent 70%);
+    opacity: 0.4;
+  }
+
+  .hero-bedrock::after {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    left: -180px;
+    bottom: -220px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.12), transparent 70%);
+    opacity: 0.35;
+  }
+
+  .hero-bedrock-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .hero-bedrock-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 3.5rem;
+    align-items: center;
+  }
+
+  .hero-eyebrow {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 1rem;
+  }
+
+  .hero-bedrock-title {
+    color: #ffffff;
+    font-size: clamp(2.6rem, 4.2vw, 4.4rem);
+    line-height: 1.05;
+  }
+
+  .hero-bedrock-title span {
+    display: block;
+  }
+
+  .hero-chip {
+    display: inline-block;
+    background: var(--brand-sun);
+    color: #2b2344;
+    padding: 0.15em 0.6em;
+    border-radius: 999px;
+    transform: rotate(-4deg);
+    box-shadow: 0 10px 24px rgba(244, 162, 97, 0.35);
+  }
+
+  .hero-bedrock-subhead {
+    color: rgba(255, 255, 255, 0.78);
+    max-width: 34rem;
+    margin-top: 1rem;
+  }
+
+  .hero-bedrock-cta {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 1.75rem;
+  }
+
+  .hero-bedrock .btn-ghost {
+    color: rgba(255, 255, 255, 0.9);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+
+  .hero-bedrock .btn-ghost:hover {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+
+  .hero-bedrock-trust {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+  }
+
+  .hero-trust-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    font-weight: 700;
+    margin-right: 0.5rem;
+  }
+
+  .hero-bedrock-media {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hero-blob {
+    position: relative;
+    width: min(420px, 100%);
+    aspect-ratio: 4 / 5;
+    border-radius: 55% 45% 48% 52% / 60% 40% 60% 40%;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+    border: 2px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .hero-blob::after {
+    content: "";
+    position: absolute;
+    inset: 10px;
+    border-radius: inherit;
+    box-shadow: 0 0 30px rgba(93, 173, 226, 0.2);
+    pointer-events: none;
+  }
+
+  .hero-blob-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+  }
+
+  .hero-float-card {
+    position: absolute;
+    background: #f9f6f2;
+    color: #1a365d;
+    border-radius: 18px;
+    padding: 1rem 1.2rem;
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    max-width: 220px;
+  }
+
+  .hero-float-card--trust {
+    left: -10px;
+    bottom: -10px;
+  }
+
+  .hero-float-card--links {
+    right: -12px;
+    top: 12%;
+  }
+
+  .hero-card-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 12px;
+    background: rgba(244, 162, 97, 0.2);
+    color: #e8912d;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-card-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .hero-card-title {
+    font-weight: 700;
+    font-size: 0.95rem;
+    margin: 0 0 0.2rem;
+  }
+
+  .hero-card-text {
+    font-size: 0.85rem;
+    color: #425a7a;
+    margin: 0;
+  }
+
+  .hero-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .hero-quick-links a {
+    font-size: 0.8rem;
+    background: rgba(26, 54, 93, 0.08);
+    color: #1a365d;
+    padding: 0.35rem 0.6rem;
+    border-radius: 999px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .hero-quick-links a:hover {
+    background: rgba(26, 54, 93, 0.16);
+  }
+
+  @media (max-width: 1024px) {
+    .hero-bedrock-grid {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    .hero-bedrock-media {
+      order: 2;
+    }
+
+    .hero-blob {
+      margin: 0 auto;
+    }
+
+    .hero-float-card--trust {
+      left: 0;
+    }
+
+    .hero-float-card--links {
+      right: 0;
+      top: 6%;
+    }
+  }
+
+  @media (max-width: 900px) {
+    :root {
+      --header-h: 120px;
+    }
+
+    .header-logo-img {
+      height: 96px;
+      max-height: calc(var(--header-h) - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    :root {
+      --header-h: 110px;
+    }
+
+    .hero-bedrock {
+      padding-top: calc(var(--header-h) + 16px);
+      min-height: auto;
+    }
+
+    .hero-bedrock-title {
+      font-size: clamp(2.2rem, 7vw, 3.2rem);
+    }
+
+    .hero-chip {
+      transform: rotate(-2deg);
+    }
+
+    .hero-float-card {
+      position: static;
+      max-width: none;
+      margin-top: 1rem;
+    }
+
+    .hero-bedrock-media {
+      display: block;
+    }
+  }
 @layer utilities {
   /* Selection Color - Orange accent */
   ::selection {

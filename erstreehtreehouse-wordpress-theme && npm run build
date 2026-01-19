@@ -1,0 +1,27 @@
+[33m77efced[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m Update footer with Upstream ABA navigation structure
+[33mc926c38[m Create all Upstream ABA-structured pages
+[33mb98a9bc[m Create About page with Upstream ABA structure
+[33mddda998[m Apply final Treehouse color palette (Upstream ABA structure)
+[33md181dcf[m Update WORKFLOW.md for Phase 10 completion
+[33m2957096[m Apply Aviation ABA color scheme throughout
+[33m520aca4[m Implement Aviation ABA visual specification (Phase 10)
+[33m75a2f58[m Fix blank space after Getting Started section
+[33m68f7b4b[m Make cloud graphics more visible (Aviation ABA style)
+[33m515c0a8[m Add static cloud graphics like Aviation ABA (Phase 9 enhancement)
+[33m5b544fa[m Simplify animations to match Aviation ABA reality (Phase 9)
+[33m548cbd7[m Rescue Hero Section with buoyant depth and typography polish (Phase 9.9)
+[33mc47fb45[m Implement buoyant motion language and image loading (Phase 9)
+[33m96a1746[m Refine scroll animations with buoyant easing (Phase 9.1)
+[33mc362ab2[m Refine scroll animations with buoyant easing (Phase 9.1)
+[33maf17511[m Implement form interactions, parallax optimization, and visual polish (Phase 8)
+[33m1e1718a[m Update design to match Aviation ABA: Hero form, News section, Contact layout (Phase 7)
+[33m2683394[m Fix oversized blob shapes - reduce size and opacity
+[33m4efc189[m Add final visual polish - blob shapes, enhanced shadows, premium buttons (Phase 6.7 - Phase 6 COMPLETE)
+[33m6da0f89[m Add testimonials carousel section (Phase 6.6)
+[33m65e6129[m Add scroll-triggered animations with Intersection Observer (Phase 6.5)
+[33m041429a[m Add floating animated elements to hero section (Phase 6.4)
+[33m2ce96fe[m Replace emojis with custom SVG icons (Phase 6.3)
+[33m3b1c931[m Add wave dividers between sections (Phase 6.2)
+[33mb6f3509[m Complete SVG decoration assets (Phase 6.1)
+[33m20e4dcc[m Add complete homepage and core templates
+[33m5171f8d[m Initial commit: WordPress theme foundation

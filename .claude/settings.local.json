@@ -10,7 +10,16 @@
       "Bash(ls -la \"C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\\\\dist\\\\css\"\" && ls -la \"C:Userstreehtreehouse-wordpress-themedistjs\"\")",
       "Bash(powershell -Command \"New-Item -ItemType SymbolicLink -Path ''C:\\\\Users\\\\treeh\\\\Local Sites\\\\treehouse-theme-preview\\\\app\\\\public\\\\wp-content\\\\themes\\\\treehouse-therapy'' -Target ''C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme''\")",
       "Bash(cmd /c \"mklink /J \"\"C:\\\\Users\\\\treeh\\\\Local Sites\\\\treehouse-theme-preview\\\\app\\\\public\\\\wp-content\\\\themes\\\\treehouse-therapy\"\" \"\"C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\"\"\")",
-      "Bash(cmd //c \"mklink /J treehouse-therapy C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\")"
+      "Bash(cmd //c \"mklink /J treehouse-therapy C:\\\\Users\\\\treeh\\\\treehouse-wordpress-theme\")",
+      "Bash(powershell -Command \"$word = New-Object -ComObject Word.Application; $doc = $word.Documents.Open\\(''C:\\\\Users\\\\treeh\\\\OneDrive - treehousetherapymn.com\\\\GQueues Uploads\\\\Documents\\\\Ideal_ABA_Website.docx''\\); $doc.Content.Text; $doc.Close\\(\\); $word.Quit\\(\\)\")",
+      "Bash(powershell -Command \"$word = New-Object -ComObject Word.Application; $doc = $word.Documents.Open\\(''C:\\\\Users\\\\treeh\\\\OneDrive - treehousetherapymn.com\\\\GQueues Uploads\\\\Documents\\\\Ideal_ABA_Website.docx''\\); Write-Output $doc.Content.Text; $doc.Close\\(\\); $word.Quit\\(\\)\")",
+      "Bash(python3:*)",
+      "Bash(node:*)",
+      "Bash(cmd /c \"type \"\"C:\\\\Users\\\\treeh\\\\OneDrive - treehousetherapymn.com\\\\GQueues Uploads\\\\Documents\\\\Ideal_ABA_Website.docx\"\"\")",
+      "Bash(unzip:*)",
+      "Bash(perl:*)",
+      "Skill(frontend-design)",
+      "Skill(frontend-design:*)"
     ]
   }
 }

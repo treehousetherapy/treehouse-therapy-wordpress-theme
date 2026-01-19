@@ -1,0 +1,15 @@
+<!-- Cloud Divider SVG - Wave Pattern for Section Separation -->
+<svg class="wave-divider" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="waveGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#87CEEB;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#E0F7FA;stop-opacity:0" />
+    </linearGradient>
+  </defs>
+  <!-- Primary Wave -->
+  <path d="M0,40 Q360,0 720,40 T1440,40 L1440,120 L0,120 Z" fill="#E0F7FA" stroke="none"/>
+  <!-- Secondary Wave (lighter) -->
+  <path d="M0,60 Q360,30 720,60 T1440,60 L1440,120 L0,120 Z" fill="#FFFFFF" stroke="none" opacity="0.8"/>
+  <!-- Accent highlight -->
+  <path d="M0,50 Q360,20 720,50 T1440,50" stroke="#87CEEB" stroke-width="1" fill="none" opacity="0.3"/>
+</svg>

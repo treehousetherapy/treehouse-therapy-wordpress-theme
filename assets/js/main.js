@@ -67,39 +67,48 @@
 
     // Contact Form Handler
     function initContactForm() {
-        const form = document.getElementById('contact-form');
-        if (!form) return;
+        const forms = document.querySelectorAll('form[action*="admin-post.php"]');
+        if (forms.length === 0) return;
 
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const formData = new FormData(form);
-            formData.append('action', 'treehouse_contact');
-            formData.append('nonce', treehouseData.nonce);
-
-            const submitBtn = form.querySelector('[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Sending...';
-            submitBtn.disabled = true;
-
-            fetch(treehouseData.ajaxUrl, {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.success) {
-                    form.innerHTML = '<div class="bg-success-green/10 border-2 border-success-green rounded-lg p-6 text-center"><p class="text-success-green font-semibold text-lg">Thank you! We will be in touch soon.</p></div>';
+        forms.forEach(form => {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                const formData = new FormData(form);
+                if (form.querySelector('[name="action"]')) {
+                    formData.append('action', form.querySelector('[name="action"]').value);
                 } else {
-                    alert(data.data.message || 'There was an error. Please try again.');
+                    formData.append('action', 'submit_contact_form');
+                }
+
+                const submitBtn = form.querySelector('[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
+
+                // Check if treehouseData exists, otherwise use admin-ajax.php
+                const ajaxUrl = typeof treehouseData !== 'undefined' ? treehouseData.ajaxUrl : '/wp-admin/admin-ajax.php';
+
+                fetch(ajaxUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        form.innerHTML = '<div class="bg-green-50 border-2 border-green-500 rounded-lg p-6 text-center"><p class="text-green-700 font-semibold text-lg">Thank you! We will be in touch soon.</p><p class="text-green-600 text-sm mt-2">We respond within 24 hours.</p></div>';
+                    } else {
+                        alert(data.data?.message || 'There was an error. Please try again.');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }
+                })
+                .catch(error => {
+                    console.error('Form submission error:', error);
+                    alert('There was an error. Please try again or contact us directly.');
                     submitBtn.textContent = originalText;
                     submitBtn.disabled = false;
-                }
-            })
-            .catch(error => {
-                alert('There was an error. Please try again.');
-                submitBtn.textContent = originalText;
-                submitBtn.disabled = false;
+                });
             });
         });
     }

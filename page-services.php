@@ -2,395 +2,465 @@
 /**
  * Template Name: Services Page
  * Treehouse Therapy Center - Services Page
- * Decision support page with clear service buckets
  */
 
 get_header();
 ?>
 
 <!-- Hero Section -->
-<section class="section bg-white pt-32 pb-16 overflow-hidden">
-    <div class="container-custom">
-        <div class="max-w-3xl mx-auto text-center" data-animate="fade-up">
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="color: var(--primary-navy);">
-                ABA Services Built Around <span class="gradient-text">Your Child</span>
-            </h1>
-            <p class="text-xl" style="color: var(--text-medium);">
-                Every child is unique. Our therapy programs are designed to meet your child where they are and help them grow in ways that matter to your family.
-            </p>
+<section class="page-hero page-hero-services">
+    <div class="page-hero-container">
+        <div class="page-hero-content" data-animate>
+            <h1>Our ABA Therapy Services</h1>
+            <p class="page-hero-subhead">Personalized, home-based therapy that helps children build skills for life—right where they feel most comfortable.</p>
+            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary btn-lg">
+                Get Started Today
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
         </div>
     </div>
 </section>
 
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #F5F5F5;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#FFFFFF"/>
-    </svg>
-</div>
+<!-- Introduction Section -->
+<section class="section-intro">
+    <div class="section-intro-container">
+        <div class="section-intro-content" data-animate>
+            <h2>How We Support Families</h2>
+            <div class="intro-text">
+                <p>Every child learns differently, and every family has unique needs. At Treehouse Therapy Center, we bring expert ABA therapy directly to your home throughout the Minneapolis/St. Paul metro area. Our approach is built around your child's strengths, your family's routines, and real-life situations where skills matter most.</p>
+                <p>We specialize in Early Intensive Developmental and Behavioral Intervention (EIDBI) services for children ages 2-12 with autism spectrum disorder. Our team works closely with you to create a therapy plan that fits your life—not the other way around.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
-<!-- Service Cards -->
-<section class="section bg-gray-light py-20">
-    <div class="container-custom">
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8" data-animate-group>
-            <!-- In-Home ABA Therapy -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="w-16 h-16 mb-6 rounded-full flex items-center justify-center" style="background: var(--gradient-orange);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+<!-- Service Cards Section -->
+<section class="section-service-cards">
+    <div class="service-cards-container">
+        <div class="service-cards-header" data-animate>
+            <h2>What We Offer</h2>
+        </div>
+
+        <div class="service-cards-grid" data-stagger>
+            <!-- Card 1: In-Home ABA Therapy -->
+            <div class="service-detail-card" data-animate>
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--primary-navy);">In-Home ABA Therapy</h3>
-                <p class="mb-4" style="color: var(--text-medium);">
-                    One-on-one therapy in the comfort of your home. We work with your child in their natural environment where skills transfer directly to daily life.
-                </p>
-                <ul class="space-y-2 text-sm" style="color: var(--text-medium);">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Personalized 1:1 sessions
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Flexible scheduling
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Family involvement encouraged
-                    </li>
+                <h3>In-Home ABA Therapy</h3>
+                <p class="service-detail-description">Our therapists come to you, providing one-on-one support in your child's most comfortable environment. Home-based therapy allows us to work on real-life skills during daily routines—mealtimes, playtime, bedtime, and everything in between.</p>
+                
+                <h4>Benefits:</h4>
+                <ul class="service-benefits-list">
+                    <li>Skills are learned where they'll be used</li>
+                    <li>Parents can observe and participate</li>
+                    <li>No commute or schedule disruption</li>
+                    <li>Siblings and family can be involved</li>
+                    <li>Therapy fits naturally into your routine</li>
                 </ul>
             </div>
 
-            <!-- Parent Training -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="w-16 h-16 mb-6 rounded-full flex items-center justify-center" style="background: var(--gradient-teal);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+            <!-- Card 2: School/Daycare Collaboration -->
+            <div class="service-detail-card" data-animate>
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                        <path d="M6 12v5c3 3 9 3 12 0v-5"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--primary-navy);">Parent Training</h3>
-                <p class="mb-4" style="color: var(--text-medium);">
-                    Empowering you with the knowledge and techniques to support your child's progress at home, school, and in the community.
-                </p>
-                <ul class="space-y-2 text-sm" style="color: var(--text-medium);">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Evidence-based strategies
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Practical, real-world techniques
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Ongoing coaching & support
-                    </li>
+                <h3>School/Daycare Collaboration</h3>
+                <p class="service-detail-description">We partner with your child's school or daycare to ensure consistency across environments. Our team can coordinate with teachers and staff to support your child's learning goals throughout their day.</p>
+                
+                <h4>Benefits:</h4>
+                <ul class="service-benefits-list">
+                    <li>Consistency between home and school</li>
+                    <li>Support for IEP goals</li>
+                    <li>Better peer interactions</li>
+                    <li>Teacher collaboration</li>
+                    <li>Smoother transitions</li>
                 </ul>
             </div>
 
-            <!-- BCBA Supervision -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="w-16 h-16 mb-6 rounded-full flex items-center justify-center" style="background: var(--gradient-navy);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+            <!-- Card 3: Parent & Caregiver Training -->
+            <div class="service-detail-card" data-animate>
+                <div class="service-detail-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--primary-navy);">BCBA Oversight</h3>
-                <p class="mb-4" style="color: var(--text-medium);">
-                    Every program is designed and supervised by a Board Certified Behavior Analyst (BCBA) who ensures quality care and meaningful progress.
-                </p>
-                <ul class="space-y-2 text-sm" style="color: var(--text-medium);">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Regular program reviews
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Data-driven adjustments
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Clear progress reporting
-                    </li>
+                <h3>Parent & Caregiver Training</h3>
+                <p class="service-detail-description">You know your child best. We equip you with practical strategies and techniques to support your child's growth between sessions. Parent training is built into every treatment plan because your involvement is essential to lasting progress.</p>
+                
+                <h4>Benefits:</h4>
+                <ul class="service-benefits-list">
+                    <li>Practical tools you can use immediately</li>
+                    <li>Confidence in supporting your child</li>
+                    <li>Better understanding of ABA techniques</li>
+                    <li>Stronger family communication</li>
+                    <li>Skills that extend beyond therapy hours</li>
                 </ul>
             </div>
+        </div>
+    </div>
+</section>
 
-            <!-- School Collaboration -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="w-16 h-16 mb-6 rounded-full flex items-center justify-center" style="background: var(--gradient-orange);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+<!-- Skills We Help Develop Section -->
+<section class="section-skills-develop">
+    <div class="skills-develop-container">
+        <div class="skills-develop-header" data-animate>
+            <h2>Building Skills That Matter</h2>
+            <p>Our therapy targets the skills that make the biggest difference in your child's daily life and long-term independence.</p>
+        </div>
+
+        <div class="skills-develop-grid" data-stagger>
+            <!-- Communication Skills -->
+            <div class="skill-develop-card" data-animate>
+                <div class="skill-develop-icon skill-icon-teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--primary-navy);">School Collaboration</h3>
-                <p class="mb-4" style="color: var(--text-medium);">
-                    We work with teachers and school staff to ensure consistency and support your child's success in the classroom.
-                </p>
-                <ul class="space-y-2 text-sm" style="color: var(--text-medium);">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        IEP/504 support
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Teacher consultations
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Classroom strategies
-                    </li>
+                <h3>Communication Skills</h3>
+                <ul>
+                    <li>Requesting wants and needs</li>
+                    <li>Following directions</li>
+                    <li>Expressing feelings</li>
+                    <li>Conversation skills</li>
+                    <li>Using words, signs, or AAC devices</li>
                 </ul>
             </div>
 
             <!-- Social Skills -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="w-16 h-16 mb-6 rounded-full flex items-center justify-center" style="background: var(--gradient-teal);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+            <div class="skill-develop-card" data-animate>
+                <div class="skill-develop-icon skill-icon-pink">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--primary-navy);">Social Skills</h3>
-                <p class="mb-4" style="color: var(--text-medium);">
-                    Building meaningful connections through play, conversation, and positive social interactions with peers and family.
-                </p>
-                <ul class="space-y-2 text-sm" style="color: var(--text-medium);">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Play-based learning
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Turn-taking & sharing
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Emotion recognition
-                    </li>
+                <h3>Social Skills</h3>
+                <ul>
+                    <li>Playing with siblings and peers</li>
+                    <li>Taking turns and sharing</li>
+                    <li>Making eye contact</li>
+                    <li>Understanding social cues</li>
+                    <li>Building friendships</li>
                 </ul>
             </div>
 
             <!-- Daily Living Skills -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="w-16 h-16 mb-6 rounded-full flex items-center justify-center" style="background: var(--gradient-navy);">
-                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/>
+            <div class="skill-develop-card" data-animate>
+                <div class="skill-develop-icon skill-icon-yellow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                        <polyline points="9 22 9 12 15 12 15 22"/>
                     </svg>
                 </div>
-                <h3 class="text-2xl font-bold mb-4" style="color: var(--primary-navy);">Daily Living Skills</h3>
-                <p class="mb-4" style="color: var(--text-medium);">
-                    Teaching independence through practical skills like dressing, eating, hygiene, and routines that make daily life easier.
-                </p>
-                <ul class="space-y-2 text-sm" style="color: var(--text-medium);">
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Self-care routines
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Mealtime skills
-                    </li>
-                    <li class="flex items-start gap-2">
-                        <svg class="w-5 h-5 flex-shrink-0 mt-0.5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        Safety awareness
-                    </li>
+                <h3>Daily Living Skills</h3>
+                <ul>
+                    <li>Toileting and hygiene</li>
+                    <li>Dressing independently</li>
+                    <li>Mealtime routines</li>
+                    <li>Following morning/bedtime routines</li>
+                    <li>Safety awareness</li>
                 </ul>
             </div>
-        </div>
-    </div>
-</section>
 
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #FFFFFF;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#F5F5F5"/>
-    </svg>
-</div>
-
-<!-- Who We Serve -->
-<section class="section bg-white py-20">
-    <div class="container-custom">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div data-animate="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--primary-navy);">
-                    Who We <span class="gradient-text">Serve</span>
-                </h2>
-                <p class="text-lg mb-6" style="color: var(--text-medium);">
-                    We provide ABA therapy for children and young adults diagnosed with autism spectrum disorder (ASD) or related developmental conditions.
-                </p>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center" style="background: var(--gradient-orange);">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m3-10.203a4 4 0 11-8 0 4 4 0 018 0z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold" style="color: var(--primary-navy);">Ages Birth - 21</h4>
-                            <p class="text-sm" style="color: var(--text-medium);">Early intervention through young adulthood transition.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center" style="background: var(--gradient-teal);">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold" style="color: var(--primary-navy);">Autism Spectrum Disorder</h4>
-                            <p class="text-sm" style="color: var(--text-medium);">ABA is the gold standard treatment for autism.</p>
-                        </div>
-                    </div>
-                    <div class="flex items-start gap-4">
-                        <div class="w-10 h-10 flex-shrink-0 rounded-full flex items-center justify-center" style="background: var(--gradient-navy);">
-                            <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4 class="font-bold" style="color: var(--primary-navy);">Referrals Welcome</h4>
-                            <p class="text-sm" style="color: var(--text-medium);">Physicians, schools, and families can refer.</p>
-                        </div>
-                    </div>
+            <!-- Emotional Regulation -->
+            <div class="skill-develop-card" data-animate>
+                <div class="skill-develop-icon skill-icon-coral">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
                 </div>
+                <h3>Emotional Regulation</h3>
+                <ul>
+                    <li>Identifying emotions</li>
+                    <li>Coping with frustration</li>
+                    <li>Managing transitions</li>
+                    <li>Calming strategies</li>
+                    <li>Handling unexpected changes</li>
+                </ul>
             </div>
-            
-            <div class="card p-8" data-animate="fade-up">
-                <h3 class="text-2xl font-bold mb-6" style="color: var(--primary-navy);">What You Can Expect</h3>
-                <ul class="space-y-4">
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        <span style="color: var(--text-medium);"><strong style="color: var(--primary-navy);">Data-Driven:</strong> Progress is measured and shared with you regularly.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        <span style="color: var(--text-medium);"><strong style="color: var(--primary-navy);">Joyful:</strong> Therapy is fun—we use play, praise, and your child's interests.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        <span style="color: var(--text-medium);"><strong style="color: var(--primary-navy);">Individualized:</strong> Every program is built around your child's unique needs.</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <svg class="w-6 h-6 flex-shrink-0 mt-0.5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                        </svg>
-                        <span style="color: var(--text-medium);"><strong style="color: var(--primary-navy);">Family-Centered:</strong> You're an active partner in the therapy process.</span>
-                    </li>
+
+            <!-- Behavior Support -->
+            <div class="skill-develop-card" data-animate>
+                <div class="skill-develop-icon skill-icon-purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"/>
+                        <path d="M9 12l2 2 4-4"/>
+                    </svg>
+                </div>
+                <h3>Behavior Support</h3>
+                <ul>
+                    <li>Reducing challenging behaviors</li>
+                    <li>Building positive alternatives</li>
+                    <li>Understanding behavior triggers</li>
+                    <li>Developing self-control</li>
+                    <li>Following rules and boundaries</li>
+                </ul>
+            </div>
+
+            <!-- Play & Learning Skills -->
+            <div class="skill-develop-card" data-animate>
+                <div class="skill-develop-icon skill-icon-teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                    </svg>
+                </div>
+                <h3>Play & Learning Skills</h3>
+                <ul>
+                    <li>Independent play</li>
+                    <li>Imaginative play</li>
+                    <li>Following instructions</li>
+                    <li>Attention and focus</li>
+                    <li>Pre-academic skills</li>
                 </ul>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #F5F5F5;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#FFFFFF"/>
-    </svg>
-</div>
+<!-- Progress Examples Section -->
+<section class="section-progress-examples">
+    <div class="progress-examples-container">
+        <div class="progress-examples-header" data-animate>
+            <h2>What Progress Can Look Like</h2>
+            <p>Progress looks different for every child. Here's what families often experience after starting therapy with us:</p>
+        </div>
 
-<!-- Insurance Section -->
-<section class="section bg-gray-light py-20">
-    <div class="container-custom">
-        <div class="text-center mb-12" data-animate="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--primary-navy);">
-                Insurance & <span class="gradient-text">Funding</span>
-            </h2>
-            <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-medium);">
-                We work with most major insurance providers to make ABA therapy accessible for your family.
-            </p>
+        <div class="progress-examples-grid" data-stagger>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Fewer meltdowns and smoother transitions</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>First words or clearer communication</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Successfully using the toilet independently</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Playing alongside siblings without conflict</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Following a bedtime routine without struggles</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Trying new foods at mealtimes</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Making a friend at school or daycare</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Getting dressed independently</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Expressing feelings instead of hitting or biting</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Sitting through a family meal</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Handling "no" without a tantrum</span>
+            </div>
+            <div class="progress-example-item" data-animate>
+                <svg class="progress-check" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"/>
+                </svg>
+                <span>Waiting their turn during games</span>
+            </div>
         </div>
-        
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-6 max-w-4xl mx-auto" data-animate="fade-up">
-            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
-                <p class="font-semibold text-sm" style="color: var(--primary-navy);">Blue Cross Blue Shield</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
-                <p class="font-semibold text-sm" style="color: var(--primary-navy);">Aetna</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
-                <p class="font-semibold text-sm" style="color: var(--primary-navy);">UnitedHealthcare</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
-                <p class="font-semibold text-sm" style="color: var(--primary-navy);">Cigna</p>
-            </div>
-            <div class="bg-white rounded-xl p-6 text-center shadow-sm">
-                <p class="font-semibold text-sm" style="color: var(--primary-navy);">Medicaid</p>
-            </div>
-        </div>
-        
-        <p class="text-center mt-8 text-sm" style="color: var(--text-light);">
-            Don't see your insurance? <a href="<?php echo home_url('/contact'); ?>" style="color: var(--primary-orange);" class="underline">Contact us</a> and we'll verify your benefits for free.
-        </p>
     </div>
 </section>
 
-<!-- Wave Divider to CTA -->
-<div class="wave-divider-curve" style="background: var(--primary-navy);">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#F5F5F5"/>
-    </svg>
-</div>
+<!-- Our Approach Section -->
+<section class="section-our-approach">
+    <div class="our-approach-container">
+        <div class="our-approach-header" data-animate>
+            <h2>How We Do ABA <span class="highlight-box highlight-yellow">Differently</span></h2>
+        </div>
+
+        <div class="our-approach-grid" data-stagger>
+            <div class="approach-element" data-animate>
+                <div class="approach-number">1</div>
+                <h3>Play-Based Learning</h3>
+                <p>Learning happens best when it feels like fun. We use your child's interests and natural play to teach new skills in a way that keeps them engaged and wanting more.</p>
+            </div>
+
+            <div class="approach-element" data-animate>
+                <div class="approach-number">2</div>
+                <h3>Family-Centered Care</h3>
+                <p>You're the expert on your child. We listen to your insights, respect your values, and build therapy around what matters most to your family.</p>
+            </div>
+
+            <div class="approach-element" data-animate>
+                <div class="approach-number">3</div>
+                <h3>Natural Environment</h3>
+                <p>Skills stick when they're learned where they'll be used. That's why we bring therapy to your home—so your child learns in the real world, not a clinical setting.</p>
+            </div>
+
+            <div class="approach-element" data-animate>
+                <div class="approach-number">4</div>
+                <h3>Data-Driven Progress</h3>
+                <p>We track progress carefully and adjust our approach based on what's working. You'll always know how your child is doing and what we're working toward.</p>
+            </div>
+
+            <div class="approach-element" data-animate>
+                <div class="approach-number">5</div>
+                <h3>Culturally Responsive</h3>
+                <p>Every family is unique. We honor your culture, language, and traditions, tailoring our approach to fit your family's way of life.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
 <!-- CTA Section -->
-<section class="section py-20 text-white text-center" style="background: var(--gradient-navy);">
-    <div class="container-custom">
-        <div class="max-w-2xl mx-auto" data-animate="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Learn More?
-            </h2>
-            <p class="text-xl mb-8 opacity-90">
-                Every child's journey is different. Let's talk about how we can help yours.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary text-lg">
-                    Request a Consultation
-                </a>
-                <a href="<?php echo home_url('/process'); ?>" class="btn" style="background: white; color: var(--primary-navy);">
-                    See Our Process
-                </a>
-            </div>
+<section class="section-cta-simple">
+    <div class="cta-simple-container" data-animate>
+        <h2>Ready to Get Started?</h2>
+        <p>Every child deserves support that meets them where they are. Let's talk about how we can help your family.</p>
+        <div class="cta-simple-buttons">
+            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary btn-lg">
+                Contact Us Today
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </a>
+            <a href="<?php echo home_url('/our-process'); ?>" class="btn btn-ghost btn-lg">Learn About Our Process →</a>
         </div>
+    </div>
+</section>
+
+<!-- Contact Form Section -->
+<section class="section-page-contact-form">
+    <div class="page-contact-form-container">
+        <div class="page-contact-form-header" data-animate>
+            <h2>Schedule a Free Consultation</h2>
+            <p>Your information is confidential. We'll reach out within 1 business day.</p>
+        </div>
+
+        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="page-contact-form" data-animate>
+            <input type="hidden" name="action" value="submit_services_contact_form">
+            
+            <div class="form-row-two">
+                <div class="form-group">
+                    <label>Parent/Guardian Name*</label>
+                    <input type="text" name="parent_name" required>
+                </div>
+                <div class="form-group">
+                    <label>Child's First Name*</label>
+                    <input type="text" name="child_name" required>
+                </div>
+            </div>
+
+            <div class="form-row-two">
+                <div class="form-group">
+                    <label>Child's Age*</label>
+                    <input type="text" name="child_age" required>
+                </div>
+                <div class="form-group">
+                    <label>Phone Number*</label>
+                    <input type="tel" name="phone" required>
+                </div>
+            </div>
+
+            <div class="form-row-two">
+                <div class="form-group">
+                    <label>Email*</label>
+                    <input type="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Insurance Provider*</label>
+                    <select name="insurance" required>
+                        <option value="">Select Insurance</option>
+                        <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
+                        <option value="Medicaid/MA">Medicaid/MA</option>
+                        <option value="HealthPartners">HealthPartners</option>
+                        <option value="Aetna">Aetna</option>
+                        <option value="Cigna">Cigna</option>
+                        <option value="UnitedHealthcare">UnitedHealthcare</option>
+                        <option value="Medica">Medica</option>
+                        <option value="UCare">UCare</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>How did you hear about us? (optional)</label>
+                <select name="referral_source">
+                    <option value="">Select one</option>
+                    <option value="Google Search">Google Search</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="Friend/Family Referral">Friend/Family Referral</option>
+                    <option value="Doctor/Therapist Referral">Doctor/Therapist Referral</option>
+                    <option value="School">School</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>Message/Questions (optional)</label>
+                <textarea name="message" rows="4" placeholder="Tell us about your child and what you're looking for..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg" style="width: 100%;">
+                Get Started
+                <span class="btn-arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </span>
+            </button>
+        </form>
     </div>
 </section>
 

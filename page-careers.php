@@ -2,371 +2,387 @@
 /**
  * Template Name: Careers Page
  * Treehouse Therapy Center - Careers Page
- * Full hiring funnel page
+ * Upstream Flow Design System
  */
 
 get_header();
 ?>
 
 <!-- Hero Section -->
-<section class="section bg-white pt-32 pb-16 overflow-hidden">
-    <div class="container-custom">
-        <div class="max-w-3xl mx-auto text-center" data-animate="fade-up">
-            <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-semibold mb-6" style="background: rgba(218, 155, 77, 0.1); color: var(--primary-orange);">
-                <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none">
-                    <path d="M12 2L14.5 9H22L16 14L18.5 21L12 17L5.5 21L8 14L2 9H9.5L12 2Z" fill="currentColor"/>
-                </svg>
-                We're Hiring!
-            </span>
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6" style="color: var(--primary-navy);">
-                Join Our <span class="gradient-text">Growing Team</span>
-            </h1>
-            <p class="text-xl" style="color: var(--text-medium);">
-                Make a real difference in the lives of children and families. Build a meaningful career with Treehouse Therapy Center.
-            </p>
-        </div>
+<section class="hero-upstream" style="min-height: auto; padding: 8rem 2rem 4rem;">
+    <div class="hero-bg-pattern"></div>
+
+    <!-- Decorative elements -->
+    <div class="hero-decor decor-rocket">
+        <svg viewBox="0 0 80 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M40 5C40 5 65 25 65 55C65 75 55 90 40 95C25 90 15 75 15 55C15 25 40 5 40 5Z" fill="white" fill-opacity="0.9"/>
+            <circle cx="40" cy="45" r="10" fill="#E91E8C"/>
+            <path d="M35 85H45L40 100L35 85Z" fill="#FF6B6B"/>
+        </svg>
+    </div>
+
+    <div class="hero-decor decor-cloud-2">
+        <svg viewBox="0 0 100 50" fill="white" fill-opacity="0.8">
+            <ellipse cx="25" cy="30" rx="20" ry="15"/>
+            <ellipse cx="50" cy="25" rx="25" ry="18"/>
+            <ellipse cx="75" cy="32" rx="18" ry="12"/>
+        </svg>
+    </div>
+
+    <div style="max-width: 900px; margin: 0 auto; text-align: center; position: relative; z-index: 10;" data-animate>
+        <h1 style="color: var(--navy-deep); margin-bottom: 1.5rem;">
+            Join a Team That <span class="highlight-box">Makes a Difference</span>
+        </h1>
+        <p style="font-size: 1.25rem; color: var(--text-medium); max-width: 700px; margin: 0 auto;">
+            At Treehouse Therapy, you'll be part of a caring, supportive team dedicated to helping children and families thrive. If you're passionate about making an impact, we'd love to meet you.
+        </p>
     </div>
 </section>
 
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #F5F5F5;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#FFFFFF"/>
+<!-- Wave Transition -->
+<div class="wave-transition" style="background: #C5E6F3;">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,0 C360,100 1080,100 1440,0 L1440,100 L0,100 Z" fill="#F0F9FF"/>
     </svg>
 </div>
 
-<!-- Why Work Here -->
-<section class="section bg-gray-light py-20">
-    <div class="container-custom">
-        <div class="text-center mb-16" data-animate="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--primary-navy);">
-                Why <span class="gradient-text">Treehouse?</span>
-            </h2>
-            <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-medium);">
-                We're building something special—a team that cares deeply about the children we serve and each other.
-            </p>
+<!-- Why Work Here Section -->
+<section class="section-aba-fun">
+    <div class="aba-fun-container">
+        <div class="aba-fun-header" data-animate>
+            <h2>Why <span class="highlight-box highlight-pink">Treehouse</span>?</h2>
         </div>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8" data-animate-group>
-            <div class="card p-6 text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--gradient-orange);">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
-                    </svg>
-                </div>
-                <h3 class="font-bold mb-2" style="color: var(--primary-navy);">Meaningful Work</h3>
-                <p class="text-sm" style="color: var(--text-medium);">Every day you'll help children learn, grow, and reach their potential.</p>
+
+        <div class="blob-container" data-animate>
+            <div class="blob blob-pink">
+                <div class="blob-shape"></div>
+                <h4>Meaningful Work</h4>
+                <p>See real progress every day</p>
             </div>
-            
-            <div class="card p-6 text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--gradient-teal);">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-                    </svg>
-                </div>
-                <h3 class="font-bold mb-2" style="color: var(--primary-navy);">Growth & Learning</h3>
-                <p class="text-sm" style="color: var(--text-medium);">Ongoing training, supervision, and opportunities to advance your career.</p>
+
+            <div class="blob blob-yellow">
+                <div class="blob-shape"></div>
+                <h4>Supportive Team</h4>
+                <p>Collaborative, caring culture</p>
             </div>
-            
-            <div class="card p-6 text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--gradient-navy);">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
-                    </svg>
-                </div>
-                <h3 class="font-bold mb-2" style="color: var(--primary-navy);">Supportive Team</h3>
-                <p class="text-sm" style="color: var(--text-medium);">Work alongside caring professionals who have your back.</p>
-            </div>
-            
-            <div class="card p-6 text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center" style="background: var(--gradient-orange);">
-                    <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                    </svg>
-                </div>
-                <h3 class="font-bold mb-2" style="color: var(--primary-navy);">Work-Life Balance</h3>
-                <p class="text-sm" style="color: var(--text-medium);">Flexible scheduling and a culture that respects your time.</p>
+
+            <div class="blob blob-teal">
+                <div class="blob-shape"></div>
+                <h4>Growth</h4>
+                <p>Professional development & training</p>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #FFFFFF;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#F5F5F5"/>
+<!-- Who Thrives Here -->
+<section class="section-services">
+    <div class="section-header" data-animate>
+        <h2>Who <span class="highlight-box">Thrives</span> Here</h2>
+        <p>The qualities that make great team members</p>
+    </div>
+
+    <div class="services-grid" data-stagger>
+        <div class="service-card" data-animate>
+            <div class="service-illustration">
+                <svg viewBox="0 0 160 140" fill="none">
+                    <circle cx="80" cy="60" r="40" fill="#E8F6F5" stroke="#2AA198" stroke-width="3"/>
+                    <path d="M60 60L75 75L100 50" stroke="#2AA198" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M60 50C55 45 50 45 50 50C50 55 55 60 60 65C65 60 70 55 70 50C70 45 65 45 60 50Z" fill="#E91E8C"/>
+                    <path d="M90 50C85 45 80 45 80 50C80 55 85 60 90 65C95 60 100 55 100 50C100 45 95 45 90 50Z" fill="#E91E8C"/>
+                </svg>
+            </div>
+            <h3>Compassionate</h3>
+            <p>You genuinely care about helping children and families reach their goals, bringing empathy and patience to every session.</p>
+        </div>
+
+        <div class="service-card" data-animate>
+            <div class="service-illustration">
+                <svg viewBox="0 0 160 140" fill="none">
+                    <circle cx="80" cy="70" r="45" fill="#E8F6F5" stroke="#FFC107" stroke-width="3"/>
+                    <circle cx="65" cy="60" r="5" fill="#1E3A5F"/>
+                    <circle cx="95" cy="60" r="5" fill="#1E3A5F"/>
+                    <path d="M60 85 Q80 100 100 85" stroke="#E91E8C" stroke-width="3" stroke-linecap="round"/>
+                    <path d="M50 50 Q45 35 60 40" stroke="#8B5A2B" stroke-width="6" stroke-linecap="round"/>
+                    <path d="M110 50 Q115 35 100 40" stroke="#8B5A2B" stroke-width="6" stroke-linecap="round"/>
+                </svg>
+            </div>
+            <h3>Positive & Energetic</h3>
+            <p>You bring joy and enthusiasm to your work, making therapy fun and engaging for the children you support.</p>
+        </div>
+
+        <div class="service-card" data-animate>
+            <div class="service-illustration">
+                <svg viewBox="0 0 160 140" fill="none">
+                    <rect x="40" y="40" width="80" height="80" rx="10" fill="#E8F6F5" stroke="#2AA198" stroke-width="3"/>
+                    <circle cx="60" cy="65" r="8" fill="#FFC107"/>
+                    <circle cx="100" cy="65" r="8" fill="#E91E8C"/>
+                    <circle cx="60" cy="100" r="8" fill="#48C9B0"/>
+                    <circle cx="100" cy="100" r="8" fill="#9B59B6"/>
+                    <path d="M60 65 L100 65 L100 100 L60 100 Z" stroke="#2AA198" stroke-width="2" stroke-dasharray="4 2"/>
+                </svg>
+            </div>
+            <h3>Detail-Oriented</h3>
+            <p>You understand the importance of accurate data collection and consistent implementation of therapy plans.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Transition -->
+<div class="wave-transition wave-transition-flip" style="background: white;">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,100 C480,0 960,0 1440,100 L1440,0 L0,0 Z" fill="#F0F9FF"/>
     </svg>
 </div>
 
 <!-- Open Positions -->
-<section class="section bg-white py-20">
-    <div class="container-custom">
-        <div class="text-center mb-16" data-animate="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--primary-navy);">
-                Open <span class="gradient-text">Positions</span>
-            </h2>
+<section class="section-skills">
+    <div class="skills-container">
+        <div class="skills-header" data-animate>
+            <h2>Open <span class="highlight-box">Positions</span></h2>
+            <p>Join our growing team</p>
         </div>
-        
-        <div class="max-w-3xl mx-auto space-y-6" data-animate-group>
-            <!-- BCBA Position -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-2" style="background: rgba(68, 128, 155, 0.1); color: var(--accent-teal);">Full-Time</span>
-                        <h3 class="text-xl font-bold" style="color: var(--primary-navy);">Board Certified Behavior Analyst (BCBA)</h3>
-                        <p class="text-sm mt-2" style="color: var(--text-medium);">Lead client cases, supervise RBTs, and make a lasting impact on families.</p>
-                    </div>
-                    <a href="<?php echo home_url('/contact'); ?>?position=bcba" class="btn btn-primary flex-shrink-0">
-                        Apply Now
-                    </a>
+
+        <div class="skills-grid" data-stagger>
+            <div class="skill-card" data-animate>
+                <div class="skill-icon skill-icon-teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                        <circle cx="12" cy="7" r="4"/>
+                    </svg>
                 </div>
-                <div class="mt-4 pt-4 border-t flex flex-wrap gap-4 text-sm" style="color: var(--text-light); border-color: #E5E7EB;">
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        </svg>
-                        Twin Cities Metro
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        Competitive Salary + Bonus
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                        Health Benefits
-                    </span>
+                <div class="skill-content">
+                    <h4>Registered Behavior Technician (RBT)</h4>
+                    <p>Provide direct ABA therapy to children in home and community settings</p>
                 </div>
             </div>
 
-            <!-- RBT Position -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-2" style="background: rgba(218, 155, 77, 0.1); color: var(--primary-orange);">Full-Time / Part-Time</span>
-                        <h3 class="text-xl font-bold" style="color: var(--primary-navy);">Registered Behavior Technician (RBT)</h3>
-                        <p class="text-sm mt-2" style="color: var(--text-medium);">Provide 1:1 therapy sessions and help children achieve their goals every day.</p>
-                    </div>
-                    <a href="<?php echo home_url('/contact'); ?>?position=rbt" class="btn btn-primary flex-shrink-0">
-                        Apply Now
-                    </a>
+            <div class="skill-card" data-animate>
+                <div class="skill-icon skill-icon-pink">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
                 </div>
-                <div class="mt-4 pt-4 border-t flex flex-wrap gap-4 text-sm" style="color: var(--text-light); border-color: #E5E7EB;">
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        </svg>
-                        Twin Cities Metro
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        $18-25/hr
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253"/>
-                        </svg>
-                        Paid Training
-                    </span>
+                <div class="skill-content">
+                    <h4>Board Certified Behavior Analyst (BCBA)</h4>
+                    <p>Lead clinical programming, supervise RBTs, and support families</p>
                 </div>
             </div>
 
-            <!-- Behavior Technician Trainee -->
-            <div class="card p-8" data-animate="fade-up">
-                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                        <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold mb-2" style="background: rgba(36, 46, 60, 0.1); color: var(--primary-navy);">Entry Level</span>
-                        <h3 class="text-xl font-bold" style="color: var(--primary-navy);">Behavior Technician Trainee</h3>
-                        <p class="text-sm mt-2" style="color: var(--text-medium);">No experience required! We'll train you to become a certified RBT.</p>
-                    </div>
-                    <a href="<?php echo home_url('/contact'); ?>?position=trainee" class="btn btn-primary flex-shrink-0">
-                        Apply Now
-                    </a>
+            <div class="skill-card" data-animate>
+                <div class="skill-icon skill-icon-yellow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                    </svg>
                 </div>
-                <div class="mt-4 pt-4 border-t flex flex-wrap gap-4 text-sm" style="color: var(--text-light); border-color: #E5E7EB;">
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
-                        </svg>
-                        Twin Cities Metro
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                        </svg>
-                        RBT Certification Provided
-                    </span>
-                    <span class="flex items-center gap-1">
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                        </svg>
-                        Flexible Hours
-                    </span>
+                <div class="skill-content">
+                    <h4>Clinical Director</h4>
+                    <p>Oversee clinical operations and ensure quality service delivery</p>
+                </div>
+            </div>
+
+            <div class="skill-card" data-animate>
+                <div class="skill-icon skill-icon-coral">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                    </svg>
+                </div>
+                <div class="skill-content">
+                    <h4>Administrative Support</h4>
+                    <p>Help families navigate insurance, scheduling, and coordination</p>
+                </div>
+            </div>
+
+            <div class="skill-card" data-animate>
+                <div class="skill-icon skill-icon-purple">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                        <path d="M2 17l10 5 10-5"/>
+                        <path d="M2 12l10 5 10-5"/>
+                    </svg>
+                </div>
+                <div class="skill-content">
+                    <h4>Internship Opportunities</h4>
+                    <p>Gain hands-on experience while pursuing BCBA certification</p>
+                </div>
+            </div>
+
+            <div class="skill-card" data-animate>
+                <div class="skill-icon skill-icon-teal">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <path d="M12 6v6l4 2"/>
+                    </svg>
+                </div>
+                <div class="skill-content">
+                    <h4>Part-Time & Full-Time</h4>
+                    <p>Flexible scheduling options to fit your lifestyle</p>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #F5F5F5;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#FFFFFF"/>
+<!-- Benefits Section -->
+<section class="section-process">
+    <div class="process-header" data-animate>
+        <h2>Benefits & Support</h2>
+        <p>We invest in our team because you invest in our families</p>
+    </div>
+
+    <div class="process-flow">
+        <div class="process-steps" data-stagger>
+            <div class="process-step" data-animate>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+                    </svg>
+                </div>
+                <h4>Competitive Pay</h4>
+                <p>Above-market rates with performance bonuses</p>
+            </div>
+
+            <div class="process-step" data-animate>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                        <polyline points="22 4 12 14.01 9 11.01"/>
+                    </svg>
+                </div>
+                <h4>Flexible Schedule</h4>
+                <p>Work hours that fit your life</p>
+            </div>
+
+            <div class="process-step" data-animate>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                        <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                    </svg>
+                </div>
+                <h4>Training & CEUs</h4>
+                <p>Ongoing professional development opportunities</p>
+            </div>
+
+            <div class="process-step" data-animate>
+                <div class="step-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                        <circle cx="9" cy="7" r="4"/>
+                        <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                        <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                    </svg>
+                </div>
+                <h4>Supportive Culture</h4>
+                <p>Collaborative team that has your back</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Wave Transition -->
+<div class="wave-transition" style="background: linear-gradient(180deg, #2AA198 0%, #4ECDC4 100%);">
+    <svg viewBox="0 0 1440 100" preserveAspectRatio="none">
+        <path d="M0,50 Q360,100 720,50 T1440,50 L1440,100 L0,100 Z" fill="#F0F9FF"/>
     </svg>
 </div>
 
-<!-- Benefits -->
-<section class="section bg-gray-light py-20">
-    <div class="container-custom">
-        <div class="grid lg:grid-cols-2 gap-16 items-center">
-            <div data-animate="fade-up">
-                <h2 class="text-3xl md:text-4xl font-bold mb-6" style="color: var(--primary-navy);">
-                    Benefits & <span class="gradient-text">Perks</span>
-                </h2>
-                <p class="text-lg mb-8" style="color: var(--text-medium);">
-                    We invest in our team because we know that happy, supported employees provide the best care.
+<!-- Application Process -->
+<section class="section-contact">
+    <div class="contact-container">
+        <div class="contact-form-wrapper" data-animate>
+            <h3>Apply Today</h3>
+            <p style="margin-bottom: 2rem; color: var(--text-medium);">Send us your resume and tell us why you'd be a great fit for our team.</p>
+            <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" enctype="multipart/form-data">
+                <input type="hidden" name="action" value="submit_career_form">
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name*</label>
+                        <input type="text" name="first_name" placeholder="Jane" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name*</label>
+                        <input type="text" name="last_name" placeholder="Doe" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Phone*</label>
+                        <input type="tel" name="phone" placeholder="(555) 123-4567" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email*</label>
+                        <input type="email" name="email" placeholder="jane@example.com" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Position of Interest*</label>
+                    <select name="position" class="form-input" required>
+                        <option value="">Select a position...</option>
+                        <option value="RBT">Registered Behavior Technician (RBT)</option>
+                        <option value="BCBA">Board Certified Behavior Analyst (BCBA)</option>
+                        <option value="Clinical Director">Clinical Director</option>
+                        <option value="Administrative">Administrative Support</option>
+                        <option value="Internship">Internship</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tell us about yourself*</label>
+                    <textarea name="message" placeholder="Why are you interested in joining Treehouse Therapy? What experience do you bring?" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label>Resume/CV*</label>
+                    <input type="file" name="resume" accept=".pdf,.doc,.docx" class="form-input" required style="padding: 0.75rem;">
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%;">
+                    Submit Application
+                    <span class="btn-arrow">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </span>
+                </button>
+            </form>
+        </div>
+
+        <div class="contact-info-panel" data-animate>
+            <h3>Questions About Working Here?</h3>
+            <p>We'd love to hear from you!</p>
+
+            <div class="contact-item">
+                <div class="contact-item-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                </div>
+                <a href="tel:6123094135">(612) 309-4135</a>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-item-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <a href="mailto:careers@treehousetherapymn.com">careers@treehousetherapymn.com</a>
+            </div>
+
+            <div style="margin-top: 2rem; padding-top: 2rem; border-top: 1px solid rgba(30, 58, 95, 0.2);">
+                <p style="font-size: 0.9rem; opacity: 0.9;">
+                    We're an equal opportunity employer committed to building a diverse and inclusive team.
                 </p>
-            </div>
-            
-            <div class="grid grid-cols-2 gap-4" data-animate="fade-up">
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(218, 155, 77, 0.1);">
-                            <svg class="w-5 h-5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
-                            </svg>
-                        </div>
-                        <span class="font-semibold text-sm" style="color: var(--primary-navy);">Health Insurance</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(68, 128, 155, 0.1);">
-                            <svg class="w-5 h-5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <span class="font-semibold text-sm" style="color: var(--primary-navy);">401(k) Match</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(36, 46, 60, 0.1);">
-                            <svg class="w-5 h-5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
-                            </svg>
-                        </div>
-                        <span class="font-semibold text-sm" style="color: var(--primary-navy);">Paid Time Off</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(218, 155, 77, 0.1);">
-                            <svg class="w-5 h-5" style="color: var(--primary-orange);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253"/>
-                            </svg>
-                        </div>
-                        <span class="font-semibold text-sm" style="color: var(--primary-navy);">CEU Reimbursement</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(68, 128, 155, 0.1);">
-                            <svg class="w-5 h-5" style="color: var(--accent-teal);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
-                            </svg>
-                        </div>
-                        <span class="font-semibold text-sm" style="color: var(--primary-navy);">Flexible Schedule</span>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-4 shadow-sm">
-                    <div class="flex items-center gap-3">
-                        <div class="w-10 h-10 rounded-full flex items-center justify-center" style="background: rgba(36, 46, 60, 0.1);">
-                            <svg class="w-5 h-5" style="color: var(--primary-navy);" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"/>
-                            </svg>
-                        </div>
-                        <span class="font-semibold text-sm" style="color: var(--primary-navy);">Career Growth</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Wave Divider -->
-<div class="wave-divider-curve" style="background: #FFFFFF;">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#F5F5F5"/>
-    </svg>
-</div>
-
-<!-- Hiring Process -->
-<section class="section bg-white py-20">
-    <div class="container-custom">
-        <div class="text-center mb-16" data-animate="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-4" style="color: var(--primary-navy);">
-                Our Hiring <span class="gradient-text">Process</span>
-            </h2>
-            <p class="text-lg max-w-2xl mx-auto" style="color: var(--text-medium);">
-                We make it simple. Here's what to expect when you apply.
-            </p>
-        </div>
-        
-        <div class="grid md:grid-cols-4 gap-8 max-w-4xl mx-auto" data-animate-group>
-            <div class="text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-xl font-bold text-white" style="background: var(--gradient-orange);">1</div>
-                <h4 class="font-bold mb-2" style="color: var(--primary-navy);">Apply</h4>
-                <p class="text-sm" style="color: var(--text-medium);">Submit your application and resume online.</p>
-            </div>
-            <div class="text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-xl font-bold text-white" style="background: var(--gradient-teal);">2</div>
-                <h4 class="font-bold mb-2" style="color: var(--primary-navy);">Phone Screen</h4>
-                <p class="text-sm" style="color: var(--text-medium);">Quick call to learn about you and answer questions.</p>
-            </div>
-            <div class="text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-xl font-bold text-white" style="background: var(--gradient-navy);">3</div>
-                <h4 class="font-bold mb-2" style="color: var(--primary-navy);">Interview</h4>
-                <p class="text-sm" style="color: var(--text-medium);">Meet with our team to discuss the role in depth.</p>
-            </div>
-            <div class="text-center" data-animate="fade-up">
-                <div class="w-14 h-14 mx-auto mb-4 rounded-full flex items-center justify-center text-xl font-bold text-white" style="background: var(--gradient-orange);">4</div>
-                <h4 class="font-bold mb-2" style="color: var(--primary-navy);">Welcome!</h4>
-                <p class="text-sm" style="color: var(--text-medium);">Onboarding and training begin. You're part of the team!</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Wave Divider to CTA -->
-<div class="wave-divider-curve" style="background: var(--primary-navy);">
-    <svg viewBox="0 0 1440 100" preserveAspectRatio="none" style="width: 100%; height: 60px; display: block; transform: rotate(180deg);">
-        <path d="M0,50 C360,80 720,80 1080,50 C1260,35 1380,25 1440,20 L1440,0 L0,0 Z" fill="#FFFFFF"/>
-    </svg>
-</div>
-
-<!-- CTA Section -->
-<section class="section py-20 text-white text-center" style="background: var(--gradient-navy);">
-    <div class="container-custom">
-        <div class="max-w-2xl mx-auto" data-animate="fade-up">
-            <h2 class="text-3xl md:text-4xl font-bold mb-6">
-                Ready to Make a Difference?
-            </h2>
-            <p class="text-xl mb-8 opacity-90">
-                Join our team and help children reach their full potential.
-            </p>
-            <div class="flex flex-wrap justify-center gap-4">
-                <a href="<?php echo home_url('/contact'); ?>?subject=careers" class="btn btn-primary text-lg">
-                    Apply Today
-                </a>
-                <a href="mailto:careers@treehousetherapymn.com" class="btn" style="background: white; color: var(--primary-navy);">
-                    Email Us
-                </a>
             </div>
         </div>
     </div>

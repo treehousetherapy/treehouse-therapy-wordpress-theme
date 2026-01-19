@@ -1,0 +1,59 @@
+[33mcommit ddda9982b496b68687818739b3ed831340b473c7[m
+Author: moeomar <digitalrev109@gmail.com>
+Date:   Sat Jan 10 05:03:15 2026 -0600
+
+    Apply final Treehouse color palette (Upstream ABA structure)
+    
+    COLOR TOKEN UPDATES:
+    - Primary Navy: #1E3A5F → #242E3C (darker, charcoal)
+    - Primary Orange: #E8912D → #DA9B4D (warmer, muted gold)
+    - Accent Teal: #5DADE2 → #44809B (deeper teal)
+    - Seafoam: #48C9B0 → #5BA89D
+    
+    This prepares the theme for the full Upstream ABA page structure:
+    - Home, About, Process, Services, Careers, Contact, Locations
+
+[1mdiff --git a/tailwind.config.js b/tailwind.config.js[m
+[1mindex 4353073..14447c4 100644[m
+[1m--- a/tailwind.config.js[m
+[1m+++ b/tailwind.config.js[m
+[36m@@ -8,25 +8,28 @@[m [mmodule.exports = {[m
+   theme: {[m
+     extend: {[m
+       colors: {[m
+[31m-        // Aviation ABA EXACT color palette (from video analysis)[m
+[31m-        'primary-navy': '#1E3A5F',        // Headings, footer bg[m
+[31m-        'primary-orange': '#E8912D',      // Buttons, CTAs[m
+[31m-        'golden-yellow': '#F5B041',       // Gradient end[m
+[31m-        'teal-light': '#5DADE2',          // Sky accents, icons[m
+[31m-        'seafoam-green': '#48C9B0',       // Secondary accent[m
+[31m-        'deep-teal': '#1A5276',           // Footer gradient[m
+[31m-        'cream-bg': '#FAF9F6',            // Off-white background (NOT pure white)[m
+[32m+[m[32m        // TREEHOUSE THERAPY CENTER - Final Color Palette[m
+[32m+[m[32m        // Based on Upstream ABA structure with Treehouse branding[m
+[32m+[m[32m        'primary-navy': '#242E3C',        // Text, headers, nav, footer[m
+[32m+[m[32m        'primary-orange': '#DA9B4D',      // CTAs, accents, emphasis[m
+[32m+[m[32m        'accent-teal': '#44809B',         // Icons, subtle accents[m
+[32m+[m[32m        'golden-yellow': '#E8B84D',       // Warm accent (lighter orange)[m
+[32m+[m[32m        // Backgrounds[m
+[32m+[m[32m        'cream-bg': '#FAFAFA',            // Off-white background[m
+[32m+[m[32m        'gray-light': '#F5F5F5',          // Light gray sections[m
+         'white': '#FFFFFF',               // Pure white for cards[m
+         // Text colors[m
+[31m-        'text-dark': '#1E3A5F',           // Primary text (matches navy)[m
+[32m+[m[32m        'text-dark': '#242E3C',           // Primary text (matches navy)[m
+         'text-medium': '#5A6672',         // Secondary text[m
+         'text-light': '#8A9AAA',          // Muted text[m
+         // Utility[m
+         'error-red': '#E53E3E',[m
+         'success-green': '#38A169',[m
+         // Legacy aliases (for backward compatibility)[m
+[31m-        'dark-navy': '#1E3A5F',[m
+[31m-        'tree-brown': '#6E4C1E',[m
+[32m+[m[32m        'dark-navy': '#242E3C',[m
+[32m+[m[32m        'teal-light': '#44809B',[m
+[32m+[m[32m        'seafoam-green': '#5BA89D',[m
+[32m+[m[32m        'deep-teal': '#3A6F85',[m
+       },[m
+       fontFamily: {[m
+         'nunito': ['Nunito', 'sans-serif'],[m

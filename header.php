@@ -3,86 +3,75 @@
 <head>
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Upstream Flow Design System Styles -->
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/upstream-style.css" />
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- Aviation ABA Style Header: Transparent at top, solid white when scrolled -->
-<header id="masthead" class="site-header">
-    <div class="header-inner py-4">
-        <div class="container-custom">
-            <div class="flex items-center justify-between px-4">
+<!-- Header -->
+<?php $header_classes = 'site-header'; ?>
+<?php if (is_front_page()) { $header_classes .= ' site-header--hero'; } ?>
+<header class="<?php echo esc_attr($header_classes); ?>">
+    <div class="header-inner">
+        <!-- Logo -->
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+            <img src="<?php echo get_template_directory_uri(); ?>/assets/images/THTC_NEW_LOGO.png" alt="Treehouse Therapy Center" class="header-logo-img">
+        </a>
 
-                <!-- Logo -->
-                <div class="site-branding">
-                    <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center space-x-3">
-                        <div class="w-12 h-12">
-                            <!-- Treehouse Logo with Airplane/Heart motif -->
-                            <svg viewBox="0 0 100 100" class="w-full h-full">
-                                <!-- Tree trunk -->
-                                <rect x="42" y="60" width="16" height="30" fill="#6E4C1E" rx="2"/>
-                                <!-- Tree canopy -->
-                                <circle cx="50" cy="45" r="30" fill="#5BA89D"/>
-                                <circle cx="35" cy="55" r="18" fill="#44809B"/>
-                                <circle cx="65" cy="55" r="18" fill="#44809B"/>
-                                <!-- Heart accent -->
-                                <path d="M50 35 C45 30, 38 32, 38 40 C38 48, 50 55, 50 55 C50 55, 62 48, 62 40 C62 32, 55 30, 50 35Z" fill="#DA9B4D"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <span class="block text-xl font-nunito font-bold" style="color: var(--primary-navy);">
-                                Treehouse Therapy Center
-                            </span>
-                            <span class="block text-xs" style="color: var(--teal-light);">
-                                Building a foundation for growth
-                            </span>
-                        </div>
-                    </a>
-                </div>
+        <!-- Desktop Navigation -->
+        <nav class="nav-main">
+            <a href="<?php echo home_url('/'); ?>" class="nav-link">Home</a>
+            <a href="<?php echo home_url('/about'); ?>" class="nav-link">About</a>
+            <a href="<?php echo home_url('/services'); ?>" class="nav-link">Services</a>
+            <a href="<?php echo home_url('/careers'); ?>" class="nav-link">Careers</a>
+            <a href="<?php echo home_url('/contact'); ?>" class="nav-link">Contact</a>
+        </nav>
 
-                <!-- Desktop Navigation (Upstream ABA structure) -->
-                <nav class="hidden lg:flex items-center space-x-6">
-                    <a href="<?php echo home_url('/'); ?>" class="nav-link">Home</a>
-                    <a href="<?php echo home_url('/about'); ?>" class="nav-link">About</a>
-                    <a href="<?php echo home_url('/process'); ?>" class="nav-link">Process</a>
-                    <a href="<?php echo home_url('/services'); ?>" class="nav-link">Services</a>
-                    <a href="<?php echo home_url('/careers'); ?>" class="nav-link">Careers</a>
-                    <a href="<?php echo home_url('/contact'); ?>" class="nav-link">Contact</a>
-                    <a href="<?php echo home_url('/locations'); ?>" class="nav-link">Locations</a>
-                </nav>
-
-                <!-- CTA Button (Orange Pill) -->
-                <div class="hidden lg:block">
-                    <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary">
-                        Contact Us
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button id="mobile-menu-toggle" class="lg:hidden" style="color: var(--primary-navy);">
-                    <span class="sr-only">Menu</span>
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        <!-- CTA Buttons -->
+        <div class="header-cta">
+            <a href="tel:6123094135" class="btn-phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                (612) 309-4135
+            </a>
+            <a href="<?php echo home_url('/contact'); ?>" class="btn-contact">
+                Contact Us
+                <span class="arrow">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
-                </button>
-            </div>
+                </span>
+            </a>
         </div>
+
+        <!-- Mobile Menu Button -->
+        <button onclick="toggleMenu()" class="mobile-menu-btn" aria-label="Toggle menu">
+            <svg class="menu-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+        </button>
     </div>
 
-    <!-- Mobile Menu (Upstream ABA structure) -->
-    <div id="mobile-menu" class="mobile-menu">
-        <div class="px-4 py-6 space-y-4">
-            <a href="<?php echo home_url('/'); ?>" class="block py-2 text-lg font-nunito nav-link">Home</a>
-            <a href="<?php echo home_url('/about'); ?>" class="block py-2 text-lg font-nunito nav-link">About</a>
-            <a href="<?php echo home_url('/process'); ?>" class="block py-2 text-lg font-nunito nav-link">Process</a>
-            <a href="<?php echo home_url('/services'); ?>" class="block py-2 text-lg font-nunito nav-link">Services</a>
-            <a href="<?php echo home_url('/careers'); ?>" class="block py-2 text-lg font-nunito nav-link">Careers</a>
-            <a href="<?php echo home_url('/contact'); ?>" class="block py-2 text-lg font-nunito nav-link">Contact</a>
-            <a href="<?php echo home_url('/locations'); ?>" class="block py-2 text-lg font-nunito nav-link">Locations</a>
-            <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary w-full mt-4">Get Started</a>
-        </div>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="<?php echo home_url('/'); ?>" class="mobile-nav-link">Home</a>
+            <a href="<?php echo home_url('/about'); ?>" class="mobile-nav-link">About</a>
+            <a href="<?php echo home_url('/services'); ?>" class="mobile-nav-link">Services</a>
+            <a href="<?php echo home_url('/careers'); ?>" class="mobile-nav-link">Careers</a>
+            <a href="<?php echo home_url('/contact'); ?>" class="mobile-nav-link">Contact</a>
+            <a href="tel:6123094135" class="btn btn-pink mobile-cta">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                </svg>
+                Call Us
+            </a>
+        </nav>
     </div>
 </header>
 
-<div id="content" class="site-content pt-24">
+<!-- Main Content -->
+<main>

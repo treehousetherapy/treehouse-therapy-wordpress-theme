@@ -18,14 +18,14 @@ Tags: therapy, aba, healthcare, autism, medical, business, custom-colors, custom
 
 /* Minimal base styles for theme fallback */
 body {
-  font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #1E3A5F;
   background-color: #FAF9F6;
   line-height: 1.7;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-weight: 700;
   color: #1E3A5F;
 }

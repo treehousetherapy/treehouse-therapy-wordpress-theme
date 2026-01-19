@@ -1,0 +1,1999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treehouse Therapy Center - Redesigned Homepage</title>
+
+    <!-- Distinctive Typography: Fraunces + DM Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,400&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           TREEHOUSE THERAPY - "STORYBOOK TREEHOUSE"
+           Warm, whimsical, reassuring - like opening
+           a beloved children's book
+           ============================================ */
+
+        :root {
+            /* Storybook Palette - Warm & Inviting */
+            --forest-deep: #1B4332;        /* Deep forest green - trust, growth */
+            --forest-mid: #2D6A4F;         /* Mid forest - headers */
+            --leaf-green: #40916C;         /* Leafy green - accents */
+            --sage: #74C69D;               /* Soft sage - highlights */
+            --mint-cream: #D8F3DC;         /* Mint cream - subtle bg */
+
+            --treehouse-warm: #8B5A2B;     /* Warm wood brown */
+            --bark-brown: #5C4033;         /* Tree bark */
+            --honey-gold: #E9A319;         /* Honey/sunlight */
+            --sunset-coral: #E07B53;       /* Warm coral CTA */
+            --blush-pink: #FFCDB2;         /* Soft blush */
+
+            --cream: #FDF8F3;              /* Warm cream bg */
+            --paper: #FFFBF5;              /* Paper white */
+            --text-rich: #2D3436;          /* Rich text */
+            --text-soft: #636E72;          /* Muted text */
+
+            /* Shadows with warmth */
+            --shadow-soft: 0 4px 20px rgba(91, 64, 51, 0.08);
+            --shadow-card: 0 8px 32px rgba(91, 64, 51, 0.12);
+            --shadow-elevated: 0 20px 60px rgba(91, 64, 51, 0.15);
+            --shadow-glow: 0 0 40px rgba(233, 163, 25, 0.2);
+
+            /* Motion */
+            --ease-bounce: cubic-bezier(0.34, 1.56, 0.64, 1);
+            --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+
+            --header-height: 90px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--cream);
+            color: var(--text-rich);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Fraunces', Georgia, serif;
+            font-weight: 600;
+            color: var(--forest-deep);
+            line-height: 1.15;
+        }
+
+        /* ============================================
+           HEADER - Floating Glass Panel
+           ============================================ */
+        .site-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: var(--header-height);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            transition: all 0.4s var(--ease-smooth);
+        }
+
+        .header-glass {
+            position: absolute;
+            inset: 0;
+            background: rgba(253, 248, 243, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(139, 90, 43, 0.1);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .site-header.scrolled .header-glass {
+            opacity: 1;
+        }
+
+        .header-inner {
+            position: relative;
+            width: 100%;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            text-decoration: none;
+            z-index: 10;
+        }
+
+        .logo-icon {
+            width: 52px;
+            height: 52px;
+        }
+
+        .logo-text {
+            font-family: 'Fraunces', serif;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--forest-deep);
+            line-height: 1.2;
+        }
+
+        .logo-text span {
+            display: block;
+            font-size: 0.7rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 500;
+            color: var(--text-soft);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .nav-main {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
+        }
+
+        .nav-link {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-rich);
+            text-decoration: none;
+            position: relative;
+            padding: 0.5rem 0;
+            transition: color 0.2s ease;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--honey-gold);
+            border-radius: 2px;
+            transition: width 0.3s var(--ease-bounce);
+        }
+
+        .nav-link:hover {
+            color: var(--forest-mid);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .header-cta {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .btn-phone {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--forest-mid);
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            background: var(--mint-cream);
+            transition: all 0.3s ease;
+        }
+
+        .btn-phone:hover {
+            background: var(--sage);
+            color: var(--forest-deep);
+        }
+
+        .btn-phone svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: var(--sunset-coral);
+            color: white;
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 100px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 0 4px 16px rgba(224, 123, 83, 0.35);
+            transition: all 0.3s var(--ease-bounce);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(224, 123, 83, 0.4);
+        }
+
+        /* ============================================
+           HERO - Split Layout with Lead Form
+           ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            padding-top: var(--header-height);
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--paper) 50%, var(--mint-cream) 100%);
+            overflow: hidden;
+        }
+
+        /* Decorative Elements */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(116, 198, 157, 0.15) 0%, transparent 70%);
+            animation: float 20s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(233, 163, 25, 0.1) 0%, transparent 70%);
+            animation: float 25s ease-in-out infinite reverse;
+        }
+
+        /* Leaf decorations */
+        .leaf-decor {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .leaf-1 {
+            top: 15%;
+            left: 5%;
+            width: 80px;
+            animation: drift 15s ease-in-out infinite;
+        }
+
+        .leaf-2 {
+            top: 60%;
+            right: 8%;
+            width: 60px;
+            animation: drift 18s ease-in-out infinite reverse;
+        }
+
+        .leaf-3 {
+            bottom: 20%;
+            left: 12%;
+            width: 50px;
+            animation: drift 12s ease-in-out infinite 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(20px, -30px); }
+        }
+
+        @keyframes drift {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            25% { transform: translateY(-10px) rotate(5deg); }
+            75% { transform: translateY(5px) rotate(-3deg); }
+        }
+
+        .hero-container {
+            position: relative;
+            z-index: 10;
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+            display: grid;
+            grid-template-columns: 1.1fr 0.9fr;
+            gap: 4rem;
+            align-items: center;
+        }
+
+        .hero-content {
+            animation: fadeSlideUp 0.8s ease-out both;
+        }
+
+        @keyframes fadeSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: linear-gradient(135deg, var(--forest-deep), var(--forest-mid));
+            color: white;
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 20px rgba(27, 67, 50, 0.3);
+        }
+
+        .badge-pulse {
+            width: 8px;
+            height: 8px;
+            background: #4ADE80;
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.2); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2.8rem, 5vw, 4rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero h1 .highlight {
+            position: relative;
+            display: inline-block;
+            color: var(--honey-gold);
+        }
+
+        .hero h1 .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0.1em;
+            left: -0.1em;
+            right: -0.1em;
+            height: 0.35em;
+            background: rgba(233, 163, 25, 0.2);
+            z-index: -1;
+            border-radius: 4px;
+            transform: skewX(-3deg);
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: var(--text-soft);
+            max-width: 520px;
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .hero-trust-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.95rem;
+            color: var(--text-rich);
+        }
+
+        .trust-icon {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--mint-cream);
+            border-radius: 50%;
+            color: var(--leaf-green);
+        }
+
+        .trust-icon svg {
+            width: 14px;
+            height: 14px;
+        }
+
+        /* Lead Form Card */
+        .hero-form-wrapper {
+            animation: fadeSlideUp 0.8s ease-out 0.2s both;
+        }
+
+        .lead-form-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow-elevated);
+            border: 1px solid rgba(139, 90, 43, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-form-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--honey-gold), var(--sunset-coral));
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .form-header h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .form-header p {
+            color: var(--text-soft);
+            font-size: 0.95rem;
+        }
+
+        .lead-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-rich);
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 0.875rem 1rem;
+            border: 1.5px solid #E5E7EB;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-family: inherit;
+            color: var(--text-rich);
+            background: #FAFAFA;
+            transition: all 0.2s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--sage);
+            background: white;
+            box-shadow: 0 0 0 4px rgba(116, 198, 157, 0.15);
+        }
+
+        .form-group input::placeholder {
+            color: #9CA3AF;
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 1rem 2rem;
+            background: linear-gradient(135deg, var(--sunset-coral), #D46A42);
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 600;
+            font-family: inherit;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            box-shadow: 0 4px 20px rgba(224, 123, 83, 0.4);
+            transition: all 0.3s var(--ease-bounce);
+        }
+
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(224, 123, 83, 0.5);
+        }
+
+        .form-submit svg {
+            width: 20px;
+            height: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .form-submit:hover svg {
+            transform: translateX(4px);
+        }
+
+        .form-privacy {
+            text-align: center;
+            font-size: 0.8rem;
+            color: var(--text-soft);
+            margin-top: 0.5rem;
+        }
+
+        .form-privacy svg {
+            width: 14px;
+            height: 14px;
+            vertical-align: middle;
+            margin-right: 0.25rem;
+        }
+
+        /* ============================================
+           INSURANCE LOGOS SECTION
+           ============================================ */
+        .insurance-bar {
+            background: white;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(139, 90, 43, 0.08);
+            border-bottom: 1px solid rgba(139, 90, 43, 0.08);
+        }
+
+        .insurance-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            text-align: center;
+        }
+
+        .insurance-label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-soft);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.25rem;
+        }
+
+        .insurance-logos {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2rem 3rem;
+        }
+
+        .insurance-logo {
+            height: 40px;
+            opacity: 0.7;
+            filter: grayscale(30%);
+            transition: all 0.3s ease;
+        }
+
+        .insurance-logo:hover {
+            opacity: 1;
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* Placeholder logo styling */
+        .insurance-logo-placeholder {
+            height: 40px;
+            padding: 0.5rem 1.5rem;
+            background: linear-gradient(135deg, #F3F4F6, #E5E7EB);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #6B7280;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            transition: all 0.3s ease;
+        }
+
+        .insurance-logo-placeholder:hover {
+            opacity: 1;
+            background: linear-gradient(135deg, #E5E7EB, #D1D5DB);
+        }
+
+        /* ============================================
+           SKILLS/OUTCOMES SECTION
+           ============================================ */
+        .skills-section {
+            padding: 6rem 0;
+            background: var(--paper);
+            position: relative;
+        }
+
+        .section-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 4rem;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            font-size: 1.15rem;
+            color: var(--text-soft);
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .skill-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: var(--shadow-soft);
+            border: 1px solid rgba(139, 90, 43, 0.06);
+            transition: all 0.4s var(--ease-smooth);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .skill-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            transition: height 0.4s var(--ease-smooth);
+        }
+
+        .skill-card:hover::before {
+            height: 100%;
+        }
+
+        .skill-card:nth-child(1)::before { background: var(--sage); }
+        .skill-card:nth-child(2)::before { background: var(--honey-gold); }
+        .skill-card:nth-child(3)::before { background: var(--sunset-coral); }
+        .skill-card:nth-child(4)::before { background: var(--blush-pink); }
+        .skill-card:nth-child(5)::before { background: var(--leaf-green); }
+        .skill-card:nth-child(6)::before { background: var(--treehouse-warm); }
+
+        .skill-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-card);
+        }
+
+        .skill-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .skill-icon svg {
+            width: 28px;
+            height: 28px;
+        }
+
+        .skill-card:nth-child(1) .skill-icon { background: rgba(116, 198, 157, 0.15); color: var(--leaf-green); }
+        .skill-card:nth-child(2) .skill-icon { background: rgba(233, 163, 25, 0.15); color: var(--honey-gold); }
+        .skill-card:nth-child(3) .skill-icon { background: rgba(224, 123, 83, 0.15); color: var(--sunset-coral); }
+        .skill-card:nth-child(4) .skill-icon { background: rgba(255, 205, 178, 0.4); color: #C77852; }
+        .skill-card:nth-child(5) .skill-icon { background: rgba(64, 145, 108, 0.15); color: var(--leaf-green); }
+        .skill-card:nth-child(6) .skill-icon { background: rgba(139, 90, 43, 0.12); color: var(--treehouse-warm); }
+
+        .skill-card h4 {
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .skill-card p {
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           TESTIMONIALS SECTION
+           ============================================ */
+        .testimonials-section {
+            padding: 6rem 0;
+            background: linear-gradient(180deg, var(--paper) 0%, var(--mint-cream) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonials-section::before {
+            content: '"';
+            position: absolute;
+            top: 2rem;
+            left: 5%;
+            font-family: 'Fraunces', serif;
+            font-size: 20rem;
+            color: var(--sage);
+            opacity: 0.1;
+            line-height: 1;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .testimonial-card {
+            background: white;
+            border-radius: 24px;
+            padding: 2rem;
+            box-shadow: var(--shadow-card);
+            position: relative;
+            transition: all 0.4s var(--ease-smooth);
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-6px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .testimonial-quote {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: var(--text-rich);
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--sage), var(--leaf-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        .author-info {
+            flex: 1;
+        }
+
+        .author-name {
+            font-weight: 700;
+            color: var(--forest-deep);
+            font-size: 0.95rem;
+        }
+
+        .author-role {
+            font-size: 0.85rem;
+            color: var(--text-soft);
+        }
+
+        .testimonial-stars {
+            display: flex;
+            gap: 0.2rem;
+            color: var(--honey-gold);
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-stars svg {
+            width: 18px;
+            height: 18px;
+            fill: currentColor;
+        }
+
+        /* ============================================
+           PROCESS SECTION
+           ============================================ */
+        .process-section {
+            padding: 6rem 0;
+            background: var(--forest-deep);
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .process-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(116, 198, 157, 0.1) 0%, transparent 60%);
+        }
+
+        .process-section .section-header h2 {
+            color: white;
+        }
+
+        .process-section .section-header p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            position: relative;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 12%;
+            right: 12%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--honey-gold), var(--sunset-coral));
+            opacity: 0.3;
+        }
+
+        .process-step {
+            text-align: center;
+            position: relative;
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 1.5rem;
+            background: linear-gradient(135deg, var(--honey-gold), var(--sunset-coral));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Fraunces', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            box-shadow: 0 8px 30px rgba(233, 163, 25, 0.3);
+            position: relative;
+            z-index: 10;
+        }
+
+        .step-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage);
+        }
+
+        .step-icon svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .process-step h4 {
+            color: white;
+            font-size: 1.15rem;
+            margin-bottom: 0.5rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .process-step p {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.6;
+        }
+
+        /* ============================================
+           SERVICES PREVIEW
+           ============================================ */
+        .services-section {
+            padding: 6rem 0;
+            background: var(--cream);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: var(--shadow-soft);
+            transition: all 0.4s var(--ease-smooth);
+            border: 1px solid rgba(139, 90, 43, 0.06);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: var(--shadow-elevated);
+        }
+
+        .service-illustration {
+            height: 180px;
+            background: linear-gradient(135deg, var(--mint-cream), var(--paper));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-illustration svg {
+            width: 120px;
+            height: 120px;
+        }
+
+        .service-content {
+            padding: 1.75rem;
+        }
+
+        .service-content h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+        }
+
+        .service-content p {
+            font-size: 0.95rem;
+            color: var(--text-soft);
+            line-height: 1.6;
+            margin-bottom: 1.25rem;
+        }
+
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 600;
+            color: var(--forest-mid);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: all 0.2s ease;
+        }
+
+        .service-link:hover {
+            color: var(--sunset-coral);
+            gap: 0.75rem;
+        }
+
+        .service-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        /* ============================================
+           CTA SECTION
+           ============================================ */
+        .cta-section {
+            padding: 6rem 0;
+            background: linear-gradient(135deg, var(--honey-gold) 0%, var(--sunset-coral) 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l30 30-30 30L0 30z' fill='%23ffffff' fill-opacity='0.05'/%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 10;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .cta-content h2 {
+            color: white;
+            font-size: clamp(2rem, 4vw, 2.75rem);
+            margin-bottom: 1rem;
+        }
+
+        .cta-content p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: white;
+            color: var(--sunset-coral);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 100px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s var(--ease-bounce);
+        }
+
+        .btn-white:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-outline-white {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: transparent;
+            color: white;
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 100px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            transition: all 0.3s var(--ease-bounce);
+        }
+
+        .btn-outline-white:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
+            transform: translateY(-3px);
+        }
+
+        /* ============================================
+           FOOTER
+           ============================================ */
+        .site-footer {
+            background: var(--forest-deep);
+            color: white;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-inner {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr repeat(3, 1fr);
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-brand p {
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+
+        .footer-col h5 {
+            color: white;
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1.25rem;
+            font-family: 'DM Sans', sans-serif;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 0.75rem;
+        }
+
+        .footer-col a {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.2s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--sage);
+        }
+
+        .footer-bottom {
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .footer-bottom p {
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 0.9rem;
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .footer-socials a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        .footer-socials a:hover {
+            background: var(--sage);
+            transform: translateY(-2px);
+        }
+
+        .footer-socials svg {
+            width: 20px;
+            height: 20px;
+        }
+
+        /* ============================================
+           RESPONSIVE
+           ============================================ */
+        @media (max-width: 1024px) {
+            .hero-container {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+
+            .skills-grid,
+            .testimonials-grid,
+            .services-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .process-steps {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 3rem;
+            }
+
+            .process-steps::before {
+                display: none;
+            }
+
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .nav-main {
+                display: none;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: calc(var(--header-height) + 2rem);
+            }
+
+            .hero-container {
+                padding: 2rem 1.5rem;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid,
+            .testimonials-grid,
+            .services-grid,
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+
+            .insurance-logos {
+                gap: 1.5rem 2rem;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-container {
+                padding: 0 1.5rem;
+            }
+        }
+
+        /* ============================================
+           SCROLL ANIMATIONS
+           ============================================ */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .animate-on-scroll.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        .stagger-6 { transition-delay: 0.6s; }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="site-header" id="header">
+        <div class="header-glass"></div>
+        <div class="header-inner">
+            <a href="#" class="logo">
+                <svg class="logo-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Tree trunk -->
+                    <rect x="22" y="28" width="8" height="18" rx="2" fill="#8B5A2B"/>
+                    <!-- Treehouse platform -->
+                    <rect x="14" y="26" width="24" height="4" rx="1" fill="#5C4033"/>
+                    <!-- Tree foliage layers -->
+                    <ellipse cx="26" cy="18" rx="18" ry="14" fill="#40916C"/>
+                    <ellipse cx="26" cy="14" rx="14" ry="10" fill="#74C69D"/>
+                    <ellipse cx="26" cy="11" rx="10" ry="7" fill="#95D5B2"/>
+                    <!-- Little window -->
+                    <circle cx="26" cy="22" r="3" fill="#FFFBF5"/>
+                    <circle cx="26" cy="22" r="2" fill="#87CEEB"/>
+                </svg>
+                <div class="logo-text">
+                    Treehouse Therapy
+                    <span>Minneapolis ABA Specialists</span>
+                </div>
+            </a>
+
+            <nav class="nav-main">
+                <a href="#" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#" class="nav-link">Careers</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="header-cta">
+                <a href="tel:6123094135" class="btn-phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    (612) 309-4135
+                </a>
+                <a href="#contact" class="btn-primary">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section with Lead Form -->
+    <section class="hero">
+        <!-- Decorative leaves -->
+        <svg class="leaf-decor leaf-1" viewBox="0 0 80 80" fill="none">
+            <path d="M40 5C20 15 5 35 10 55C15 75 35 80 55 70C75 60 80 40 70 20C60 0 40 5 40 5Z" fill="#74C69D" opacity="0.3"/>
+        </svg>
+        <svg class="leaf-decor leaf-2" viewBox="0 0 60 60" fill="none">
+            <path d="M30 5C15 10 5 25 8 40C11 55 25 58 42 50C59 42 60 28 52 15C44 2 30 5 30 5Z" fill="#E9A319" opacity="0.25"/>
+        </svg>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-pulse"></span>
+                    No Waitlist - Start Services Fast
+                </div>
+
+                <h1>
+                    Helping your child <span class="highlight">thrive</span> with personalized ABA therapy
+                </h1>
+
+                <p class="hero-description">
+                    At Treehouse Therapy Center, we provide evidence-based ABA therapy that feels like play. Our compassionate team helps children ages 2-12 build essential life skills in the comfort of home or school.
+                </p>
+
+                <div class="hero-trust-row">
+                    <div class="trust-item">
+                        <span class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </span>
+                        Ages 2-12
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </span>
+                        Minneapolis/St. Paul Metro
+                    </div>
+                    <div class="trust-item">
+                        <span class="trust-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"/>
+                            </svg>
+                        </span>
+                        In-Home & School-Based
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lead Capture Form -->
+            <div class="hero-form-wrapper">
+                <div class="lead-form-card">
+                    <div class="form-header">
+                        <h3>Start Your Child's Journey</h3>
+                        <p>Free consultation - we'll call within 24 hours</p>
+                    </div>
+
+                    <form class="lead-form" action="#" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Child's First Name*</label>
+                                <input type="text" name="child_name" placeholder="Emma" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Child's Age*</label>
+                                <select name="child_age" required>
+                                    <option value="">Select age</option>
+                                    <option value="2">2 years</option>
+                                    <option value="3">3 years</option>
+                                    <option value="4">4 years</option>
+                                    <option value="5">5 years</option>
+                                    <option value="6">6 years</option>
+                                    <option value="7">7 years</option>
+                                    <option value="8">8 years</option>
+                                    <option value="9">9 years</option>
+                                    <option value="10">10 years</option>
+                                    <option value="11">11 years</option>
+                                    <option value="12">12 years</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>Parent/Guardian Name*</label>
+                                <input type="text" name="parent_name" placeholder="Jane Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone Number*</label>
+                                <input type="tel" name="phone" placeholder="(555) 123-4567" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Email Address*</label>
+                            <input type="email" name="email" placeholder="jane@example.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Insurance Provider</label>
+                            <select name="insurance">
+                                <option value="">Select your insurance</option>
+                                <option value="bcbs">Blue Cross Blue Shield</option>
+                                <option value="medicaid">Medicaid/MA</option>
+                                <option value="healthpartners">HealthPartners</option>
+                                <option value="ucare">UCare</option>
+                                <option value="uhc">UnitedHealthcare</option>
+                                <option value="medica">Medica</option>
+                                <option value="aetna">Aetna</option>
+                                <option value="cigna">Cigna</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="form-submit">
+                            Get Free Consultation
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+
+                        <p class="form-privacy">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                            </svg>
+                            Your information is secure and never shared
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Insurance Logos Bar -->
+    <section class="insurance-bar">
+        <div class="insurance-inner">
+            <p class="insurance-label">Insurance We Accept</p>
+            <div class="insurance-logos">
+                <div class="insurance-logo-placeholder">BLUE CROSS</div>
+                <div class="insurance-logo-placeholder">MEDICAID</div>
+                <div class="insurance-logo-placeholder">HEALTHPARTNERS</div>
+                <div class="insurance-logo-placeholder">UCARE</div>
+                <div class="insurance-logo-placeholder">UNITED</div>
+                <div class="insurance-logo-placeholder">MEDICA</div>
+                <div class="insurance-logo-placeholder">AETNA</div>
+                <div class="insurance-logo-placeholder">CIGNA</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills/Outcomes Section -->
+    <section class="skills-section" id="skills">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2>Building Essential Skills for Life</h2>
+                <p>Our comprehensive approach targets key developmental areas to help your child reach their full potential</p>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card animate-on-scroll stagger-1">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h4>Social Skills</h4>
+                    <p>Building friendships, turn-taking, sharing, and meaningful connections with peers and family members.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll stagger-2">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Communication</h4>
+                    <p>Developing verbal and non-verbal communication skills to express needs, wants, and ideas effectively.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll stagger-3">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"/>
+                            <line x1="9" y1="9" x2="9.01" y2="9"/>
+                            <line x1="15" y1="9" x2="15.01" y2="9"/>
+                        </svg>
+                    </div>
+                    <h4>Emotional Regulation</h4>
+                    <p>Learning to identify, understand, and manage emotions in healthy and constructive ways.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll stagger-4">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                            <polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h4>Daily Living Skills</h4>
+                    <p>Mastering self-care routines like dressing, eating, and personal hygiene for greater independence.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll stagger-5">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h4>Play Skills</h4>
+                    <p>Engaging in imaginative and functional play that promotes learning, creativity, and joy.</p>
+                </div>
+
+                <div class="skill-card animate-on-scroll stagger-6">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+                        </svg>
+                    </div>
+                    <h4>Academic Readiness</h4>
+                    <p>Building foundational skills for learning success including focus, following directions, and pre-academic concepts.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2>What Parents Are Saying</h2>
+                <p>Real stories from families we've had the privilege to work with</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card animate-on-scroll stagger-1">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"The progress we've seen in just a few months has been incredible. Our daughter is now making eye contact, using words to communicate, and actually enjoying social interactions. Treehouse has been a blessing."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SM</div>
+                        <div class="author-info">
+                            <p class="author-name">Sarah M.</p>
+                            <p class="author-role">Parent of 4-year-old</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll stagger-2">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"What sets Treehouse apart is how much they genuinely care. The therapists feel like family - they celebrate every milestone with us and truly understand our son's unique needs."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JT</div>
+                        <div class="author-info">
+                            <p class="author-name">Jennifer T.</p>
+                            <p class="author-role">Parent of 6-year-old</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card animate-on-scroll stagger-3">
+                    <div class="testimonial-stars">
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <p class="testimonial-quote">"We were nervous about starting therapy, but Treehouse made the process so easy. No waitlist, quick insurance verification, and a personalized plan within weeks. Highly recommend!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MR</div>
+                        <div class="author-info">
+                            <p class="author-name">Michael R.</p>
+                            <p class="author-role">Parent of 3-year-old</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2>Getting Started is Easy</h2>
+                <p>Four simple steps to begin your child's therapy journey</p>
+            </div>
+
+            <div class="process-steps">
+                <div class="process-step animate-on-scroll stagger-1">
+                    <div class="step-number">1</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                    </div>
+                    <h4>Reach Out</h4>
+                    <p>Fill out our form or give us a call. We respond within 24 hours.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll stagger-2">
+                    <div class="step-number">2</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M9 12l2 2 4-4"/>
+                            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+                        </svg>
+                    </div>
+                    <h4>Insurance Check</h4>
+                    <p>We verify your coverage and handle all the paperwork for you.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll stagger-3">
+                    <div class="step-number">3</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                    </div>
+                    <h4>Assessment</h4>
+                    <p>Our BCBA meets with your family to understand your child's unique needs.</p>
+                </div>
+
+                <div class="process-step animate-on-scroll stagger-4">
+                    <div class="step-number">4</div>
+                    <div class="step-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+                        </svg>
+                    </div>
+                    <h4>Begin Therapy</h4>
+                    <p>Your personalized plan starts - watch your child grow and thrive!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <div class="section-container">
+            <div class="section-header animate-on-scroll">
+                <h2>Our Services</h2>
+                <p>Flexible therapy options that fit your family's life</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card animate-on-scroll stagger-1">
+                    <div class="service-illustration">
+                        <svg viewBox="0 0 120 120" fill="none">
+                            <!-- House shape -->
+                            <path d="M60 20L100 50V95H20V50L60 20Z" fill="#D8F3DC" stroke="#40916C" stroke-width="3"/>
+                            <!-- Door -->
+                            <rect x="48" y="60" width="24" height="35" rx="2" fill="#E9A319"/>
+                            <!-- Windows -->
+                            <rect x="30" y="55" width="14" height="14" rx="2" fill="#FFFBF5" stroke="#40916C" stroke-width="2"/>
+                            <rect x="76" y="55" width="14" height="14" rx="2" fill="#FFFBF5" stroke="#40916C" stroke-width="2"/>
+                            <!-- Child figure -->
+                            <circle cx="60" cy="78" r="6" fill="#FFDBAC"/>
+                            <circle cx="58" cy="76" r="1.5" fill="#2D3436"/>
+                            <circle cx="62" cy="76" r="1.5" fill="#2D3436"/>
+                            <path d="M57 80 Q60 83 63 80" stroke="#E07B53" stroke-width="1.5" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h4>In-Home Therapy</h4>
+                        <p>One-on-one therapy in your home where your child feels most comfortable and learning happens naturally.</p>
+                        <a href="#" class="service-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card animate-on-scroll stagger-2">
+                    <div class="service-illustration" style="background: linear-gradient(135deg, #FEF3C7, #FFFBEB);">
+                        <svg viewBox="0 0 120 120" fill="none">
+                            <!-- School building -->
+                            <rect x="20" y="45" width="80" height="55" rx="4" fill="#FEF3C7" stroke="#E9A319" stroke-width="3"/>
+                            <!-- Door -->
+                            <rect x="50" y="70" width="20" height="30" rx="2" fill="#E07B53"/>
+                            <!-- Windows row -->
+                            <rect x="28" y="52" width="12" height="14" rx="2" fill="#FFFBF5" stroke="#E9A319" stroke-width="2"/>
+                            <rect x="54" y="52" width="12" height="14" rx="2" fill="#FFFBF5" stroke="#E9A319" stroke-width="2"/>
+                            <rect x="80" y="52" width="12" height="14" rx="2" fill="#FFFBF5" stroke="#E9A319" stroke-width="2"/>
+                            <!-- Flag -->
+                            <rect x="55" y="25" width="3" height="25" fill="#2D6A4F"/>
+                            <path d="M58 25H75L70 32L75 39H58V25Z" fill="#E07B53"/>
+                            <!-- Book -->
+                            <rect x="35" y="80" width="18" height="14" rx="2" fill="#74C69D"/>
+                            <path d="M39 84H49M39 88H47" stroke="white" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h4>School-Based Therapy</h4>
+                        <p>Collaborative support within educational settings to help your child succeed academically and socially.</p>
+                        <a href="#" class="service-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="service-card animate-on-scroll stagger-3">
+                    <div class="service-illustration" style="background: linear-gradient(135deg, #FFCDB2, #FFE5D9);">
+                        <svg viewBox="0 0 120 120" fill="none">
+                            <!-- Parent figure -->
+                            <circle cx="45" cy="40" r="14" fill="#FFDBAC"/>
+                            <circle cx="41" cy="38" r="2.5" fill="#2D3436"/>
+                            <circle cx="49" cy="38" r="2.5" fill="#2D3436"/>
+                            <path d="M42 45 Q45 49 48 45" stroke="#E07B53" stroke-width="2" stroke-linecap="round"/>
+                            <rect x="32" y="56" width="26" height="38" rx="4" fill="#40916C"/>
+
+                            <!-- Child figure -->
+                            <circle cx="80" cy="52" r="11" fill="#FFDBAC"/>
+                            <circle cx="77" cy="50" r="2" fill="#2D3436"/>
+                            <circle cx="83" cy="50" r="2" fill="#2D3436"/>
+                            <path d="M77 56 Q80 59 83 56" stroke="#E07B53" stroke-width="1.5" stroke-linecap="round"/>
+                            <rect x="70" y="64" width="20" height="30" rx="3" fill="#E9A319"/>
+
+                            <!-- Heart connection -->
+                            <path d="M55 60 Q65 52 72 58" stroke="#E07B53" stroke-width="2" stroke-dasharray="4 2"/>
+                            <path d="M64 52 C64 48 68 48 68 52 C68 48 72 48 72 52 C72 58 68 62 68 62 C68 62 64 58 64 52Z" fill="#E07B53"/>
+                        </svg>
+                    </div>
+                    <div class="service-content">
+                        <h4>Parent Training</h4>
+                        <p>Empowering you with strategies and techniques to support your child's continued growth at home.</p>
+                        <a href="#" class="service-link">
+                            Learn More
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section" id="contact">
+        <div class="section-container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Ready to Help Your Child Thrive?</h2>
+                <p>Take the first step today. We're here to support your family every step of the way.</p>
+                <div class="cta-buttons">
+                    <a href="tel:6123094135" class="btn-white">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        Call (612) 309-4135
+                    </a>
+                    <a href="#" class="btn-outline-white">
+                        Schedule Consultation
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo" style="margin-bottom: 1rem;">
+                        <svg class="logo-icon" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" style="width: 44px; height: 44px;">
+                            <rect x="22" y="28" width="8" height="18" rx="2" fill="#8B5A2B"/>
+                            <rect x="14" y="26" width="24" height="4" rx="1" fill="#5C4033"/>
+                            <ellipse cx="26" cy="18" rx="18" ry="14" fill="#40916C"/>
+                            <ellipse cx="26" cy="14" rx="14" ry="10" fill="#74C69D"/>
+                            <ellipse cx="26" cy="11" rx="10" ry="7" fill="#95D5B2"/>
+                            <circle cx="26" cy="22" r="3" fill="#FFFBF5"/>
+                            <circle cx="26" cy="22" r="2" fill="#87CEEB"/>
+                        </svg>
+                        <div class="logo-text" style="color: white;">
+                            Treehouse Therapy
+                            <span style="color: rgba(255,255,255,0.6);">Minneapolis ABA Specialists</span>
+                        </div>
+                    </a>
+                    <p>Evidence-based ABA therapy helping Minnesota children ages 2-12 build essential life skills and reach their full potential.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Services</h5>
+                    <ul>
+                        <li><a href="#">In-Home Therapy</a></li>
+                        <li><a href="#">School-Based Therapy</a></li>
+                        <li><a href="#">Parent Training</a></li>
+                        <li><a href="#">EIDBI Services</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Our Team</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h5>Contact</h5>
+                    <ul>
+                        <li><a href="tel:6123094135">(612) 309-4135</a></li>
+                        <li><a href="mailto:info@treehousetherapymn.com">info@treehousetherapymn.com</a></li>
+                        <li>Minneapolis/St. Paul Metro</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Treehouse Therapy Center LLC. All rights reserved.</p>
+                <div class="footer-socials">
+                    <a href="#" aria-label="Facebook">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                            <rect x="2" y="9" width="4" height="12"/>
+                            <circle cx="4" cy="4" r="2"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+
+            if (currentScroll > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+
+            lastScroll = currentScroll;
+        });
+
+        // Scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.animate-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form validation enhancement
+        const form = document.querySelector('.lead-form');
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                // Add loading state
+                const btn = form.querySelector('.form-submit');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<span style="display: inline-block; width: 20px; height: 20px; border: 2px solid white; border-top-color: transparent; border-radius: 50%; animation: spin 1s linear infinite;"></span> Submitting...';
+                btn.disabled = true;
+
+                // Simulate submission (replace with actual form handling)
+                setTimeout(() => {
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20"><polyline points="20 6 9 17 4 12"/></svg> Thank you!';
+                    btn.style.background = '#40916C';
+                }, 1500);
+            });
+        }
+    </script>
+
+    <style>
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</body>
+</html>

@@ -1,0 +1,243 @@
+/**
+ * Enhanced Hover Effects and Animations
+ * Aviation ABA Design System
+ */
+
+/* ===== BUTTON ENHANCEMENTS ===== */
+.btn {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 107, 107, 0.25);
+}
+
+.btn-primary:active {
+    transform: translateY(-1px);
+}
+
+.btn-secondary:hover {
+    background-color: #5FB3E5;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(135, 206, 235, 0.2);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
+}
+
+.btn-outline:hover {
+    background-color: #E0F7FA;
+    transform: translateY(-2px);
+}
+
+/* ===== CARD ENHANCEMENTS ===== */
+.card,
+.card-elevated {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover,
+.card-elevated:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px -15px rgba(26, 54, 93, 0.2) !important;
+}
+
+/* ===== FORM INPUT FOCUS STATES ===== */
+.form-input {
+    transition: all 0.2s ease-out;
+    border-color: rgba(26, 54, 93, 0.2);
+}
+
+.form-input:focus {
+    border-color: #87CEEB;
+    box-shadow: 0 0 0 3px rgba(135, 206, 235, 0.1);
+    outline: none;
+    background-color: #E0F7FA;
+}
+
+.form-input:hover {
+    border-color: #87CEEB;
+}
+
+/* ===== FORM LABEL ENHANCEMENT ===== */
+.form-label {
+    transition: color 0.2s ease-out;
+    font-weight: 600;
+    color: #1A365D;
+}
+
+.form-input:focus ~ .form-label,
+.form-input:hover ~ .form-label {
+    color: #87CEEB;
+}
+
+/* ===== NAVIGATION LINK EFFECTS ===== */
+a.nav-link,
+.nav-link {
+    transition: all 0.2s ease-out;
+    position: relative;
+    color: #1A365D;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+a.nav-link:hover,
+.nav-link:hover {
+    color: #87CEEB;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #87CEEB;
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* ===== HEADER SCROLL EFFECT ===== */
+.site-header {
+    transition: all 0.3s ease-out;
+    background-color: white;
+}
+
+.site-header.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 20px -4px rgba(26, 54, 93, 0.08);
+    border-bottom: 1px solid rgba(26, 54, 93, 0.05);
+}
+
+/* ===== MOBILE MENU ANIMATION ===== */
+#mobile-menu {
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#mobile-menu:not(.hidden) {
+    animation-name: slideIn;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== ICON CIRCLE HOVER ===== */
+.icon-circle,
+.icon-circle-coral,
+.icon-circle-teal,
+.icon-circle-orange,
+.icon-circle-navy,
+.icon-box-blue,
+.icon-box-purple {
+    transition: all 0.3s ease-out;
+    box-shadow: 0 10px 30px -10px rgba(26, 54, 93, 0.15);
+}
+
+.icon-circle:hover,
+.icon-circle-coral:hover,
+.icon-circle-teal:hover,
+.icon-circle-orange:hover,
+.icon-circle-navy:hover,
+.icon-box-blue:hover,
+.icon-box-purple:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px -15px rgba(26, 54, 93, 0.2);
+}
+
+/* ===== TESTIMONIAL CARD ENHANCEMENT ===== */
+.testimonial-card {
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(26, 54, 93, 0.15);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 25px 70px rgba(26, 54, 93, 0.15);
+}
+
+/* ===== SERVICE CARD ENHANCEMENTS ===== */
+.service-card {
+    transition: all 0.3s ease-out;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px -10px rgba(26, 54, 93, 0.15);
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 50px -15px rgba(26, 54, 93, 0.2);
+}
+
+/* ===== BUTTON GROUP HOVER ===== */
+.btn-group .btn:hover {
+    transform: translateY(-3px);
+}
+
+/* ===== SMOOTH TRANSITIONS FOR INTERACTIVE ELEMENTS ===== */
+* {
+    transition-property: color, background-color, border-color, box-shadow, transform;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-out;
+}
+
+/* Disable transitions for performance-sensitive elements */
+.animation-disabled,
+.no-transition {
+    transition: none !important;
+}
+
+/* ===== CLOUD DIVIDER ANIMATION ===== */
+.wave-divider svg,
+.cloud-divider svg {
+    animation: wave 8s ease-in-out infinite;
+}
+
+@keyframes wave {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-2%);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(2%);
+    }
+}
+
+/* ===== AOS CUSTOM ANIMATIONS ===== */
+[data-aos] {
+    opacity: 0;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+/* ===== ACCESSIBILITY ===== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
