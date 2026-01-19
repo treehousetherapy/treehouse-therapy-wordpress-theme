@@ -234,7 +234,7 @@ get_header();
 <section id="difference" class="about-difference">
     <div class="about-difference-container">
         <div class="about-difference-header" data-animate>
-            <p class="section-label">Why Treehouse</p>
+            <span class="section-label">WHY TREEHOUSE</span>
             <h2>What Makes Us <span class="highlight-pill">Different</span></h2>
             <p class="section-intro">We're not trying to be the biggest ABA provider. We're trying to be the best fit for your family. Here's what sets us apart:</p>
         </div>
