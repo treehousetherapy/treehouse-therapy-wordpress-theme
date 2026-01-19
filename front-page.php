@@ -9,7 +9,7 @@ get_header();
 ?>
 
 <!-- Hero Section - Bedrock-inspired layout -->
-<section class="hero-bedrock hero--light">
+<section class="hero-bedrock hero--light" id="page-hero">
     <div class="hero-bedrock-container">
         <div class="hero-bedrock-grid">
             <div class="hero-bedrock-content">

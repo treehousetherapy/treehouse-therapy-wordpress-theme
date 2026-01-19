@@ -13,7 +13,7 @@
 <!-- Header -->
 <?php $header_classes = 'site-header'; ?>
 <?php if (is_front_page()) { $header_classes .= ' site-header--hero'; } ?>
-<header class="<?php echo esc_attr($header_classes); ?>" data-header-mode="auto">
+<header class="<?php echo esc_attr($header_classes); ?>" data-header-mode="auto" id="main-header">
     <div class="header-inner">
         <!-- Logo -->
         <a href="<?php echo esc_url(home_url('/')); ?>" class="logo site-logo">
@@ -74,39 +74,30 @@
 </header>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  const header = document.querySelector('.site-header');
-  const hero = document.querySelector('.hero-bedrock, .hero-upstream');
+document.addEventListener('DOMContentLoaded', () => {
+  const header = document.querySelector('.site-header[data-header-mode="auto"]');
+  const hero = document.querySelector('#page-hero');
+
   if (!header) return;
 
-  const preferredMode = hero && hero.classList.contains('hero--dark') ? 'dark' : 'light';
-
   const setMode = (mode) => {
-    header.classList.remove('is-light', 'is-dark');
-    header.classList.add(mode === 'dark' ? 'is-dark' : 'is-light');
+    header.classList.toggle('is-light', mode === 'light');
+    header.classList.toggle('is-dark', mode === 'dark');
   };
 
-  const updateHeaderMode = () => {
-    if (!hero) {
-      setMode('light');
-      return;
-    }
-    const headerHeight = header.offsetHeight || 80;
-    const heroTop = hero.offsetTop || 0;
-    const heroHeight = hero.offsetHeight || 0;
-    const scrollPos = window.scrollY || window.pageYOffset;
-    const threshold = heroTop + heroHeight - headerHeight * 1.2;
+  const heroMode = hero?.classList.contains('hero--light') ? 'light' : 'dark';
+  setMode(heroMode);
 
-    if (scrollPos < threshold) {
-      setMode(preferredMode);
-    } else {
-      setMode('light');
-    }
+  const onScroll = () => {
+    if (!hero) return setMode('light');
+    const heroBottom = hero.getBoundingClientRect().bottom;
+    // Once you scroll past hero, force readable light header everywhere
+    if (heroBottom <= 80) setMode('light');
+    else setMode(heroMode);
   };
 
-  updateHeaderMode();
-  window.addEventListener('scroll', updateHeaderMode, { passive: true });
-  window.addEventListener('resize', updateHeaderMode);
+  window.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
 });
 </script>
 
