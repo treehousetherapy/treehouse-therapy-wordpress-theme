@@ -144,6 +144,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
+.site-header.is-light .nav-link,
+.site-header.is-light .main-nav a {
+  color: #0E1E32 !important;
+  opacity: 1 !important;
+}
+
 .site-header.is-dark {
   --header-bg: rgba(10, 14, 30, 0.35);
   --header-border: rgba(255, 255, 255, 0.1);
@@ -153,6 +159,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   --header-cta-color: #0E1E32;
   --header-cta-shadow: rgba(240, 216, 96, 0.35);
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.site-header.is-dark .nav-link,
+.site-header.is-dark .main-nav a {
+  color: #fff !important;
+  opacity: 0.92 !important;
 }
 
 .header-inner {
@@ -2252,7 +2264,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 
 /* Left content column */
 .hero-bedrock-content {
-  color: #0E1E32;
+  color: white;
+}
+
+/* LIGHT MODE - force full opacity dark text */
+.hero-bedrock.hero--light .hero-bedrock-content {
+  color: #0E1E32 !important;
+  opacity: 1 !important;
 }
 
 .hero-eyebrow {
@@ -2261,17 +2279,27 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #5080B8;
+  color: rgba(255, 255, 255, 0.7);
   margin-bottom: 1.5rem;
+}
+
+.hero-bedrock.hero--light .hero-eyebrow {
+  color: #5080B8 !important;
+  opacity: 1 !important;
 }
 
 .hero-bedrock-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
   line-height: 1.1;
   font-weight: 800;
-  color: #0E1E32;
+  color: white;
   margin-bottom: 1.5rem;
   letter-spacing: -0.03em;
+}
+
+.hero-bedrock.hero--light .hero-bedrock-title {
+  color: #0E1E32 !important;
+  opacity: 1 !important;
 }
 
 .hero-bedrock-title span {
@@ -2293,12 +2321,22 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   box-shadow: 0 6px 18px rgba(240, 216, 96, 0.35);
 }
 
+.hero-bedrock.hero--light .hero-chip {
+  background: #FFC107;
+  color: #0E1E32 !important;
+}
+
 .hero-bedrock-subhead {
   font-size: clamp(1.125rem, 1.5vw, 1.35rem);
   line-height: 1.6;
-  color: #31455e;
+  color: rgba(255, 255, 255, 0.9);
   margin-bottom: 2rem;
   max-width: 560px;
+}
+
+.hero-bedrock.hero--light .hero-bedrock-subhead {
+  color: #31455e !important;
+  opacity: 1 !important;
 }
 
 .hero-bedrock-cta {
@@ -2357,9 +2395,14 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #31455e;
+  color: rgba(255, 255, 255, 0.9);
   font-size: 0.95rem;
   font-weight: 700;
+}
+
+.hero-bedrock.hero--light .hero-bedrock-trust li {
+  color: #0E1E32 !important;
+  opacity: 1 !important;
 }
 
 .hero-trust-icon {
