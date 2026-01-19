@@ -62,6 +62,14 @@ function treehouse_enqueue_assets() {
         '1.0.0'
     );
 
+    // Upstream design system (overrides)
+    wp_enqueue_style(
+        'treehouse-upstream',
+        get_template_directory_uri() . '/assets/css/upstream-style.css',
+        array('treehouse-styles'),
+        filemtime(get_template_directory() . '/assets/css/upstream-style.css')
+    );
+
     // Main JavaScript
     wp_enqueue_script(
         'treehouse-main',
