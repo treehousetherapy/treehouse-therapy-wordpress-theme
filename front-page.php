@@ -13,7 +13,6 @@ get_header();
     <div class="hero-bedrock-container">
         <div class="hero-bedrock-grid">
             <div class="hero-bedrock-content">
-                <p class="hero-eyebrow">Treehouse Therapy Center</p>
                 <h1 class="hero-bedrock-title">
                     <span>Confident,</span>
                     <span><span class="hero-chip">connected</span> kids —</span>
@@ -41,64 +40,68 @@ get_header();
             </div>
 
             <div class="hero-bedrock-media">
-                <div class="hero-blob">
-                    <img
-                        src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-child-portrait.png"
-                        alt="Smiling child wearing headphones"
-                        class="hero-blob-img"
-                        loading="eager"
-                    />
-                </div>
-
-                <div class="hero-float-card hero-float-card--trust">
-                    <div class="hero-card-icon">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"/>
-                            <path d="M9 12l2 2 4-4"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <p class="hero-card-title">Most insurances accepted</p>
-                        <p class="hero-card-text">We help you navigate coverage with ease.</p>
+                <div class="hero-portrait-wrap">
+                    <div class="hero-blob">
+                        <img
+                            src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-child-portrait.png"
+                            alt="Smiling child wearing headphones"
+                            class="hero-blob-img"
+                            loading="eager"
+                        />
                     </div>
                 </div>
 
-                <div class="hero-float-card hero-float-card--form">
-                    <p class="hero-card-title">Get Started Today</p>
-                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="hero-lead-form">
-                        <input type="hidden" name="action" value="submit_hero_lead_form">
-                        
-                        <div class="form-group-compact">
-                            <input type="text" name="parent_name" placeholder="Parent Name*" required>
+                <div class="hero-form-wrap">
+                    <div class="hero-form-card">
+                        <p class="hero-card-title">Get Started Today</p>
+                        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="hero-lead-form">
+                            <input type="hidden" name="action" value="submit_hero_lead_form">
+                            
+                            <div class="form-group-compact">
+                                <input type="text" name="parent_name" placeholder="Parent Name*" required>
+                            </div>
+                            
+                            <div class="form-group-compact">
+                                <input type="text" name="child_age" placeholder="Child's Age*" required>
+                            </div>
+                            
+                            <div class="form-group-compact">
+                                <input type="tel" name="phone" placeholder="Phone*" required>
+                            </div>
+                            
+                            <div class="form-group-compact">
+                                <select name="insurance" required>
+                                    <option value="">Insurance Provider*</option>
+                                    <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
+                                    <option value="Medicaid/MA">Medicaid/MA</option>
+                                    <option value="HealthPartners">HealthPartners</option>
+                                    <option value="Aetna">Aetna</option>
+                                    <option value="Cigna">Cigna</option>
+                                    <option value="UnitedHealthcare">UnitedHealthcare</option>
+                                    <option value="Medica">Medica</option>
+                                    <option value="UCare">UCare</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="btn-hero-form">Request a Call</button>
+                            
+                            <p class="form-note">We'll respond within 24 hours</p>
+                        </form>
+                    </div>
+
+                    <div class="hero-insurance-card">
+                        <div class="hero-insurance-badge">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"/>
+                                <path d="M9 12l2 2 4-4"/>
+                            </svg>
                         </div>
-                        
-                        <div class="form-group-compact">
-                            <input type="text" name="child_age" placeholder="Child's Age*" required>
+                        <div>
+                            <h4>Most insurances accepted</h4>
+                            <p>We help you navigate coverage with ease.</p>
                         </div>
-                        
-                        <div class="form-group-compact">
-                            <input type="tel" name="phone" placeholder="Phone*" required>
-                        </div>
-                        
-                        <div class="form-group-compact">
-                            <select name="insurance" required>
-                                <option value="">Insurance Provider*</option>
-                                <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
-                                <option value="Medicaid/MA">Medicaid/MA</option>
-                                <option value="HealthPartners">HealthPartners</option>
-                                <option value="Aetna">Aetna</option>
-                                <option value="Cigna">Cigna</option>
-                                <option value="UnitedHealthcare">UnitedHealthcare</option>
-                                <option value="Medica">Medica</option>
-                                <option value="UCare">UCare</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                        
-                        <button type="submit" class="btn-hero-form">Request a Call</button>
-                        
-                        <p class="form-note">We'll respond within 24 hours</p>
-                    </form>
+                    </div>
                 </div>
             </div>
         </div>
