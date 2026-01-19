@@ -115,134 +115,104 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 }
 
 /* ===== HEADER ===== */
-/* Stable, responsive header that NEVER breaks when logo size changes */
+/* Stable, responsive header that adapts to light/dark backgrounds */
 :root {
   --header-h: 80px;
   --logo-h: clamp(44px, 6vw, 64px);
 }
 
 .site-header {
-  position: fixed !important;
+  position: sticky;
   top: 0;
-  left: 0;
-  right: 0;
   z-index: 1000;
+  width: 100%;
   height: var(--header-h);
-  background: rgba(14, 30, 50, 0.05) !important;
-  backdrop-filter: blur(12px) !important;
-  border-bottom: none !important;
-  box-shadow: none !important;
-  transition: all 0.3s ease;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background: var(--header-bg, transparent);
+  border-bottom: 1px solid var(--header-border, transparent);
+  backdrop-filter: blur(10px);
+  transition: background 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-.site-header.scrolled {
-  background: rgba(255, 255, 255, 0.98) !important;
-  border-bottom: none !important;
-  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.06) !important;
+.site-header.is-light {
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --header-border: rgba(0, 0, 0, 0.06);
+  --header-link: #0E1E32;
+  --header-link-hover: #1A5276;
+  --header-cta-bg: #F0D860;
+  --header-cta-color: #0E1E32;
+  --header-cta-shadow: rgba(240, 216, 96, 0.25);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
 }
 
-/* When scrolled, nav links become dark */
-.site-header.scrolled .nav-link {
-  color: #0E1E32;
+.site-header.is-dark {
+  --header-bg: rgba(10, 14, 30, 0.35);
+  --header-border: rgba(255, 255, 255, 0.1);
+  --header-link: #FFFFFF;
+  --header-link-hover: #F0D860;
+  --header-cta-bg: #F0D860;
+  --header-cta-color: #0E1E32;
+  --header-cta-shadow: rgba(240, 216, 96, 0.35);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 }
 
-.site-header.scrolled .btn-contact {
-  background: #F0D860;
-  color: #0E1E32;
-}
-
-.site-header.scrolled .mobile-menu-btn {
-  color: #0E1E32;
-}
-
-/* Header inner: STABLE flex layout with controlled spacing */
 .header-inner {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 clamp(1rem, 3vw, 2rem);
+  padding: 0.75rem clamp(1.25rem, 4vw, 2.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: clamp(16px, 2vw, 32px);
-  width: 100%;
   height: 100%;
 }
 
-/* Logo: fixed flex basis, never grows or shrinks nav */
-.logo {
+.logo,
+.site-logo {
   flex: 0 0 auto;
   display: flex;
   align-items: center;
   text-decoration: none;
-  height: 100%;
-  min-width: 0; /* Prevent logo from forcing overflow */
+  min-width: 0;
 }
 
-/* Header logo image - constrained by HEIGHT with clamp for responsive sizing */
 .header-logo-img {
   height: var(--logo-h);
   width: auto;
-  max-width: 200px;
+  max-width: 220px;
   object-fit: contain;
   display: block;
   transition: height 0.3s ease;
 }
 
-/* Responsive logo sizing - uses clamp in CSS variable */
-@media (max-width: 1200px) {
-  :root {
-    --logo-h: clamp(40px, 5vw, 56px);
-  }
+.nav-main,
+.main-nav {
+  flex: 1 1 auto;
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  margin: 0;
+  min-width: 0;
 }
 
-@media (max-width: 1024px) {
-  :root {
-    --logo-h: clamp(36px, 5vw, 48px);
-  }
-  
-  .header-logo-img {
-    max-width: 180px;
-  }
-}
-
-@media (max-width: 768px) {
-  :root {
-    --header-h: 70px;
-    --logo-h: 40px;
-  }
-  
-  .header-logo-img {
-    max-width: 160px;
-  }
-}
-
-.logo-only {
-  gap: 0;
-}
-
-/* Navigation - flexible, centered, adapts to available space */
-.nav-main {
+.nav-main ul,
+.main-nav ul {
   display: flex;
   align-items: center;
-  gap: clamp(0.75rem, 2vw, 2rem);
-  flex: 1 1 auto;
-  justify-content: center;
+  gap: clamp(1rem, 2vw, 1.75rem);
+  list-style: none;
   margin: 0;
-  min-width: 0; /* Allow shrinking */
+  padding: 0;
 }
 
 .nav-link {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: clamp(0.875rem, 1.1vw, 1rem);
-  color: white;
+  font-size: clamp(0.9rem, 1vw, 1rem);
+  color: var(--header-link, #0E1E32);
   text-decoration: none;
   position: relative;
   padding: 0.5rem 0.25rem;
-  transition: all 0.3s ease;
+  transition: color 0.2s ease, opacity 0.2s ease;
   white-space: nowrap;
 }
 
@@ -253,52 +223,22 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   left: 0;
   width: 100%;
   height: 2px;
-  background: rgba(240, 216, 96, 0.5);
+  background: rgba(240, 216, 96, 0.6);
   border-radius: 3px;
   transform: scaleX(0);
   transform-origin: right;
-  transition: transform 0.3s var(--ease-flow);
+  transition: transform 0.25s var(--ease-flow);
 }
 
 .nav-link:hover {
-  color: #F0D860;
+  color: var(--header-link-hover, #1A5276);
 }
 
 .nav-link:hover::after {
   transform: scaleX(1);
   transform-origin: left;
-  background: #F0D860;
 }
 
-/* Reduce nav gap at mid breakpoints */
-@media (max-width: 1200px) {
-  .nav-main {
-    gap: 1rem;
-  }
-  
-  .nav-link {
-    font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 1100px) {
-  .nav-main {
-    gap: 0.75rem;
-  }
-  
-  .nav-link {
-    font-size: 0.85rem;
-    padding: 0.5rem 0.15rem;
-  }
-}
-
-@media (max-width: 1024px) {
-  .nav-main {
-    display: none;
-  }
-}
-
-/* Header CTA Buttons - no flex growth */
 .header-cta {
   display: flex;
   align-items: center;
@@ -306,7 +246,6 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   flex: 0 0 auto;
 }
 
-/* Hide phone button on desktop */
 .btn-phone {
   display: none;
 }
@@ -316,13 +255,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   height: 18px;
 }
 
-/* Single prominent CTA button - Treehouse yellow */
 .btn-contact {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  background: #F0D860;
-  color: #0E1E32;
+  background: var(--header-cta-bg, #F0D860);
+  color: var(--header-cta-color, #0E1E32);
   padding: 0.7rem 1.4rem;
   border-radius: 50px;
   font-family: var(--font-body);
@@ -331,7 +269,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   text-decoration: none;
   transition: all 0.3s var(--ease-flow);
   border: none;
-  box-shadow: 0 4px 16px rgba(240, 216, 96, 0.25);
+  box-shadow: 0 4px 16px var(--header-cta-shadow, rgba(240, 216, 96, 0.25));
   white-space: nowrap;
 }
 
@@ -365,7 +303,33 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   color: #0E1E32;
 }
 
+@media (max-width: 1200px) {
+  :root {
+    --logo-h: clamp(40px, 5vw, 56px);
+  }
+  .nav-main ul,
+  .main-nav ul {
+    gap: 1rem;
+  }
+  .nav-link {
+    font-size: 0.9rem;
+  }
+}
+
 @media (max-width: 1024px) {
+  :root {
+    --logo-h: clamp(36px, 5vw, 48px);
+  }
+  .nav-main {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --header-h: 70px;
+    --logo-h: 40px;
+  }
   .header-cta .btn-contact {
     display: none;
   }
@@ -2232,9 +2196,11 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .hero-bedrock {
   position: relative;
   min-height: calc(100vh - var(--header-h));
-  /* Treehouse navy gradient background */
-  background: radial-gradient(1200px 600px at 20% 20%, rgba(80, 128, 184, 0.35) 0%, rgba(14, 30, 50, 0) 60%),
-              linear-gradient(135deg, #0E1E32 0%, #1B2B52 100%);
+  /* Warm, light background */
+  background:
+    radial-gradient(1200px 700px at 15% 15%, rgba(80, 128, 184, 0.12) 0%, rgba(80, 128, 184, 0) 60%),
+    radial-gradient(900px 600px at 80% 10%, rgba(240, 216, 96, 0.14) 0%, rgba(240, 216, 96, 0) 60%),
+    linear-gradient(180deg, #FDFBF7 0%, #F7FBFD 65%, #FFFFFF 100%);
   padding-top: calc(var(--header-h) + 3rem);
   padding-bottom: 5rem;
   overflow: hidden;
@@ -2244,11 +2210,11 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .hero-bedrock::before {
   content: '';
   position: absolute;
-  top: 15%;
+  top: 12%;
   right: -8%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, rgba(80, 128, 184, 0.12) 0%, transparent 65%);
+  width: 640px;
+  height: 640px;
+  background: radial-gradient(circle, rgba(80, 128, 184, 0.1) 0%, transparent 65%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2256,11 +2222,11 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .hero-bedrock::after {
   content: '';
   position: absolute;
-  bottom: -10%;
+  bottom: -18%;
   left: -12%;
-  width: 900px;
-  height: 900px;
-  background: radial-gradient(circle, rgba(152, 184, 96, 0.08) 0%, transparent 70%);
+  width: 820px;
+  height: 820px;
+  background: radial-gradient(circle, rgba(152, 184, 96, 0.1) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
 }
@@ -2282,7 +2248,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 
 /* Left content column */
 .hero-bedrock-content {
-  color: white;
+  color: #0E1E32;
 }
 
 .hero-eyebrow {
@@ -2291,15 +2257,15 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: rgba(255, 255, 255, 0.7);
+  color: #5080B8;
   margin-bottom: 1.5rem;
 }
 
 .hero-bedrock-title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.15;
+  line-height: 1.1;
   font-weight: 800;
-  color: white;
+  color: #0E1E32;
   margin-bottom: 1.5rem;
   letter-spacing: -0.03em;
 }
@@ -2311,23 +2277,24 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 /* Chip highlight word - Treehouse yellow */
 .hero-chip {
   display: inline-block;
-  background: #F0D860;
+  background: linear-gradient(135deg, #F0D860 0%, #F8E89A 100%);
   color: #0E1E32;
-  padding: 0.1em 0.5em;
+  padding: 0.1em 0.55em;
   border-radius: 12px;
   transform: rotate(-1.5deg);
   position: relative;
   font-style: italic;
   margin: 0 0.2em;
   font-weight: 800;
+  box-shadow: 0 6px 18px rgba(240, 216, 96, 0.35);
 }
 
 .hero-bedrock-subhead {
   font-size: clamp(1.125rem, 1.5vw, 1.35rem);
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.9);
+  color: #31455e;
   margin-bottom: 2rem;
-  max-width: 540px;
+  max-width: 560px;
 }
 
 .hero-bedrock-cta {
@@ -2348,27 +2315,27 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .hero-bedrock-cta .btn-primary {
   background: #5080B8;
   color: white;
-  box-shadow: 0 8px 24px rgba(80, 128, 184, 0.35);
+  box-shadow: 0 10px 26px rgba(80, 128, 184, 0.25);
 }
 
 .hero-bedrock-cta .btn-primary:hover {
   transform: translateY(-3px);
-  box-shadow: 0 12px 32px rgba(80, 128, 184, 0.45);
-  background: #6090C8;
+  box-shadow: 0 14px 34px rgba(80, 128, 184, 0.35);
+  background: #5d8dc6;
 }
 
 .hero-bedrock-cta .btn-ghost,
 .hero-bedrock-cta .hero-secondary {
-  background: rgba(255, 255, 255, 0.1);
-  color: white;
-  border: 2px solid rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(10px);
+  background: rgba(80, 128, 184, 0.08);
+  color: #0E1E32;
+  border: 2px solid rgba(80, 128, 184, 0.25);
+  backdrop-filter: blur(8px);
 }
 
 .hero-bedrock-cta .btn-ghost:hover,
 .hero-bedrock-cta .hero-secondary:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(80, 128, 184, 0.15);
+  border-color: rgba(80, 128, 184, 0.45);
   transform: translateY(-2px);
 }
 
@@ -2386,9 +2353,9 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #31455e;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .hero-trust-icon {
@@ -2397,7 +2364,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   justify-content: center;
   width: 20px;
   height: 20px;
-  background: rgba(152, 184, 96, 0.25);
+  background: rgba(152, 184, 96, 0.2);
   color: #98B860;
   border-radius: 50%;
   font-size: 0.75rem;
@@ -2443,12 +2410,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 /* Floating cards - Treehouse styled */
 .hero-float-card {
   position: absolute;
-  background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(20px);
-  border-radius: 16px;
+  border-radius: 18px;
   padding: 1.25rem 1.5rem;
-  box-shadow: 0 12px 40px rgba(14, 30, 50, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 0 16px 40px rgba(14, 30, 50, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.05);
   max-width: 280px;
   z-index: 10;
   animation: float 6s ease-in-out infinite;

@@ -13,15 +13,15 @@
 <!-- Header -->
 <?php $header_classes = 'site-header'; ?>
 <?php if (is_front_page()) { $header_classes .= ' site-header--hero'; } ?>
-<header class="<?php echo esc_attr($header_classes); ?>">
+<header class="<?php echo esc_attr($header_classes); ?>" data-header-mode="auto">
     <div class="header-inner">
         <!-- Logo -->
-        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo">
+        <a href="<?php echo esc_url(home_url('/')); ?>" class="logo site-logo">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/images/THTC_NEW_LOGO.png" alt="Treehouse Therapy Center" class="header-logo-img">
         </a>
 
         <!-- Desktop Navigation -->
-        <nav class="nav-main">
+        <nav class="nav-main main-nav">
             <a href="<?php echo home_url('/'); ?>" class="nav-link">Home</a>
             <a href="<?php echo home_url('/about'); ?>" class="nav-link">About</a>
             <a href="<?php echo home_url('/services'); ?>" class="nav-link">Services</a>
@@ -72,6 +72,43 @@
         </nav>
     </div>
 </header>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const header = document.querySelector('.site-header');
+  const hero = document.querySelector('.hero-bedrock, .hero-upstream');
+  if (!header) return;
+
+  const preferredMode = hero && hero.classList.contains('hero--dark') ? 'dark' : 'light';
+
+  const setMode = (mode) => {
+    header.classList.remove('is-light', 'is-dark');
+    header.classList.add(mode === 'dark' ? 'is-dark' : 'is-light');
+  };
+
+  const updateHeaderMode = () => {
+    if (!hero) {
+      setMode('light');
+      return;
+    }
+    const headerHeight = header.offsetHeight || 80;
+    const heroTop = hero.offsetTop || 0;
+    const heroHeight = hero.offsetHeight || 0;
+    const scrollPos = window.scrollY || window.pageYOffset;
+    const threshold = heroTop + heroHeight - headerHeight * 1.2;
+
+    if (scrollPos < threshold) {
+      setMode(preferredMode);
+    } else {
+      setMode('light');
+    }
+  };
+
+  updateHeaderMode();
+  window.addEventListener('scroll', updateHeaderMode, { passive: true });
+  window.addEventListener('resize', updateHeaderMode);
+});
+</script>
 
 <!-- Main Content -->
 <main>
