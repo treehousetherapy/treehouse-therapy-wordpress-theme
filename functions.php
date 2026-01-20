@@ -59,7 +59,7 @@ function treehouse_enqueue_assets() {
         'treehouse-styles',
         get_template_directory_uri() . '/dist/css/style.min.css',
         array(),
-        '1.0.0'
+        filemtime(get_template_directory() . '/dist/css/style.min.css')
     );
 
     // Upstream design system (overrides)
@@ -75,7 +75,7 @@ function treehouse_enqueue_assets() {
         'treehouse-main',
         get_template_directory_uri() . '/dist/js/main.min.js',
         array(),
-        '1.0.0',
+        filemtime(get_template_directory() . '/dist/js/main.min.js'),
         true
     );
 
@@ -84,7 +84,7 @@ function treehouse_enqueue_assets() {
         'treehouse-animations',
         get_template_directory_uri() . '/dist/js/animations.min.js',
         array(),
-        '1.0.0',
+        filemtime(get_template_directory() . '/dist/js/animations.min.js'),
         true
     );
 
