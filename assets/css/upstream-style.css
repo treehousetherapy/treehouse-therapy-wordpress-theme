@@ -2343,26 +2343,26 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   opacity: 0.85;
 }
 
-/* Premium refined highlight - snug marker underline */
+/* Premium refined highlight - TIGHT underline only */
 .hero-chip {
   display: inline;
-  background-image: linear-gradient(transparent 62%, #FFC107 62%);
-  background-size: 100% 0.35em;
+  background: linear-gradient(to top, #FFC107 0%, #FFC107 40%, transparent 40%);
+  background-size: 100% 0.4em;
   background-repeat: no-repeat;
-  background-position: 0 88%;
+  background-position: 0 bottom;
   color: #0E1E32;
-  padding: 0 0.15em;
+  padding: 0 0.2em;
   border-radius: 0;
-  transform: none;
   position: relative;
   font-style: normal;
   margin: 0;
   font-weight: 800;
   box-shadow: none;
+  width: auto !important;
+  max-width: fit-content !important;
 }
 
 .hero-bedrock.hero--light .hero-chip {
-  background: linear-gradient(135deg, #FFC107 0%, #FFD54F 100%);
   color: #0E1E32 !important;
 }
 
