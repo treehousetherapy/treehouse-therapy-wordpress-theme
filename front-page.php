@@ -20,7 +20,7 @@ get_header();
                     <span class="title-line-4">of the way.</span>
                 </h1>
                 <p class="hero-bedrock-subhead">
-                    Personalized ABA therapy that helps children grow skills for life with care that feels safe and encouraging.
+                    Home-based ABA therapy for Minnesota families. No clinic. No commute. Just personalized care where your child learns best — at home.
                 </p>
                 <div class="hero-speed-promise">
                     <svg class="promise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
