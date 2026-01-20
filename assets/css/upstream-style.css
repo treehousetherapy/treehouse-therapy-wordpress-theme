@@ -2343,15 +2343,15 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   opacity: 0.85;
 }
 
-/* Premium refined highlight - TIGHT underline only */
+/* Premium refined highlight - BOLD highlighter mark */
 .hero-chip {
   display: inline;
-  background: linear-gradient(to top, #FFC107 0%, #FFC107 40%, transparent 40%);
-  background-size: 100% 0.4em;
+  background: linear-gradient(to top, #FFC107 0%, #FFC107 50%, transparent 50%);
+  background-size: 100% 0.5em;
   background-repeat: no-repeat;
-  background-position: 0 bottom;
+  background-position: 0 85%;
   color: #0E1E32;
-  padding: 0 0.2em;
+  padding: 0 0.25em;
   border-radius: 0;
   position: relative;
   font-style: normal;
@@ -2529,10 +2529,10 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .hero-portrait-wrap {
   position: absolute;
   top: 50%;
-  left: 10%;
+  left: 5%;
   transform: translateY(-50%);
-  width: 135%;
-  max-width: 900px;
+  width: 130%;
+  max-width: 880px;
   height: 120vh;
   min-height: 700px;
   z-index: 1;
@@ -2893,14 +2893,14 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 /* ===== HERO FORM WRAPPER ===== */
 .hero-form-wrap {
   width: 100%;
-  max-width: 360px;
+  max-width: 340px;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   position: relative;
   z-index: 10;
   margin-left: auto;
-  margin-right: 0;
+  margin-right: clamp(1rem, 3vw, 3rem);
 }
 
 .hero-form-card {

@@ -111,9 +111,9 @@ a.nav-link:hover,
 }
 
 .site-header.scrolled {
-    background-color: white;
-    box-shadow: 0 4px 20px -4px rgba(26, 54, 93, 0.08);
-    border-bottom: 1px solid rgba(26, 54, 93, 0.05);
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 /* ===== MOBILE MENU ANIMATION ===== */

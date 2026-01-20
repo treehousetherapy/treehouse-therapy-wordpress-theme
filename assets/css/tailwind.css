@@ -74,7 +74,7 @@
     color: var(--text-base);
     height: 100%;
   }
-
+  
   h1, h2, h3, h4, h5, h6 {
     font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     color: var(--brand-navy);
@@ -188,11 +188,11 @@
     background: var(--brand-coral);
     color: var(--text-on-dark);
   }
-
+  
   .btn-sm { @apply px-4 py-2 text-sm; }
   .btn-md { @apply px-6 py-3 text-base; }
   .btn-lg { @apply px-8 py-4 text-lg; }
-
+  
   /* ============================================
      FRIENDLY SKIES CARDS
      Soft elevation, lift on hover
@@ -209,7 +209,7 @@
     transform: translateY(-4px);
     box-shadow: var(--shadow-card-hover);
   }
-
+  
   .card-elevated {
     @apply bg-white;
     border-radius: 24px;
@@ -321,16 +321,16 @@
   .mobile-menu.active {
     @apply translate-x-0;
   }
-
+  
   /* Section Containers */
   .section {
     @apply py-16 md:py-20 lg:py-24 px-4 overflow-x-hidden;
   }
-
+  
   .container-custom {
     @apply max-w-7xl mx-auto;
   }
-
+  
   /* Gradient Text - Orange to Yellow (Aviation ABA) */
   .gradient-text {
     @apply bg-clip-text text-transparent;
@@ -357,8 +357,8 @@
   }
 
   .site-header.scrolled {
-    background: rgba(255, 255, 255, 0.98);
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    background: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .site-header--hero {
@@ -465,7 +465,7 @@
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(135deg, #0693e3 0%, #0580c9 100%);
   }
-
+  
   /* Icon Boxes - Aviation ABA style */
   .icon-box {
     @apply w-16 h-16 rounded-full flex items-center justify-center;
@@ -914,13 +914,13 @@
     background: var(--primary-orange);
     @apply text-white;
   }
-
+  
   /* Focus Visible - Teal ring */
   *:focus-visible {
     outline: none;
     box-shadow: 0 0 0 3px rgba(93, 173, 226, 0.3);
   }
-
+  
   /* Reduced Motion */
   @media (prefers-reduced-motion: reduce) {
     *,
