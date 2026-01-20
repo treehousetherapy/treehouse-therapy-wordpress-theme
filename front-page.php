@@ -97,18 +97,6 @@ get_header();
                         </form>
                     </div>
 
-                    <div class="hero-insurance-card">
-                        <div class="hero-insurance-badge">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 2l7 4v6c0 5-3.5 9.5-7 10-3.5-.5-7-5-7-10V6l7-4z"/>
-                                <path d="M9 12l2 2 4-4"/>
-                            </svg>
-                        </div>
-                        <div>
-                            <h4>Most insurances accepted</h4>
-                            <p>We help you navigate coverage with ease.</p>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>

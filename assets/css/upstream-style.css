@@ -170,7 +170,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .header-inner {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0.75rem clamp(1.25rem, 4vw, 2.5rem);
+  padding: 0.75rem clamp(2rem, 5vw, 3.5rem);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -185,6 +185,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   align-items: center;
   text-decoration: none;
   min-width: 0;
+  padding-left: 0.5rem;
 }
 
 .header-logo-img {
@@ -2894,15 +2895,14 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 }
 
 .hero-form-card {
-  background: linear-gradient(145deg, rgba(255, 255, 255, 0.98) 0%, rgba(250, 251, 252, 0.95) 100%);
-  border: 1px solid rgba(14, 30, 50, 0.08);
-  border-radius: 28px;
+  background: #FFFFFF;
+  border: 1px solid rgba(14, 30, 50, 0.12);
+  border-radius: 24px;
   box-shadow: 
-    0 20px 60px rgba(14, 30, 50, 0.15),
-    0 8px 24px rgba(14, 30, 50, 0.08),
-    inset 0 1px 0 rgba(255, 255, 255, 0.9);
-  padding: 2.25rem 2rem;
-  backdrop-filter: blur(20px);
+    0 24px 80px rgba(14, 30, 50, 0.20),
+    0 12px 32px rgba(14, 30, 50, 0.12),
+    0 4px 12px rgba(14, 30, 50, 0.08);
+  padding: 2.5rem 2.25rem;
   position: relative;
   overflow: hidden;
 }
@@ -2915,7 +2915,6 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   right: 0;
   height: 4px;
   background: linear-gradient(90deg, #5080B8 0%, #98B860 50%, #F0D860 100%);
-  opacity: 0.6;
 }
 
 .hero-card-title {
@@ -2930,8 +2929,8 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .hero-lead-form {
   display: flex;
   flex-direction: column;
-  gap: 1.125rem;
-  margin-top: 1.25rem;
+  gap: 1rem;
+  margin-top: 1.5rem;
 }
 
 .form-group-compact {
@@ -2943,21 +2942,19 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 .form-group-compact input,
 .form-group-compact select {
   width: 100%;
-  padding: 1.15rem 1.25rem;
-  border: 2px solid rgba(14, 30, 50, 0.10);
-  border-radius: 14px;
+  padding: 1rem 1.15rem;
+  border: 1.5px solid rgba(14, 30, 50, 0.15);
+  border-radius: 12px;
   font-family: var(--font-body);
-  font-size: 0.975rem;
+  font-size: 0.95rem;
   color: #0E1E32;
-  background: white;
+  background: #FAFBFC;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 2px 8px rgba(14, 30, 50, 0.03);
 }
 
 .form-group-compact input:hover,
 .form-group-compact select:hover {
-  border-color: rgba(80, 128, 184, 0.3);
-  box-shadow: 0 4px 12px rgba(14, 30, 50, 0.06);
+  border-color: rgba(80, 128, 184, 0.35);
 }
 
 .form-group-compact input:focus,
@@ -2965,10 +2962,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   outline: none;
   border-color: #5080B8;
   background: white;
-  box-shadow: 
-    0 0 0 4px rgba(80, 128, 184, 0.10),
-    0 4px 16px rgba(80, 128, 184, 0.12);
-  transform: translateY(-1px);
+  box-shadow: 0 0 0 3px rgba(80, 128, 184, 0.12);
 }
 
 .form-group-compact input::placeholder {
