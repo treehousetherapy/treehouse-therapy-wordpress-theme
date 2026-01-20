@@ -91,8 +91,8 @@ get_header();
                             <button type="submit" class="btn-hero-form">Check Availability</button>
                             
                             <div class="form-trust-strip">
-                                <p>✓ We'll respond within 24 hours</p>
-                                <p>✓ HIPAA-compliant • Most insurances accepted</p>
+                                <p>We'll respond within 24 hours</p>
+                                <p>HIPAA-compliant • Most insurances accepted</p>
                             </div>
                         </form>
                     </div>
