@@ -90,9 +90,12 @@ get_header();
                                 </select>
                             </div>
                             
-                            <button type="submit" class="btn-hero-form">Request a Call</button>
+                            <button type="submit" class="btn-hero-form">Check Availability</button>
                             
-                            <p class="form-note">We'll respond within 24 hours</p>
+                            <div class="form-trust-strip">
+                                <p>✓ We'll respond within 24 hours</p>
+                                <p>✓ HIPAA-compliant • Most insurances accepted</p>
+                            </div>
                         </form>
                     </div>
 
