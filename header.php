@@ -74,24 +74,16 @@
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const header = document.querySelector('.site-header[data-header-mode="auto"]');
-  const hero = document.querySelector('#page-hero');
-
   if (!header) return;
 
-  const setMode = (mode) => {
-    header.classList.toggle('is-light', mode === 'light');
-    header.classList.toggle('is-dark', mode === 'dark');
+  const setLight = () => {
+    header.classList.add('is-light');
+    header.classList.remove('is-dark');
   };
 
-  const heroMode = hero?.classList.contains('hero--light') ? 'light' : 'dark';
-  setMode(heroMode);
-
   const onScroll = () => {
-    if (!hero) return setMode('light');
-    const heroBottom = hero.getBoundingClientRect().bottom;
-    // Once you scroll past hero, force readable light header everywhere
-    if (heroBottom <= 80) setMode('light');
-    else setMode(heroMode);
+    setLight();
+    header.classList.toggle('scrolled', window.scrollY > 40);
   };
 
   window.addEventListener('scroll', onScroll, { passive: true });
