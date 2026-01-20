@@ -14,10 +14,10 @@ get_header();
         <div class="hero-bedrock-grid">
             <div class="hero-bedrock-content">
                 <h1 class="hero-bedrock-title">
-                    <span>Confident,</span>
-                    <span><span class="hero-chip">connected</span> kids —</span>
-                    <span>supported every step</span>
-                    <span>of the way.</span>
+                    <span class="title-line-1">Confident,</span>
+                    <span class="title-line-2"><span class="hero-chip">connected</span> kids —</span>
+                    <span class="title-line-3">supported every step</span>
+                    <span class="title-line-4">of the way.</span>
                 </h1>
                 <p class="hero-bedrock-subhead">
                     Personalized ABA therapy that helps children grow skills for life with care that feels safe and encouraging.
@@ -32,11 +32,17 @@ get_header();
                     <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary btn-lg">Get Started</a>
                     <a href="<?php echo home_url('/services'); ?>" class="btn btn-ghost btn-lg hero-secondary">Our Services</a>
                 </div>
-                <ul class="hero-bedrock-trust">
-                    <li><span class="hero-trust-icon">✓</span> Ages 2–12</li>
-                    <li><span class="hero-trust-icon">✓</span> Minneapolis/St. Paul metro</li>
-                    <li><span class="hero-trust-icon">✓</span> Most insurances accepted</li>
-                </ul>
+                <div class="hero-trust-signals">
+                    <div class="trust-rating">
+                        <span class="stars">⭐⭐⭐⭐⭐</span>
+                        <span class="rating-text">Parents love Treehouse</span>
+                    </div>
+                    <ul class="hero-bedrock-trust">
+                        <li><span class="hero-trust-icon">✓</span> Ages 2–12</li>
+                        <li><span class="hero-trust-icon">✓</span> Minneapolis/St. Paul metro</li>
+                    </ul>
+                    <p class="trust-micro">Clinician-led care • 1:1 Support • Quick Start</p>
+                </div>
             </div>
 
             <div class="hero-bedrock-media">
