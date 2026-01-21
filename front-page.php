@@ -34,7 +34,7 @@ get_header();
             <div class="hero-bedrock-content">
                 <h1 class="hero-bedrock-title">
                     <span class="title-line-1">Home-based ABA therapy</span>
-                    <span class="title-line-2">for <span class="hero-chip-wrapper"><span class="hero-chip-bg"></span><span class="hero-chip-text">Minnesota</span></span> families.</span>
+                    <span class="title-line-2">for<span class="hero-chip-wrapper"><span class="hero-chip-bg"></span><span class="hero-chip-text">Minnesota</span></span>families.</span>
                 </h1>
                 <p class="hero-bedrock-subhead">
                     No commute. Just personalized care where your child learns best — at home.

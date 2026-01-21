@@ -2355,12 +2355,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 }
 
 .hero-bedrock-title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  line-height: 1.15;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
   font-weight: 800;
   color: white;
-  margin-bottom: 2rem;
-  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+  letter-spacing: -0.02em;
 }
 
 .hero-bedrock.hero--light .hero-bedrock-title {
@@ -2370,6 +2370,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
 
 .hero-bedrock-title span {
   display: block;
+}
+
+/* Ensure proper line spacing to prevent overlap */
+.hero-bedrock-title .title-line-2 {
+  display: block;
+  margin-top: 0;
+  line-height: 1.1;
 }
 
 /* Refined hierarchy - lighter weight + smaller size on last lines */
@@ -2405,7 +2412,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   z-index: 1;
   color: #0E1E32;
   font-weight: 800;
-  padding: 0 0.75rem;
+  padding: 0 0.4em;
   display: inline-block;
 }
 
