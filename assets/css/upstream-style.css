@@ -2756,8 +2756,9 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   }
 
   .hero-quick-card {
-    top: 15%;
+    top: 45%;
     right: 6%;
+    transform: translateY(-50%);
     max-width: 260px;
   }
 }
@@ -6697,11 +6698,12 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
    COMPACT HERO CARD + MODAL
    ============================================ */
 
-/* Compact floating card - upper right positioning */
+/* Compact floating card - middle-right positioning */
 .hero-quick-card {
   position: absolute;
-  top: 12%;
+  top: 45%;
   right: 8%;
+  transform: translateY(-50%);
   background: #FFFFFF;
   border-radius: 16px;
   padding: 1.5rem;
@@ -6921,8 +6923,9 @@ body.modal-open {
   }
 
   .hero-quick-card {
-    top: 18%;
+    top: 45%;
     right: 7%;
+    transform: translateY(-50%);
     max-width: 280px;
   }
 }
