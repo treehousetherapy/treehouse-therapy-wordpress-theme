@@ -1,0 +1,679 @@
+/**
+ * Premium UI Enhancements CSS
+ * Modern marketing site interactions and animations
+ */
+
+/* ============================================
+   1. ENHANCED HEADER SCROLL STATE
+   ============================================ */
+
+.site-header {
+  transition: padding 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              backdrop-filter 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Top state - full padding */
+.site-header.header-top {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+/* Scrolled state - compact with shadow */
+.site-header.header-scrolled {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+/* Nav link hover states */
+.nav-link {
+  position: relative;
+  transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: currentColor;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-link:hover::after,
+.nav-link.nav-link-active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-link.nav-link-active {
+  font-weight: 600;
+}
+
+/* Contact CTA micro-interaction */
+.btn-contact {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-contact:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 193, 7, 0.3);
+}
+
+.btn-contact:active {
+  transform: translateY(0);
+}
+
+.btn-contact .arrow {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn-contact:hover .arrow {
+  transform: translateX(4px);
+}
+
+.btn-contact .arrow svg {
+  width: 18px;
+  height: 18px;
+  vertical-align: middle;
+}
+
+/* ============================================
+   2. MOBILE MENU ENHANCEMENTS
+   ============================================ */
+
+.mobile-menu {
+  position: fixed;
+  top: var(--header-h, 80px);
+  left: 0;
+  right: 0;
+  background: #FFFFFF;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+              opacity 0.3s ease;
+  z-index: 999;
+}
+
+.mobile-menu.mobile-menu-open {
+  max-height: calc(100vh - var(--header-h, 80px));
+  opacity: 1;
+  overflow-y: auto;
+}
+
+.mobile-nav {
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.mobile-nav-link {
+  padding: 1rem 1.25rem;
+  border-radius: 12px;
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #1E3A5F;
+  transition: background 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.nav-link-active {
+  background: rgba(80, 128, 184, 0.08);
+  color: #5080B8;
+}
+
+.mobile-cta {
+  margin-top: 1rem;
+}
+
+/* Prevent body scroll when menu open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ============================================
+   3. HERO HIGHLIGHT ANIMATION
+   ============================================ */
+
+.hero-chip {
+  display: inline-block;
+  position: relative;
+  transform-origin: center;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-chip {
+    opacity: 0;
+    transform: scale(0.8) translateY(10px);
+    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .hero-chip.highlight-animate-in {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+
+  /* Subtle idle motion */
+  @keyframes highlightPulse {
+    0%, 100% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.02);
+    }
+  }
+
+  .hero-chip.highlight-animate-in {
+    animation: highlightPulse 4s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+}
+
+/* ============================================
+   4. BUTTON MICRO-INTERACTIONS
+   ============================================ */
+
+.btn-primary,
+.btn-hero-form,
+.btn-cta {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.2s ease,
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background 0.2s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .btn-primary:hover,
+  .btn-hero-form:hover,
+  .btn-cta:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-primary:active,
+  .btn-hero-form:active,
+  .btn-cta:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+}
+
+/* Ripple effect */
+.btn-ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  transform: scale(0);
+  animation: ripple 0.6s ease-out;
+  pointer-events: none;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* ============================================
+   5. SCROLL REVEAL ANIMATIONS
+   ============================================ */
+
+[data-animate] {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-animate].is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Instant reveal for reduced motion */
+[data-animate].is-visible-instant {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+/* Stagger delays applied via JS */
+[data-stagger] > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+[data-stagger] > *.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  [data-animate],
+  [data-stagger] > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+/* ============================================
+   6. CARD HOVER EFFECTS
+   ============================================ */
+
+.hover-enhanced {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s ease;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hover-enhanced:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.service-card.hover-enhanced:hover,
+.feature-card.hover-enhanced:hover {
+  border-color: rgba(80, 128, 184, 0.3);
+}
+
+.difference-card.hover-enhanced:hover,
+.value-card.hover-enhanced:hover {
+  border-color: rgba(232, 145, 45, 0.3);
+}
+
+/* Equal height cards in grid */
+.services-grid,
+.difference-grid,
+.values-grid {
+  display: grid;
+  align-items: stretch;
+}
+
+.service-card,
+.difference-card,
+.value-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* ============================================
+   7. ROTATING DECORATIVE BADGE
+   ============================================ */
+
+.rotating-badge {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.rotating-badge.badge-active {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rotateBadge {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .rotating-badge {
+    animation: rotateBadge 20s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .rotating-badge {
+    animation: none;
+  }
+}
+
+/* Badge positioning */
+.hero-bedrock .rotating-badge {
+  top: 15%;
+  right: 5%;
+}
+
+@media (max-width: 768px) {
+  .rotating-badge {
+    width: 80px;
+    height: 80px;
+    top: 10%;
+    right: 2%;
+  }
+}
+
+/* ============================================
+   8. FORM ENHANCEMENTS
+   ============================================ */
+
+.hero-form-card {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease,
+              transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hero-form-card.form-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Enhanced focus states */
+.form-group-compact {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.form-group-compact.form-group-focused {
+  transform: scale(1.01);
+}
+
+.form-group-compact input,
+.form-group-compact select {
+  transition: border-color 0.3s ease,
+              box-shadow 0.3s ease,
+              background 0.3s ease;
+}
+
+.form-group-compact input:focus,
+.form-group-compact select:focus {
+  outline: none;
+  border-color: #5080B8;
+  box-shadow: 0 0 0 3px rgba(80, 128, 184, 0.1);
+  background: #FFFFFF;
+}
+
+/* Error state */
+.form-group-compact.form-group-error input,
+.form-group-compact.form-group-error select {
+  border-color: #E74C3C;
+  background: rgba(231, 76, 60, 0.05);
+}
+
+.form-group-compact.form-group-error::after {
+  content: 'Required field';
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  font-size: 0.75rem;
+  color: #E74C3C;
+}
+
+/* Success state */
+.form-group-compact.form-group-success input,
+.form-group-compact.form-group-success select {
+  border-color: #27AE60;
+  background: rgba(39, 174, 96, 0.05);
+}
+
+/* ============================================
+   9. FLOATING HELP WIDGET
+   ============================================ */
+
+#floatingHelp {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 1000;
+}
+
+.floating-help-toggle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #5080B8 0%, #1E3A5F 100%);
+  color: #FFFFFF;
+  border: none;
+  box-shadow: 0 4px 20px rgba(30, 58, 95, 0.3);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s ease;
+  position: relative;
+}
+
+.floating-help-toggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 28px rgba(30, 58, 95, 0.4);
+}
+
+.floating-help-toggle.toggle-active {
+  transform: rotate(45deg);
+}
+
+.floating-help-toggle svg {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s ease;
+}
+
+/* Pulse animation */
+@keyframes helpPulse {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(30, 58, 95, 0.3);
+  }
+  50% {
+    box-shadow: 0 4px 20px rgba(30, 58, 95, 0.3),
+                0 0 0 12px rgba(80, 128, 184, 0.2);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .floating-help-toggle:not(.toggle-active) {
+    animation: helpPulse 3s ease-in-out infinite;
+  }
+}
+
+/* Help panel */
+.floating-help-panel {
+  position: absolute;
+  bottom: 75px;
+  right: 0;
+  width: 280px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  padding: 1.5rem;
+  opacity: 0;
+  transform: translateY(10px) scale(0.95);
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.floating-help-panel.panel-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: all;
+}
+
+.floating-help-panel h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #1E3A5F;
+  margin: 0 0 0.5rem 0;
+}
+
+.floating-help-panel p {
+  font-size: 0.875rem;
+  color: #5A6C7D;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.floating-help-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.floating-help-link {
+  padding: 0.75rem 1rem;
+  background: rgba(80, 128, 184, 0.08);
+  border-radius: 8px;
+  color: #1E3A5F;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: background 0.2s ease, transform 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.floating-help-link:hover {
+  background: rgba(80, 128, 184, 0.15);
+  transform: translateX(4px);
+}
+
+.floating-help-link svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+.floating-help-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 24px;
+  height: 24px;
+  border: none;
+  background: transparent;
+  color: #5A6C7D;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.floating-help-close:hover {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+  #floatingHelp {
+    bottom: 16px;
+    right: 16px;
+  }
+
+  .floating-help-toggle {
+    width: 56px;
+    height: 56px;
+  }
+
+  .floating-help-panel {
+    width: calc(100vw - 32px);
+    max-width: 320px;
+    right: -8px;
+  }
+}
+
+/* ============================================
+   10. IMAGE SHAPE TREATMENT
+   ============================================ */
+
+.hero-blob {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-blob::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  right: -10%;
+  bottom: -10%;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(80, 128, 184, 0.1) 0%,
+    transparent 70%
+  );
+  z-index: -1;
+  animation: blobPulse 8s ease-in-out infinite;
+}
+
+@keyframes blobPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-blob::before {
+    animation: none;
+  }
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Smooth page load */
+body:not(.page-loaded) * {
+  animation-play-state: paused !important;
+}
+
+/* Accessibility: Skip to content */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  background: #1E3A5F;
+  color: #FFFFFF;
+  padding: 1rem 1.5rem;
+  text-decoration: none;
+  z-index: 10000;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* Prevent layout shift */
+.prevent-cls {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 500px;
+}

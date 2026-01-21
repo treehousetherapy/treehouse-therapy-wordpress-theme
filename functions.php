@@ -70,6 +70,14 @@ function treehouse_enqueue_assets() {
         filemtime(get_template_directory() . '/assets/css/upstream-style.css')
     );
 
+    // Premium enhancements CSS
+    wp_enqueue_style(
+        'treehouse-premium',
+        get_template_directory_uri() . '/assets/css/premium-enhancements.css',
+        array('treehouse-upstream'),
+        filemtime(get_template_directory() . '/assets/css/premium-enhancements.css')
+    );
+
     // Main JavaScript
     wp_enqueue_script(
         'treehouse-main',
@@ -85,6 +93,15 @@ function treehouse_enqueue_assets() {
         get_template_directory_uri() . '/dist/js/animations.min.js',
         array(),
         filemtime(get_template_directory() . '/dist/js/animations.min.js'),
+        true
+    );
+
+    // Premium enhancements JavaScript
+    wp_enqueue_script(
+        'treehouse-premium',
+        get_template_directory_uri() . '/assets/js/premium-enhancements.js',
+        array('treehouse-main', 'treehouse-animations'),
+        filemtime(get_template_directory() . '/assets/js/premium-enhancements.js'),
         true
     );
 

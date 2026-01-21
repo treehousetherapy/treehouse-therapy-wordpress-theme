@@ -10,6 +10,24 @@ get_header();
 
 <!-- Hero Section - Bedrock-inspired layout -->
 <section class="hero-bedrock hero--light" id="page-hero">
+    <!-- Rotating Decorative Badge -->
+    <div class="rotating-badge" aria-hidden="true">
+        <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="60" cy="60" r="58" stroke="#E8912D" stroke-width="2" fill="rgba(232, 145, 45, 0.05)"/>
+            <circle cx="60" cy="60" r="50" stroke="#5080B8" stroke-width="1" stroke-dasharray="4 4" fill="none"/>
+            <text font-family="Nunito, sans-serif" font-size="10" font-weight="700" fill="#1E3A5F">
+                <textPath href="#circlePath" startOffset="0%">
+                    TRUSTED • CARING • EXPERT • TRUSTED • CARING • EXPERT •
+                </textPath>
+            </text>
+            <defs>
+                <path id="circlePath" d="M 60,60 m -45,0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+            </defs>
+            <circle cx="60" cy="60" r="15" fill="#FFC107"/>
+            <text x="60" y="65" text-anchor="middle" font-family="Nunito, sans-serif" font-size="18" font-weight="800" fill="#1E3A5F">★</text>
+        </svg>
+    </div>
+
     <div class="hero-bedrock-container">
         <div class="hero-bedrock-grid">
             <!-- Column 1: Headline Text -->
@@ -672,5 +690,47 @@ get_header();
         </div>
     </div>
 </section>
+
+<!-- Floating Help Widget -->
+<div id="floatingHelp" aria-label="Help and support">
+    <button class="floating-help-toggle" aria-expanded="false" aria-label="Get help">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            <path d="M12 7v6M12 17h.01"/>
+        </svg>
+    </button>
+    
+    <div class="floating-help-panel" role="dialog" aria-labelledby="helpTitle">
+        <button class="floating-help-close" aria-label="Close help panel">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        
+        <h3 id="helpTitle">Questions?</h3>
+        <p>We're here to help! Get started or reach out directly.</p>
+        
+        <div class="floating-help-links">
+            <a href="<?php echo home_url('/contact'); ?>" class="floating-help-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                </svg>
+                Contact Us
+            </a>
+            <a href="<?php echo home_url('/services'); ?>" class="floating-help-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+                Our Services
+            </a>
+            <a href="tel:6123094135" class="floating-help-link">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/>
+                </svg>
+                Call (612) 309-4135
+            </a>
+        </div>
+    </div>
+</div>
 
 <?php get_footer(); ?>
