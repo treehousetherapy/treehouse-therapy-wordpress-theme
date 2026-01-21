@@ -2298,10 +2298,10 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   z-index: 1;
 }
 
-/* 2-COLUMN HERO LAYOUT: Text | Large Image with Compact Card */
+/* 2-COLUMN HERO LAYOUT: Text | Visual Area (Image + Form in Whitespace) */
 .hero-bedrock-grid-new {
   display: grid;
-  grid-template-columns: 1fr 1.2fr;
+  grid-template-columns: 1fr 1.4fr;
   gap: 3rem;
   align-items: center;
   position: relative;
@@ -2315,13 +2315,14 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   padding-right: 1rem;
 }
 
-/* Column 2: Large visual column with image + compact card */
+/* Column 2: Large visual column with image + form in right whitespace */
 .hero-bedrock-visual {
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   min-height: 600px;
+  padding-right: 380px;
 }
 
 /* LIGHT MODE - force full opacity dark text */
@@ -2570,11 +2571,11 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   }
 }
 
-/* Large portrait wrapper - 50% bigger */
+/* Large portrait wrapper - 50% bigger, positioned left */
 .hero-portrait-wrap-large {
   position: relative;
   width: 100%;
-  max-width: 750px;
+  max-width: 700px;
   height: auto;
   min-height: 700px;
   display: flex;
@@ -2582,6 +2583,7 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   justify-content: center;
   z-index: 1;
   pointer-events: none;
+  margin-right: auto;
 }
 
 /* Atmospheric background portrait - editorial/lifestyle aesthetic */
@@ -2751,15 +2753,20 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   }
 
   .hero-portrait-wrap-large {
-    max-width: 550px;
+    max-width: 500px;
     min-height: 500px;
   }
 
+  .hero-bedrock-visual {
+    padding-right: 320px;
+  }
+
   .hero-quick-card {
-    top: 45%;
-    right: 6%;
+    top: 50%;
+    right: 40px;
     transform: translateY(-50%);
-    max-width: 260px;
+    width: 280px;
+    max-width: 280px;
   }
 }
 
@@ -6698,18 +6705,18 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
    COMPACT HERO CARD + MODAL
    ============================================ */
 
-/* Compact floating card - middle-right positioning */
+/* Compact card - positioned in right whitespace, outside oval */
 .hero-quick-card {
   position: absolute;
-  top: 45%;
-  right: 8%;
+  top: 50%;
+  right: 60px;
   transform: translateY(-50%);
   background: #FFFFFF;
   border-radius: 16px;
   padding: 1.5rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
-  max-width: 320px;
-  width: 100%;
+  max-width: 340px;
+  width: 340px;
   z-index: 10;
   border: 1px solid rgba(14, 30, 50, 0.08);
 }
@@ -6918,15 +6925,20 @@ body.modal-open {
   }
 
   .hero-portrait-wrap-large {
-    max-width: 600px;
-    min-height: 550px;
+    max-width: 650px;
+    min-height: 600px;
+  }
+
+  .hero-bedrock-visual {
+    padding-right: 360px;
   }
 
   .hero-quick-card {
-    top: 45%;
-    right: 7%;
+    top: 50%;
+    right: 50px;
     transform: translateY(-50%);
-    max-width: 280px;
+    width: 320px;
+    max-width: 320px;
   }
 }
 
@@ -6939,6 +6951,8 @@ body.modal-open {
   .hero-bedrock-visual {
     min-height: 500px;
     order: 2;
+    padding-right: 0;
+    justify-content: center;
   }
 
   .hero-bedrock-content {
@@ -6949,12 +6963,14 @@ body.modal-open {
   .hero-portrait-wrap-large {
     max-width: 450px;
     min-height: 450px;
+    margin-right: 0;
   }
 
   .hero-quick-card {
     position: relative;
     bottom: auto;
     right: auto;
+    transform: none;
     margin: 2rem auto 0;
     max-width: 100%;
   }
