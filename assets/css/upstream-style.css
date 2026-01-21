@@ -127,15 +127,15 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   z-index: 1000;
   width: 100%;
   height: var(--header-h);
-  background: var(--header-bg, transparent);
-  border-bottom: 1px solid var(--header-border, transparent);
-  backdrop-filter: blur(12px);
+  background: transparent;
+  border-bottom: none;
+  backdrop-filter: none;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-header.is-light {
-  --header-bg: #FFFFFF;
-  --header-border: rgba(0, 0, 0, 0.08);
+  --header-bg: transparent;
+  --header-border: transparent;
   --header-link: #0E1E32;
   --header-link-hover: #5080B8;
   --header-cta-bg: #FFC107;
@@ -144,8 +144,14 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   box-shadow: none;
 }
 
+/* Seamless scrolled state - only appears after scrolling */
 .site-header.is-light.scrolled {
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
 }
 
 .site-header.is-light .nav-link,
@@ -173,11 +179,13 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   opacity: 1 !important;
 }
 
-/* Scrolled state - white with shadow */
+/* Scrolled state - seamless with backdrop blur */
 .site-header.scrolled,
 .site-header.is-scrolled {
-  background: #FFFFFF !important;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06) !important;
 }
 
 .header-inner {
@@ -2363,23 +2371,31 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   opacity: 0.85;
 }
 
-/* Clean solid highlight bar - rectangular highlighter style */
+/* Clean solid highlight bar - constrained to word width */
 .hero-chip {
   display: inline-block;
   position: relative;
   color: #0E1E32;
   font-weight: 800;
-  padding: 0.15em 0.5em;
-  margin: 0 0.1em;
+  padding: 0.15em 0.4em;
+  margin: 0;
   background: #FFC107;
   border-radius: 4px;
-  line-height: 1.2;
+  line-height: 1.3;
   white-space: nowrap;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
 }
 
 .hero-bedrock.hero--light .hero-chip {
   color: #0E1E32;
   background: #FFC107;
+}
+
+/* Ensure proper line spacing to prevent overlap */
+.hero-bedrock-title .title-line-2 {
+  display: block;
+  margin-top: 0.15em;
 }
 
 .hero-bedrock-subhead {
@@ -2727,6 +2743,8 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   }
 
   .hero-quick-card {
+    top: 2rem;
+    right: 1.5rem;
     max-width: 260px;
   }
 }
@@ -6666,11 +6684,11 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
    COMPACT HERO CARD + MODAL
    ============================================ */
 
-/* Compact floating card */
+/* Compact floating card - upper right positioning */
 .hero-quick-card {
   position: absolute;
-  bottom: 2rem;
-  right: 0;
+  top: 3rem;
+  right: 2rem;
   background: #FFFFFF;
   border-radius: 16px;
   padding: 1.5rem;
@@ -6890,6 +6908,8 @@ body.modal-open {
   }
 
   .hero-quick-card {
+    top: 2.5rem;
+    right: 1rem;
     max-width: 280px;
   }
 }
