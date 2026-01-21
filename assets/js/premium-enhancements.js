@@ -123,18 +123,12 @@
     }
 
     // ============================================
-    // 3. HERO HIGHLIGHT ANIMATION
+    // 3. HERO HIGHLIGHT - CLEAN SOLID BAR
     // ============================================
     function initHeroHighlight() {
-        if (prefersReducedMotion) return;
-
-        const highlight = document.querySelector('.hero-chip');
-        if (!highlight) return;
-
-        // Trigger animation on load
-        setTimeout(() => {
-            highlight.classList.add('highlight-animate-in');
-        }, 300);
+        // No animation needed for clean rectangular bar style
+        // Highlight is purely CSS-based with solid background
+        return;
     }
 
     // ============================================

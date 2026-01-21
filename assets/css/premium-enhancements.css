@@ -143,43 +143,12 @@ body.menu-open {
 }
 
 /* ============================================
-   3. HERO HIGHLIGHT ANIMATION
+   3. HERO HIGHLIGHT - CLEAN SOLID BAR
    ============================================ */
 
-.hero-chip {
-  display: inline-block;
-  position: relative;
-  transform-origin: center;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .hero-chip {
-    opacity: 0;
-    transform: scale(0.8) translateY(10px);
-    transition: opacity 0.6s cubic-bezier(0.4, 0, 0.2, 1),
-                transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .hero-chip.highlight-animate-in {
-    opacity: 1;
-    transform: scale(1) translateY(0);
-  }
-
-  /* Subtle idle motion */
-  @keyframes highlightPulse {
-    0%, 100% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.02);
-    }
-  }
-
-  .hero-chip.highlight-animate-in {
-    animation: highlightPulse 4s ease-in-out infinite;
-    animation-delay: 1s;
-  }
-}
+/* Highlight styling is now in upstream-style.css */
+/* Keeping this section for consistency but no additional animation needed */
+/* The clean rectangular bar style doesn't need complex animations */
 
 /* ============================================
    4. BUTTON MICRO-INTERACTIONS

@@ -2371,27 +2371,23 @@ h3 { font-size: clamp(1.25rem, 2.5vw, 1.75rem); }
   opacity: 0.85;
 }
 
-/* Premium refined highlight - THICK bold marker */
+/* Clean solid highlight bar - rectangular highlighter style */
 .hero-chip {
-  display: inline !important;
-  background: linear-gradient(to top, #FCD34D 0%, #FCD34D 45%, transparent 45%) !important;
-  background-size: 100% 0.65em !important;
-  background-repeat: no-repeat !important;
-  background-position: 0 82% !important;
-  color: #0E1E32 !important;
-  padding: 0 0.3em !important;
-  border-radius: 0 !important;
-  position: relative !important;
-  font-style: normal !important;
-  margin: 0 !important;
-  font-weight: 800 !important;
-  box-shadow: none !important;
-  width: auto !important;
-  max-width: fit-content !important;
+  display: inline-block;
+  position: relative;
+  color: #0E1E32;
+  font-weight: 800;
+  padding: 0.15em 0.5em;
+  margin: 0 0.1em;
+  background: #FFC107;
+  border-radius: 4px;
+  line-height: 1.2;
+  white-space: nowrap;
 }
 
 .hero-bedrock.hero--light .hero-chip {
-  color: #0E1E32 !important;
+  color: #0E1E32;
+  background: #FFC107;
 }
 
 .hero-bedrock-subhead {
