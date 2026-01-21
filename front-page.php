@@ -62,7 +62,7 @@ get_header();
                 </div>
             </div>
 
-            <!-- Column 2: Large Hero Image + Compact Card -->
+            <!-- Column 2: Large Hero Image -->
             <div class="hero-bedrock-visual">
                 <div class="hero-portrait-wrap-large">
                     <div class="hero-blob">
@@ -74,8 +74,10 @@ get_header();
                         />
                     </div>
                 </div>
-                
-                <!-- Compact Floating Card -->
+            </div>
+            
+            <!-- Column 3: Compact Floating Card -->
+            <div class="hero-bedrock-form-col">
                 <div class="hero-quick-card">
                     <h3 class="quick-card-title">Check Availability</h3>
                     <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="hero-quick-form">
