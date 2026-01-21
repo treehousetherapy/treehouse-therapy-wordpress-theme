@@ -12,6 +12,7 @@ get_header();
 <section class="hero-bedrock hero--light" id="page-hero">
     <div class="hero-bedrock-container">
         <div class="hero-bedrock-grid">
+            <!-- Column 1: Headline Text -->
             <div class="hero-bedrock-content">
                 <h1 class="hero-bedrock-title">
                     <span class="title-line-1">Home-based ABA therapy</span>
@@ -43,7 +44,8 @@ get_header();
                 </div>
             </div>
 
-            <div class="hero-bedrock-media">
+            <!-- Column 2: Hero Image -->
+            <div class="hero-bedrock-image">
                 <div class="hero-portrait-wrap">
                     <div class="hero-blob">
                         <img
@@ -54,7 +56,10 @@ get_header();
                         />
                     </div>
                 </div>
+            </div>
 
+            <!-- Column 3: Form -->
+            <div class="hero-bedrock-form">
                 <div class="hero-form-wrap">
                     <div class="hero-form-card">
                         <p class="hero-card-title">Get Started Today</p>
@@ -96,7 +101,6 @@ get_header();
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
