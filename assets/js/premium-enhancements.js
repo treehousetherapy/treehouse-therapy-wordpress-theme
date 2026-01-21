@@ -385,6 +385,43 @@
         }, 100);
     });
 
+    // ============================================
+    // HERO FORM MODAL
+    // ============================================
+    window.openHeroModal = function(event) {
+        if (event) event.preventDefault();
+        
+        const modal = document.getElementById('heroFormModal');
+        if (!modal) return;
+        
+        modal.style.display = 'flex';
+        document.body.classList.add('modal-open');
+        
+        // Focus first input
+        setTimeout(() => {
+            const firstInput = modal.querySelector('input:not([type="hidden"])');
+            if (firstInput) firstInput.focus();
+        }, 100);
+    };
+
+    window.closeHeroModal = function() {
+        const modal = document.getElementById('heroFormModal');
+        if (!modal) return;
+        
+        modal.style.display = 'none';
+        document.body.classList.remove('modal-open');
+    };
+
+    // ESC to close modal
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            const modal = document.getElementById('heroFormModal');
+            if (modal && modal.style.display === 'flex') {
+                closeHeroModal();
+            }
+        }
+    });
+
     // Re-initialize on dynamic content changes
     window.treehouseEnhancements = {
         reinitCards: initCardHoverEffects,

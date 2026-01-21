@@ -29,7 +29,7 @@ get_header();
     </div>
 
     <div class="hero-bedrock-container">
-        <div class="hero-bedrock-grid">
+        <div class="hero-bedrock-grid-new">
             <!-- Column 1: Headline Text -->
             <div class="hero-bedrock-content">
                 <h1 class="hero-bedrock-title">
@@ -37,7 +37,7 @@ get_header();
                     <span class="title-line-2">for <span class="hero-chip">Minnesota</span> families.</span>
                 </h1>
                 <p class="hero-bedrock-subhead">
-                    No clinic. No commute. Just personalized care where your child learns best — at home.
+                    No commute. Just personalized care where your child learns best — at home.
                 </p>
                 <div class="hero-speed-promise">
                     <svg class="promise-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -46,7 +46,7 @@ get_header();
                     <span>No waitlist — Start services in as little as 2-4 weeks</span>
                 </div>
                 <div class="hero-bedrock-cta">
-                    <a href="<?php echo home_url('/contact'); ?>" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="#" onclick="openHeroModal(event)" class="btn btn-primary btn-lg">Get Started</a>
                     <a href="<?php echo home_url('/services'); ?>" class="btn btn-ghost btn-lg hero-secondary">Our Services</a>
                 </div>
                 <div class="hero-trust-signals">
@@ -62,9 +62,9 @@ get_header();
                 </div>
             </div>
 
-            <!-- Column 2: Hero Image -->
-            <div class="hero-bedrock-image">
-                <div class="hero-portrait-wrap">
+            <!-- Column 2: Large Hero Image + Compact Card -->
+            <div class="hero-bedrock-visual">
+                <div class="hero-portrait-wrap-large">
                     <div class="hero-blob">
                         <img
                             src="<?php echo get_template_directory_uri(); ?>/assets/images/hero-child-portrait.png"
@@ -74,56 +74,101 @@ get_header();
                         />
                     </div>
                 </div>
-            </div>
-
-            <!-- Column 3: Form -->
-            <div class="hero-bedrock-form">
-                <div class="hero-form-wrap">
-                    <div class="hero-form-card">
-                        <p class="hero-card-title">Get Started Today</p>
-                        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="hero-lead-form">
-                            <input type="hidden" name="action" value="submit_hero_lead_form">
-                            
-                            <div class="form-group-compact">
-                                <input type="text" name="parent_name" placeholder="Parent Name*" required>
-                            </div>
-                            
-                            <div class="form-group-compact">
-                                <input type="text" name="child_age" placeholder="Child's Age*" required>
-                            </div>
-                            
-                            <div class="form-group-compact">
-                                <input type="tel" name="phone" placeholder="Phone*" required>
-                            </div>
-                            
-                            <div class="form-group-compact">
-                                <select name="insurance" required>
-                                    <option value="">Insurance Provider*</option>
-                                    <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
-                                    <option value="Medicaid/MA">Medicaid/MA</option>
-                                    <option value="HealthPartners">HealthPartners</option>
-                                    <option value="Aetna">Aetna</option>
-                                    <option value="Cigna">Cigna</option>
-                                    <option value="UnitedHealthcare">UnitedHealthcare</option>
-                                    <option value="Medica">Medica</option>
-                                    <option value="UCare">UCare</option>
-                                    <option value="Other">Other</option>
-                                </select>
-                            </div>
-                            
-                            <button type="submit" class="btn-hero-form">Check Availability</button>
-                            
-                            <div class="form-trust-strip">
-                                <p>We'll respond within 24 hours</p>
-                                <p>HIPAA-compliant • Most insurances accepted</p>
-                            </div>
-                        </form>
-                    </div>
+                
+                <!-- Compact Floating Card -->
+                <div class="hero-quick-card">
+                    <h3 class="quick-card-title">Check Availability</h3>
+                    <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="hero-quick-form">
+                        <input type="hidden" name="action" value="submit_hero_lead_form">
+                        <input type="hidden" name="parent_name" value="Quick Form Submission">
+                        <input type="hidden" name="child_age" value="Not specified">
+                        
+                        <div class="form-group-compact">
+                            <input type="tel" name="phone" placeholder="Your Phone*" required>
+                        </div>
+                        
+                        <div class="form-group-compact">
+                            <select name="insurance" required>
+                                <option value="">Insurance Provider*</option>
+                                <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
+                                <option value="Medicaid/MA">Medicaid/MA</option>
+                                <option value="HealthPartners">HealthPartners</option>
+                                <option value="Aetna">Aetna</option>
+                                <option value="Cigna">Cigna</option>
+                                <option value="UnitedHealthcare">UnitedHealthcare</option>
+                                <option value="Medica">Medica</option>
+                                <option value="UCare">UCare</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn-quick-submit">Check Availability</button>
+                        
+                        <p class="quick-trust">We'll respond within 24 hours</p>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!-- Full Form Modal -->
+<div id="heroFormModal" class="hero-modal" role="dialog" aria-labelledby="modalTitle" aria-modal="true" style="display: none;">
+    <div class="hero-modal-overlay" onclick="closeHeroModal()"></div>
+    <div class="hero-modal-content">
+        <button class="hero-modal-close" onclick="closeHeroModal()" aria-label="Close form">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+        </button>
+        
+        <h2 id="modalTitle" class="modal-title">Get Started Today</h2>
+        <p class="modal-subtitle">Fill out the form below and we'll be in touch within 24 hours.</p>
+        
+        <form action="<?php echo esc_url( admin_url('admin-post.php') ); ?>" method="POST" class="hero-modal-form">
+            <input type="hidden" name="action" value="submit_hero_lead_form">
+            
+            <div class="form-group-compact">
+                <input type="text" name="parent_name" placeholder="Parent Name*" required>
+            </div>
+            
+            <div class="form-group-compact">
+                <input type="text" name="child_age" placeholder="Child's Age*" required>
+            </div>
+            
+            <div class="form-group-compact">
+                <input type="tel" name="phone" placeholder="Phone*" required>
+            </div>
+            
+            <div class="form-group-compact">
+                <input type="email" name="email" placeholder="Email">
+            </div>
+            
+            <div class="form-group-compact">
+                <select name="insurance" required>
+                    <option value="">Insurance Provider*</option>
+                    <option value="Blue Cross Blue Shield">Blue Cross Blue Shield</option>
+                    <option value="Medicaid/MA">Medicaid/MA</option>
+                    <option value="HealthPartners">HealthPartners</option>
+                    <option value="Aetna">Aetna</option>
+                    <option value="Cigna">Cigna</option>
+                    <option value="UnitedHealthcare">UnitedHealthcare</option>
+                    <option value="Medica">Medica</option>
+                    <option value="UCare">UCare</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group-compact">
+                <textarea name="message" placeholder="Tell us about your child (optional)" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn-modal-submit">Send My Information</button>
+            
+            <p class="modal-trust">HIPAA-compliant • Most insurances accepted • We'll respond within 24 hours</p>
+        </form>
+    </div>
+</div>
 
 <!-- Wave Transition: Hero to Services -->
 <div class="wave-transition" style="background: #C5E6F3;">
